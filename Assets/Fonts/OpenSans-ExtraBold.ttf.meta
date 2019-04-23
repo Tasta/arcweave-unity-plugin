@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a50d1441d5f0bb04d890c8f2979064a6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Open Sans ExtraBold
+  fontNames:
+  - Open Sans ExtraBold
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5e773191e18b85543ac5f276af629611, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

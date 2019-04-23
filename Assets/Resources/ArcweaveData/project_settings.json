@@ -1,0 +1,649 @@
+{
+    "name": "Treasure Island: The game",
+    "elements": {
+        "1": {
+            "title": "<p>Game start<\/p>",
+            "content": null,
+            "components": [],
+            "linkedBoard": null
+        },
+        "2": {
+            "title": "Introductory cutscene",
+            "content": "<p><i>Day, outside a village inn, west England 1850 A.D.<\/i><\/p><span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span> is doing his daily chores at the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"10\" data-type=\"component\">Admiral Benbow Inn<\/span> when <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span> arrives and demands infomation about a patron, <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"11\" data-type=\"component\">Billy Bones<\/span>.<p>When <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>&nbsp;tries to escape, <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>&nbsp;strikes him with the hilt of his cutlass and he loses consciousness.<\/p><p><i>Fade to Black.<\/i><\/p><p><\/p>",
+            "components": [
+                2,
+                1
+            ],
+            "linkedBoard": null
+        },
+        "3": {
+            "title": "<span class=\"mention mention-board\" contenteditable=\"false\" data-id=\"2\" data-type=\"board\">Jim and Black Dog Dialog<\/span>",
+            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>&nbsp;talks to <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>&nbsp;to find out more information about him and perhaps distract him.",
+            "components": [
+                2,
+                1
+            ],
+            "linkedBoard": null
+        },
+        "4": {
+            "title": "<p>Cutting the rope<\/p>",
+            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>&nbsp;starts cutting the rope with the&nbsp;<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"8\" data-type=\"component\">Piece of broken glass<\/span>. He has about 10 seconds before <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>&nbsp;returns to his position.",
+            "components": [
+                2
+            ],
+            "linkedBoard": null
+        },
+        "5": {
+            "title": "Inside <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"10\" data-type=\"component\">Admiral Benbow Inn<\/span>",
+            "content": "<p><i>Fade in. <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>&nbsp;regains consciousnes.&nbsp;<\/i><\/p><p><span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span><span style=\"background-color: transparent; color: rgb(188, 188, 188); display: inline !important;\">&nbsp;is standing at the door preventing him from exiting. Jim cannot move as long as he is tied. There is a <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"8\" data-type=\"component\">Piece of broken glass<\/span>&nbsp;lying nearby.<\/span><\/p>",
+            "components": [
+                2,
+                10,
+                8
+            ],
+            "linkedBoard": null
+        },
+        "7": {
+            "title": "Take the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"8\" data-type=\"component\">Piece of broken glass<\/span>",
+            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>&nbsp;adds the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"8\" data-type=\"component\">Piece of broken glass<\/span>&nbsp;to his inventory.",
+            "components": [
+                2,
+                8
+            ],
+            "linkedBoard": null
+        },
+        "9": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>",
+            "content": "\"Hey mister!\"",
+            "components": [
+                2
+            ],
+            "linkedBoard": null
+        },
+        "10": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>",
+            "content": "What do you want lad?",
+            "components": [
+                1
+            ],
+            "linkedBoard": null
+        },
+        "11": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>",
+            "content": "\"What's your name?\"",
+            "components": [
+                2
+            ],
+            "linkedBoard": null
+        },
+        "12": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>",
+            "content": "\"Could you untie me?\"",
+            "components": [
+                2
+            ],
+            "linkedBoard": null
+        },
+        "13": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>",
+            "content": "\"Mwahahaha! So that you can scurry away, while i am not looking? Not in a thousand years, lad! Now stay put...\"",
+            "components": [
+                1
+            ],
+            "linkedBoard": null
+        },
+        "14": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>",
+            "content": "\"It's <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>, scoundrel of the 7 seas lad, and this friend of yours, <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"11\" data-type=\"component\">Billy Bones<\/span>&nbsp;will swear by the sound of it before the sun sets today!\"&nbsp;",
+            "components": [
+                1
+            ],
+            "linkedBoard": null
+        },
+        "15": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>",
+            "content": "\"Please don't steal our spirits!\"",
+            "components": [
+                2
+            ],
+            "linkedBoard": null
+        },
+        "16": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>",
+            "content": "\"Spirits? Like... Rum? Now that is something interesting, arrr! Let's see where it is, my mouth is getting dry...\"",
+            "components": [
+                1
+            ],
+            "linkedBoard": null
+        },
+        "17": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span> is distracted!",
+            "content": "<i>[&nbsp;<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>&nbsp;is distracted and looking to find the rum. <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>&nbsp;has about 10 seconds to cut the rope with the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"8\" data-type=\"component\">Piece of broken glass<\/span>&nbsp;]<\/i>",
+            "components": [
+                1
+            ],
+            "linkedBoard": null
+        },
+        "18": {
+            "title": "<p>FAILED: <span class=\"mention mention-component\" data-id=\"1\" data-type=\"component\">Black Dog<\/span> sees <span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span>!<\/p>",
+            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>&nbsp;catches <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>! Now he will never be able to warn <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"11\" data-type=\"component\">Billy Bones<\/span>!&nbsp;",
+            "components": [
+                1,
+                2
+            ],
+            "linkedBoard": null
+        },
+        "19": {
+            "title": "SUCCESS:&nbsp;<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>&nbsp;cuts the rope",
+            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>&nbsp;manages to free himself and jumps outside from the broken window. Now to find and warn <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"11\" data-type=\"component\">Billy Bones<\/span>&nbsp;that <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>&nbsp;is in town!",
+            "components": [
+                2
+            ],
+            "linkedBoard": null
+        },
+        "20": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"8\" data-type=\"component\">Piece of broken glass<\/span>",
+            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>&nbsp;looks at the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"8\" data-type=\"component\">Piece of broken glass<\/span>.&nbsp;",
+            "components": [
+                8
+            ],
+            "linkedBoard": null
+        },
+        "21": {
+            "title": "Restart game",
+            "content": null,
+            "components": [],
+            "linkedBoard": null
+        },
+        "22": {
+            "title": "<p>Chapter II <span class=\"mention mention-board\" data-id=\"4\" data-type=\"board\">Chapter 2<\/span> <\/p>",
+            "content": null,
+            "components": [],
+            "linkedBoard": null
+        },
+        "23": {
+            "title": "Back to <span class=\"mention mention-board\" contenteditable=\"false\" data-id=\"1\" data-type=\"board\">Main Flow<\/span>",
+            "content": null,
+            "components": [],
+            "linkedBoard": null
+        },
+        "24": {
+            "title": "<p><span class=\"mention mention-component\" data-id=\"13\" data-type=\"component\">City Event<\/span><\/p>",
+            "content": "<p>The village burns in flames, thanks to freakin' <span class=\"mention mention-component\" data-id=\"1\" data-type=\"component\">Black Dog<\/span> and how useless <span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span> was.<\/p>",
+            "components": [
+                13,
+                1
+            ],
+            "linkedBoard": null
+        },
+        "25": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"13\" data-type=\"component\">City Event<\/span>",
+            "content": "<p>Once <span class=\"mention mention-component\" data-id=\"11\" data-type=\"component\">Billy Bones<\/span> is warned, he gathers his trusty friends and together, they stop <span class=\"mention mention-component\" data-id=\"1\" data-type=\"component\">Black Dog<\/span> from burning the village.<\/p>",
+            "components": [
+                13,
+                1
+            ],
+            "linkedBoard": null
+        },
+        "27": {
+            "title": "<p>Intro<\/p>",
+            "content": "<p>After the close-call with <span class=\"mention mention-component\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>, <span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span> has a monologue...<\/p>",
+            "components": [
+                2
+            ],
+            "linkedBoard": null
+        },
+        "28": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"15\" data-type=\"component\">Dialogue Shard<\/span>",
+            "content": "<p>\"Phiew, that was a close call...\"<\/p>",
+            "components": [
+                15,
+                2
+            ],
+            "linkedBoard": null
+        },
+        "29": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"15\" data-type=\"component\">Dialogue Shard<\/span>",
+            "content": "<p>\"Yes, indeed it was... Please, let's try to stay away from adventures for a while.\"<\/p>",
+            "components": [
+                15,
+                2
+            ],
+            "linkedBoard": null
+        },
+        "30": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"15\" data-type=\"component\">Dialogue Shard<\/span>",
+            "content": "<p>\"No, not really... I am very resourceful, I can do much more for this world.\"<\/p>",
+            "components": [
+                15,
+                2
+            ],
+            "linkedBoard": null
+        },
+        "31": {
+            "title": "<p>Weeks later, <span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span> is found dead in a ditch.<\/p>",
+            "content": "<p><\/p>",
+            "components": [],
+            "linkedBoard": null
+        },
+        "32": {
+            "title": "<p>Game Over<\/p>",
+            "content": null,
+            "components": [],
+            "linkedBoard": null
+        },
+        "33": {
+            "title": "<p><span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span> gets married and lives an uneventful, boring life.<\/p>",
+            "content": null,
+            "components": [],
+            "linkedBoard": null
+        }
+    },
+    "notes": {
+        "note_2": {
+            "content": "<p><strong>Welcome to Arcweave!<\/strong><\/p><p>Double click on an empty spot in the workspace to create an element. To edit its title or content just double click on it.<\/p>"
+        },
+        "note_3": {
+            "content": "<p>Create connections between elements by dragging near the border of an element.<\/p>"
+        },
+        "note_7": {
+            "content": "<p>Change the color of an element or a note by <strong>right-clicking<\/strong> on it. Try it here!<\/p>"
+        },
+        "note_8": {
+            "content": "<p>Use the <strong>@<\/strong> symbol while writing to mention a component or board.<\/p>"
+        },
+        "note_9": {
+            "content": "<p>Drag n drop components from the sidebar to attach them as thumbnails inside elements.<\/p>"
+        }
+    },
+    "boards": {
+        "0": {
+            "name": "Root",
+            "children": [
+                1,
+                4,
+                3
+            ]
+        },
+        "1": {
+            "name": "Main Flow",
+            "notes": [
+                "note_2",
+                "note_3",
+                "note_7",
+                "note_8"
+            ],
+            "elements": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                7,
+                18,
+                19,
+                20,
+                21,
+                22,
+                24,
+                25
+            ]
+        },
+        "2": {
+            "name": "Jim & Black Dog Dialogue",
+            "notes": [
+                "note_9"
+            ],
+            "elements": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                23
+            ]
+        },
+        "3": {
+            "name": "Dialogues",
+            "children": [
+                2
+            ]
+        },
+        "4": {
+            "name": "Chapter 2",
+            "notes": [],
+            "elements": [
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33
+            ]
+        }
+    },
+    "connections": [
+        {
+            "label": null,
+            "sourceid": "1",
+            "targetid": "2"
+        },
+        {
+            "label": "Talk to <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>",
+            "sourceid": "5",
+            "targetid": "3"
+        },
+        {
+            "label": null,
+            "sourceid": "2",
+            "targetid": "5"
+        },
+        {
+            "label": "Try to cut the rope",
+            "sourceid": "7",
+            "targetid": "4"
+        },
+        {
+            "label": "Take <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"8\" data-type=\"component\">Piece of broken glass<\/span>",
+            "sourceid": "5",
+            "targetid": "7"
+        },
+        {
+            "label": null,
+            "sourceid": "9",
+            "targetid": "10"
+        },
+        {
+            "label": "There's rum, you know",
+            "sourceid": "10",
+            "targetid": "15"
+        },
+        {
+            "label": "These ropes...",
+            "sourceid": "10",
+            "targetid": "12"
+        },
+        {
+            "label": null,
+            "sourceid": "12",
+            "targetid": "13"
+        },
+        {
+            "label": null,
+            "sourceid": "11",
+            "targetid": "14"
+        },
+        {
+            "label": "And you are...",
+            "sourceid": "10",
+            "targetid": "11"
+        },
+        {
+            "label": null,
+            "sourceid": "15",
+            "targetid": "16"
+        },
+        {
+            "label": null,
+            "sourceid": "16",
+            "targetid": "17"
+        },
+        {
+            "label": "<p><span class=\"mention mention-component\" data-id=\"1\" data-type=\"component\">Black Dog<\/span> is looking<\/p>",
+            "sourceid": "4",
+            "targetid": "18"
+        },
+        {
+            "label": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span> is distracted",
+            "sourceid": "4",
+            "targetid": "19"
+        },
+        {
+            "label": "Look at <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"8\" data-type=\"component\">Piece of broken glass<\/span>",
+            "sourceid": "5",
+            "targetid": "20"
+        },
+        {
+            "label": null,
+            "sourceid": "17",
+            "targetid": "23"
+        },
+        {
+            "label": null,
+            "sourceid": "18",
+            "targetid": "24"
+        },
+        {
+            "label": null,
+            "sourceid": "24",
+            "targetid": "21"
+        },
+        {
+            "label": null,
+            "sourceid": "19",
+            "targetid": "25"
+        },
+        {
+            "label": null,
+            "sourceid": "25",
+            "targetid": "22"
+        },
+        {
+            "label": null,
+            "sourceid": "27",
+            "targetid": "28"
+        },
+        {
+            "label": "<p>Jim chickens out<\/p>",
+            "sourceid": "28",
+            "targetid": "29"
+        },
+        {
+            "label": "<p>Jim mans up<\/p>",
+            "sourceid": "28",
+            "targetid": "30"
+        },
+        {
+            "label": null,
+            "sourceid": "30",
+            "targetid": "31"
+        },
+        {
+            "label": null,
+            "sourceid": "31",
+            "targetid": "32"
+        },
+        {
+            "label": null,
+            "sourceid": "29",
+            "targetid": "33"
+        },
+        {
+            "label": null,
+            "sourceid": "33",
+            "targetid": "32"
+        }
+    ],
+    "components": {
+        "0": {
+            "name": "Root",
+            "children": [
+                14,
+                3,
+                12,
+                6
+            ]
+        },
+        "1": {
+            "name": "Black Dog",
+            "image": "images\/1539874554_5bc89efa612e2.jpeg",
+            "attributes": [
+                {
+                    "id": 1,
+                    "size": "full",
+                    "label": "Age",
+                    "content": "52"
+                },
+                {
+                    "id": 2,
+                    "size": "full",
+                    "label": "Description",
+                    "content": "A seasoned pirate, tall but fragile, he always wears his trusty cutlass on his belt. His garments are simple and filthy and the stench of alcohol from his unkempt beard can be noticed a mile away.&nbsp;<p>Black Dog has vowed to find and get revenge from his old pirate friend, Billy Bones.<\/p>"
+                }
+            ]
+        },
+        "2": {
+            "name": "Jim",
+            "image": "images\/1539874549_5bc89ef50280a.jpeg",
+            "attributes": [
+                {
+                    "id": 1,
+                    "size": "half",
+                    "label": "Full name",
+                    "content": "Jim Hawkins"
+                },
+                {
+                    "id": 2,
+                    "size": "half",
+                    "label": "Age",
+                    "content": "15"
+                },
+                {
+                    "id": 3,
+                    "size": "full",
+                    "label": "Bio",
+                    "content": "Jim has always dreamt of adventures. Little did he expect that he would embark on one when a vengeful old pirate arrives at his family's inn."
+                }
+            ]
+        },
+        "3": {
+            "name": "Characters",
+            "children": [
+                4,
+                7,
+                9
+            ]
+        },
+        "4": {
+            "name": "Player",
+            "children": [
+                2
+            ]
+        },
+        "6": {
+            "name": "Items",
+            "children": [
+                8
+            ]
+        },
+        "7": {
+            "name": "Allies",
+            "children": [
+                11
+            ]
+        },
+        "8": {
+            "name": "Piece of broken glass",
+            "image": "images\/1539874566_5bc89f06450cb.jpeg",
+            "attributes": [
+                {
+                    "id": 1,
+                    "size": "full",
+                    "label": "Description",
+                    "content": "A small piece of glass, probably from when the rear inn window broke from the wind. It looks very sharp."
+                }
+            ]
+        },
+        "9": {
+            "name": "Antagonists",
+            "children": [
+                1
+            ]
+        },
+        "10": {
+            "name": "Admiral Benbow Inn",
+            "image": "images\/1539874562_5bc89f0214f70.jpeg",
+            "attributes": [
+                {
+                    "id": 1,
+                    "size": "full",
+                    "label": "Description",
+                    "content": "The inn has seen better days: It has been weeks since a single patron has walked in and dust has settled everywhere around the place. The rear window is broken and creaking with the passing wind.&nbsp;<p>The large tables and beer stains everywhere whisper of earlier times, when the inn was full of life and music. Perhaps one day it will regain its former glory.<\/p>"
+                }
+            ]
+        },
+        "11": {
+            "name": "Billy Bones",
+            "attributes": [
+                {
+                    "id": 1,
+                    "size": "half",
+                    "label": "Age",
+                    "content": "62"
+                },
+                {
+                    "id": 2,
+                    "size": "half",
+                    "label": "Nickname",
+                    "content": "\"The Captain\""
+                },
+                {
+                    "id": 3,
+                    "size": "full",
+                    "label": "Description",
+                    "content": "A tall, strong, heavy, nut-brown man, his tarry pigtail falling over the shoulder of his soiled blue coat. His hands are ragged and scarred, with black, broken nails, and bears a sabre cut across one cheek, a dirty, livid white."
+                }
+            ]
+        },
+        "12": {
+            "name": "Locations",
+            "children": [
+                10
+            ]
+        },
+        "13": {
+            "icon": "IconKeep",
+            "name": "City Event",
+            "image": null,
+            "attributes": [
+                {
+                    "id": 1,
+                    "size": "full",
+                    "label": "City Event",
+                    "content": "burn_town"
+                }
+            ]
+        },
+        "14": {
+            "name": "FlowObjects",
+            "children": [
+                15,
+                13
+            ]
+        },
+        "15": {
+            "icon": "IconSpeech",
+            "name": "Dialogue Shard",
+            "image": null,
+            "attributes": [
+                {
+                    "id": 1,
+                    "size": "full",
+                    "label": "Line",
+                    "content": "Whatever he must say, he says here..."
+                },
+                {
+                    "id": 2,
+                    "size": "full",
+                    "label": "Voice-over duration",
+                    "content": "0.4"
+                }
+            ]
+        }
+    }
+}
