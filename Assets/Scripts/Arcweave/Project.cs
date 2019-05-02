@@ -81,6 +81,18 @@ namespace AW
             // Read boards
             yield return ReadBoards(root["boards"].AsObject);
 
+			// Resolve references inside elements and connections
+			// Must happen after reading everything, so Arcweave has the referenced elements instantiated.
+			foreach (var item in elements) {
+				item.Value.ParseHTML(this);
+				yield return null;
+			}
+
+			for (int i = 0; i < connections.Length; i++) {
+				connections[i].ParseHTML(this);
+				yield return null;
+			}
+
             Debug.Log("[Arcweave] Load successful!");
         }
 

@@ -12,7 +12,7 @@ public class Sample : MonoBehaviour {
     public Project project { get; protected set; }
 
     // The test board walker
-    public BoardWalker walker { get; protected set; }
+	public ProjectRunner runner { get; protected set; }
 
 	/*
      * Read the project on start.
@@ -33,13 +33,10 @@ public class Sample : MonoBehaviour {
         project = new Project();
         yield return project.Read();
 
-        Board main = project.GetBoardByName("Main Flow");
-        main.ComputeRoot();
-
         // Create the walker
-        walker = new BoardWalker(project, this);
-        walker.Play(main, OnElementTriggered);
-
+		runner = new ProjectRunner(project, this);
+		runner.Play(OnElementTriggered);
+        
         Debug.LogWarning("Test started!");
     }
 
@@ -48,34 +45,20 @@ public class Sample : MonoBehaviour {
      */
     public void OnElementTriggered(Element element)
     {
-        if (element.title == "Game start") {
-            // Only one transition from the start, to the intro
-            walker.ChooseTransition(0);
-        } else if (element.title == "Restart game") {
-            // Restart from main flow
-            Board main = project.GetBoardByName("Main Flow");
-
-            // Create a fresh new walker
-            walker = new BoardWalker(project, this);
-            walker.Play(main, OnElementTriggered);
+		if (element.title == "Game start") {
+			// Only one transition from the start, to the intro
+			runner.ChooseTransition(0);
         } else {
             viewController.Populate(element);
-            string label = null;
-
-            if (element.outConnections.Count == 0) {
-                label = "Back";
-                // ToDo: Show single button with given action
-            } else if (element.outConnections.Count == 1) {
-                string action = element.outConnections[0].label;
-                if (string.IsNullOrEmpty(action)) {
-                    label = "Proceed";
-                } else {
-                    label = action;
-                }
-                // ToDo: Show single button with given action
-            } else {
-                // ToDo: Show all transitions
-            }
         }
     }
+
+	/*
+	 * Restart game.
+	 */
+	public void Restart() {
+		// Create a fresh new runner
+		runner = new ProjectRunner(project, this);
+		runner.Play(OnElementTriggered);
+	}
 } // class Sample

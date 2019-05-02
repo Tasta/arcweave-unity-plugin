@@ -26,6 +26,10 @@ namespace AW
          */
         public void ComputeRoot()
         {
+			// Reset current root
+			root = null;
+
+			// Find first root
             for (int i = 0; i < elements.Length; i++) {
                 if (elements[i].inConnections.Count == 0) {
                     if (root != null) {

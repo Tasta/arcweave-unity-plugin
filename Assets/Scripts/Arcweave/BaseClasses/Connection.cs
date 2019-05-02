@@ -24,6 +24,8 @@ namespace AW
         {
             // Read data
             label = root["label"];
+
+			// Read source & target
             sourceElementIdx = root["sourceid"].AsInt;
             targetElementIdx = root["targetid"].AsInt;
 
@@ -43,5 +45,13 @@ namespace AW
                 Debug.LogWarning("[Arcweave] Cannot find source element of id " + sourceElementIdx + ".");
             }
         }
+
+		/*
+		 * Parse the HTML contents and resolve the links.
+		 */
+		public void ParseHTML(Project project) {
+			int linkedBoardId = -1;
+			label = Utils.ParseHTML(label, ref linkedBoardId);
+		}
     } // class Connection
 } // namespace AW

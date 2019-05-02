@@ -12,7 +12,7 @@ namespace AW
     /*
      * Board Walker
      *
-     * Gets created with a Project (for references to Arcweave entities)
+     * Gets created for each Board (containing references to Arcweave entities)
      * and with a MonoBehaviour (to attach coroutines to).
      *
      * Walks the given board starting from its root node, 
@@ -22,13 +22,10 @@ namespace AW
     {
         // The board this runs on
         private Project project;
-        private Board board;
+		public Board board { get; protected set; }
 
         // Current element
         public Element current { get; protected set; }
-
-        // The runner used for coroutines
-        private MonoBehaviour runner;
 
         // Callback with current element in play
         private UnityAction<Element> onElementTriggered = null;
@@ -36,41 +33,26 @@ namespace AW
         /*
          * Constructor for runner.
          */
-        public BoardWalker(Project project, MonoBehaviour runner) {
+        public BoardWalker(Board board, Project project) {
+			this.board = board;
             this.project = project;
-            this.runner = runner;
+
+			this.board = board;
+			if (this.board.root == null) {
+				throw new Exception("Board set for running has no valid root.");
+			}
+
+			// Set current from root
+			current = this.board.root;
         }
 
-        /*
-         * Called to play the given board.
-         */
-        public void Play(Board board, UnityAction<Element> callback)
-        {
-            this.board = board;
-            if (this.board.root == null) {
-                Debug.LogWarning("[Arcweave] Board set for running has no valid root.");
-                return;
-            }
-
-            // Set current from root
-            current = this.board.root;
-
-            // Set callback
-            onElementTriggered = callback;
-
-            // Play root node
-            if (onElementTriggered != null)
-                onElementTriggered(current);
-        }
-
-        /*
-         * Called by the user to continue running the graph.
-         */
-        public void ChooseTransition(int transitionIndex)
-        {
-            // Start transition
-            runner.StartCoroutine(Advance(transitionIndex));
-        }
+		/*
+		 * Set the element callback.
+		 */
+		public void SetElementCallback(UnityAction<Element> callback) {
+			// Set callback
+			onElementTriggered = callback;
+		}
 
         /*
          * Advance the graph with given transition.
@@ -82,7 +64,7 @@ namespace AW
          *
          * ToDo: Make it synchronous later if it proves useless.
          */
-        private IEnumerator Advance(int connection)
+        public IEnumerator Advance(int connection)
         {
             if (current == null) {
                 Debug.LogWarning("[Arcweave] No current node found. Cannot advance.");
@@ -91,15 +73,23 @@ namespace AW
 
             // Get next element
             Element nextElement = current.GetOutNeighbour(connection, project);
-            current = nextElement;
 
-            // Wait two frames to make sure we don't callback
-            // in the same frame.
-            yield return new WaitForEndOfFrame();
-            yield return new WaitForEndOfFrame();
+			// Wait two frames to make sure we don't callback
+			// in the same frame.
+			yield return new WaitForEndOfFrame();
+			yield return new WaitForEndOfFrame();
 
-            if (onElementTriggered != null)
-                onElementTriggered(current);
+			if (nextElement.linkedBoard == null) {
+				// Set next element as current
+				current = nextElement;
+
+				if (onElementTriggered != null)
+					onElementTriggered(current);
+			} else {
+				// Pass it to the ProjectRunner to handle
+				if (onElementTriggered != null)
+					onElementTriggered(nextElement);
+			}
         }
 
         /*
@@ -109,14 +99,14 @@ namespace AW
          */
         public void SetCurrent(Element element)
         {
-            // ToDo: Check that this element belongs to the currently running Board.
+            // ToDo: Maybe check that this element belongs to the currently running Board.
 
-            // Set current
-            current = element;
+			// Set current
+			current = element;
 
-            // And notify listener
-            if (onElementTriggered != null)
-                onElementTriggered(current);
+			// And notify listener
+			if (onElementTriggered != null)
+				onElementTriggered(current);
         }
     } // class BoardWalker
 } // namespace AW

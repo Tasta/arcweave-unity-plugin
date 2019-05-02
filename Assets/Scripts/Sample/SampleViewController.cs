@@ -20,6 +20,7 @@ public class SampleViewController : MonoBehaviour
     public Text content;
     public GameObject actionParent;
     public GameObject actionItem;
+	public ComponentView componentView;
 
     // Link to the sample runner
     private Sample sample;
@@ -68,7 +69,13 @@ public class SampleViewController : MonoBehaviour
                 Image icon = compObj.transform.Find("Icon").GetComponent<Image>();
                 icon.sprite = awElement.components[i].image;
 
-                // ToDo: Bind an action to it, to show component description.
+                // Bind an action to it, to show component description.
+				AW.Component awComponent = awElement.components[i];
+				Button actionBtn = compObj.GetComponent<Button>();
+				actionBtn.onClick.RemoveAllListeners(); // Because I'm too lazy to clean up properly
+				actionBtn.onClick.AddListener(() => {
+					componentView.Show(awComponent);
+				});
             }
         }
     }
@@ -119,23 +126,36 @@ public class SampleViewController : MonoBehaviour
                 btn.onClick.AddListener(() =>
                 {
                     // Choose this transition on user tap
-                    sample.walker.ChooseTransition(connIdx);
+                    sample.runner.ChooseTransition(connIdx);
                 });
             }
         } else {
-            Text label = actionItem.transform.Find("Label").GetComponent<Text>();
-            label.text = "Back...";
+			if (awElement.title == "Game Over" || awElement.title == "Restart game") {
+				Text label = actionItem.transform.Find("Label").GetComponent<Text>();
+				label.text = "Restart Game";
 
-            // Bind an action to it, to advance the Play.
-            Button btn = actionItem.GetComponent<Button>();
-            btn.onClick.RemoveAllListeners();
-            btn.onClick.AddListener(() =>
-            {
-                for (int i = 0; i < awElement.inConnections.Count; i++) {
-                    Element source = awElement.GetInNeighbour(i, sample.project);
-                    sample.walker.SetCurrent(source);
-                }
-            });
+				// Bind an action to it, to advance the Play.
+				Button btn = actionItem.GetComponent<Button>();
+				btn.onClick.RemoveAllListeners();
+				btn.onClick.AddListener(() =>
+				{
+					// Restart the sample
+					sample.Restart();
+				});
+			} else {
+				Text label = actionItem.transform.Find("Label").GetComponent<Text>();
+				label.text = "Back...";
+
+				// Bind an action to it, to advance the Play.
+				Button btn = actionItem.GetComponent<Button>();
+				btn.onClick.RemoveAllListeners();
+				btn.onClick.AddListener(() =>
+				{
+					// Go back to last element that had a label
+					Element newRoot = awElement.GoBack(sample.project);
+					sample.runner.active.SetCurrent(newRoot);
+				});
+			}
         }
     }
 } // class SampleViewController

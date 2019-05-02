@@ -8,8 +8,8 @@
             "linkedBoard": null
         },
         "2": {
-            "title": "Introductory cutscene",
-            "content": "<p><i>Day, outside a village inn, west England 1850 A.D.<\/i><\/p><span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span> is doing his daily chores at the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"10\" data-type=\"component\">Admiral Benbow Inn<\/span> when <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span> arrives and demands infomation about a patron, <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"11\" data-type=\"component\">Billy Bones<\/span>.<p>When <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>&nbsp;tries to escape, <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>&nbsp;strikes him with the hilt of his cutlass and he loses consciousness.<\/p><p><i>Fade to Black.<\/i><\/p><p><\/p>",
+            "title": "<p>Introductory cutscene<\/p>",
+            "content": "<p><em>Day, outside a village inn, west England 1850 A.D.<\/em><\/p><p><span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span> is doing his daily chores at the <span class=\"mention mention-component\" data-id=\"10\" data-type=\"component\">Admiral Benbow Inn<\/span> when <span class=\"mention mention-component\" data-id=\"1\" data-type=\"component\">Black Dog<\/span> arrives and demands infomation about a patron, <span class=\"mention mention-component\" data-id=\"11\" data-type=\"component\">Billy Bones<\/span>.<\/p><p>When <span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span> tries to escape, <span class=\"mention mention-component\" data-id=\"1\" data-type=\"component\">Black Dog<\/span> strikes him with the hilt of his cutlass and he loses consciousness.<\/p><p><em>Fade to Black.<\/em><\/p><p><\/p>",
             "components": [
                 2,
                 1
@@ -17,7 +17,7 @@
             "linkedBoard": null
         },
         "3": {
-            "title": "<span class=\"mention mention-board\" contenteditable=\"false\" data-id=\"2\" data-type=\"board\">Jim and Black Dog Dialog<\/span>",
+            "title": "<p><span class=\"mention mention-board\" data-id=\"2\" data-type=\"board\">Jim and Black Dog<\/span> <\/p>",
             "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"2\" data-type=\"component\">Jim<\/span>&nbsp;talks to <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>&nbsp;to find out more information about him and perhaps distract him.",
             "components": [
                 2,
@@ -186,7 +186,7 @@
             "linkedBoard": null
         },
         "27": {
-            "title": "<p>Intro<\/p>",
+            "title": "<p>The Monologue<\/p>",
             "content": "<p>After the close-call with <span class=\"mention mention-component\" data-id=\"1\" data-type=\"component\">Black Dog<\/span>, <span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span> has a monologue...<\/p>",
             "components": [
                 2
@@ -221,20 +221,14 @@
             "linkedBoard": null
         },
         "31": {
-            "title": "<p>Weeks later, <span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span> is found dead in a ditch.<\/p>",
-            "content": "<p><\/p>",
-            "components": [],
-            "linkedBoard": null
-        },
-        "32": {
             "title": "<p>Game Over<\/p>",
-            "content": null,
+            "content": "<p>Weeks later, <span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span> is found dead in a ditch.<\/p>",
             "components": [],
             "linkedBoard": null
         },
         "33": {
-            "title": "<p><span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span> gets married and lives an uneventful, boring life.<\/p>",
-            "content": null,
+            "title": "<p>Game Over<\/p>",
+            "content": "<p><span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span> gets married and lives an uneventful, boring life.<\/p>",
             "components": [],
             "linkedBoard": null
         }
@@ -290,7 +284,7 @@
             ]
         },
         "2": {
-            "name": "Jim & Black Dog Dialogue",
+            "name": "Jim and Black Dog",
             "notes": [
                 "note_9"
             ],
@@ -322,7 +316,6 @@
                 29,
                 30,
                 31,
-                32,
                 33
             ]
         }
@@ -404,7 +397,7 @@
             "targetid": "19"
         },
         {
-            "label": "Look at <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"8\" data-type=\"component\">Piece of broken glass<\/span>",
+            "label": "<p>Look at <span class=\"mention mention-component\" data-id=\"8\" data-type=\"component\">Piece of broken glass<\/span><\/p>",
             "sourceid": "5",
             "targetid": "20"
         },
@@ -439,12 +432,12 @@
             "targetid": "28"
         },
         {
-            "label": "<p>Jim chickens out<\/p>",
+            "label": "<p><span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span> chickens out<\/p>",
             "sourceid": "28",
             "targetid": "29"
         },
         {
-            "label": "<p>Jim mans up<\/p>",
+            "label": "<p><span class=\"mention mention-component\" data-id=\"2\" data-type=\"component\">Jim<\/span> mans up<\/p>",
             "sourceid": "28",
             "targetid": "30"
         },
@@ -455,18 +448,8 @@
         },
         {
             "label": null,
-            "sourceid": "31",
-            "targetid": "32"
-        },
-        {
-            "label": null,
             "sourceid": "29",
             "targetid": "33"
-        },
-        {
-            "label": null,
-            "sourceid": "33",
-            "targetid": "32"
         }
     ],
     "components": {
