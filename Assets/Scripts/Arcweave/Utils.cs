@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Xml;
 using UnityEngine;
 
@@ -68,23 +68,13 @@ namespace AW
 								// ToDo: Add component links too
 								if (dataType == "board") {
 									linkedBoardId = int.Parse(dataId);
-//									// Fetch next element (which should be text)
-//									reader.Read();
-//									if (reader.NodeType != XmlNodeType.Text) {
-//										Debug.LogWarning("[Arcweave] Unexpected node inside board reference: " + reader.NodeType);
-//										break;
-//									}
-//
-//									// Save reference to board name
-//									string boardName = reader.Value;
-//									linkedBoard = boardName;
 								}
 
 								// Color if reader has a data-type attribute
-								if (!string.IsNullOrEmpty(dataType)) {
-									parsedContent += "<color=orange>";
-									inColorTag = true;
-								}
+								//if (!string.IsNullOrEmpty(dataType)) {
+								//	parsedContent += "<color=orange>";
+								//	inColorTag = true;
+								//}
 
 								// Append the content
 								parsedContent += reader.Value;
@@ -100,7 +90,7 @@ namespace AW
 							paragraphCount++;
 						else if (reader.Name == "span") {
 							if (inColorTag) {
-								parsedContent += "</color>";
+								//parsedContent += "</color>";
 								inColorTag = false;
 							}
 						} else if (reader.Name == "root")

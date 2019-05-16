@@ -5,14 +5,23 @@ using UnityEngine;
 using AW;
 
 public class Sample : MonoBehaviour {
-    // The view of this sample
+    // The view of this 
     public SampleViewController viewController;
+    public CanvasGroup loader;
 
     // The project
     public Project project { get; protected set; }
 
     // The test board walker
 	public ProjectRunner runner { get; protected set; }
+
+    /*
+     * Awake the loader.
+     */
+    void Awake()
+    {
+        loader.gameObject.SetActive(true);
+    }
 
 	/*
      * Read the project on start.
@@ -36,7 +45,17 @@ public class Sample : MonoBehaviour {
         // Create the walker
 		runner = new ProjectRunner(project, this);
 		runner.Play(OnElementTriggered);
-        
+
+        // Destroy the Loader
+        const float loadOffDuration = 0.66f;
+        float accum = 0.0f;
+        while (accum < loadOffDuration) {
+            accum += Time.deltaTime;
+            loader.alpha = Mathf.Lerp(1.0f, 0.0f, accum / loadOffDuration);
+            yield return null;
+        }
+        GameObject.Destroy(loader.gameObject);
+
         Debug.LogWarning("Test started!");
     }
 
