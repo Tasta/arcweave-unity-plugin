@@ -11,6 +11,6 @@ namespace AW
      */
     public abstract class IBoardEntry : ScriptableObject
     {
-        public int id;
+        public string id;
     } // interface IBoardEntry
 } // namespace AW

@@ -15,7 +15,7 @@ namespace AW
     public class Element
     {
         // Arcweave imported data
-        public int id;
+        public string id;
         public string title;
         public string content;
         public Component[] components;
@@ -71,7 +71,7 @@ namespace AW
 
             Connection conn = inConnections[connectionIdx];
             try {
-                return project.GetElement(conn.sourceElementIdx);
+                return project.GetElement(conn.sourceElementId);
             } catch (Exception) {
                 return null;
             }
@@ -90,7 +90,7 @@ namespace AW
 
             Connection conn = outConnections[connectionIdx];
             try {
-                return project.GetElement(conn.targetElementIdx);
+                return project.GetElement(conn.targetElementId);
             } catch (Exception) {
                 return null;
             }
@@ -155,15 +155,15 @@ namespace AW
 		 */
 		public void ParseHTML(Project project) {
 			// Parse the title, while looking for the linked board reference
-			int linkedBoardId = -1;
+			string linkedBoardId = null;
 			title = Utils.ParseHTML(title, ref linkedBoardId);
-			if (linkedBoardId != -1) {
+			if (!string.IsNullOrEmpty(linkedBoardId) && linkedBoardId != "null") {
                 Board board = project.GetBoard(linkedBoardId);
 
 				if (board == null) {
 					Debug.LogWarning("[Arcweave] Cannot find linked board of id: " + linkedBoardId);
 				} else {
-					IBoardEntry boardEntry = project.boards[linkedBoardId];
+                    IBoardEntry boardEntry = project.GetBoard(linkedBoardId);
 					if (!(boardEntry is Board)) {
 						Debug.LogWarning("[Arcweave] Board of id " + linkedBoardId + " found but it's a BoardFolder.");
 					} else {

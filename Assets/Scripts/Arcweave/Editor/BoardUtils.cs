@@ -31,7 +31,7 @@ namespace AW.Editor
                 JSONNode child = current.Value;
 
                 // Get its ID
-                int id = int.Parse(current.Key);
+                string id = current.Key;
 
                 bool isFolder = child["children"] != null;
 
@@ -96,7 +96,7 @@ namespace AW.Editor
             JSONArray elementArray = node["elements"].AsArray;
             b.elements = new Element[elementArray.Count];
             for (int i = 0; i < elementArray.Count; i++) {
-                int elementId = elementArray[i].AsInt;
+                string elementId = elementArray[i];
                 Element element = project.GetElement(elementId);
 
                 if (element != null) {

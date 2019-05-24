@@ -17,7 +17,7 @@ namespace AW
 		 * 
 		 * Resolve the |board| reference.
 		 */
-		public static string ParseHTML(string content, ref int linkedBoardId)
+		public static string ParseHTML(string content, ref string linkedBoardId)
 		{
 			if (string.IsNullOrEmpty(content) || content == "null")
 				return content;
@@ -67,8 +67,8 @@ namespace AW
 
 								// ToDo: Add component links too
 								if (dataType == "board") {
-									linkedBoardId = int.Parse(dataId);
-								}
+                                    linkedBoardId = dataId;
+                                }
 
 								// Color if reader has a data-type attribute
 								//if (!string.IsNullOrEmpty(dataType)) {

@@ -144,7 +144,7 @@ public class SampleViewController : MonoBehaviour
 
                 if (string.IsNullOrEmpty(connLabel) || connLabel == "null") {
                     // Fetch label from out node
-                    Element e = sample.project.GetElement(awElement.outConnections[i].targetElementIdx);
+                    Element e = sample.project.GetElement(awElement.outConnections[i].targetElementId);
                     label.text = e.GetTitle();
                 } else {
                     label.text = connLabel;

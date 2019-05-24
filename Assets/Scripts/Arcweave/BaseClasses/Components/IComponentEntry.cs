@@ -12,6 +12,6 @@ namespace AW
     [Serializable]
     public abstract class IComponentEntry : ScriptableObject
     {
-        public int id;
+        public string id;
     } // interface IComponentEntry
 } // namespace AW

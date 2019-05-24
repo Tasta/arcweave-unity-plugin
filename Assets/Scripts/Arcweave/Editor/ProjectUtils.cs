@@ -106,7 +106,7 @@ namespace AW.Editor
 
                 // Read connections
                 EditorUtility.DisplayProgressBar("Arcweave", "Creating connections...", 45.0f);
-                ReadConnections(project, root["connections"].AsArray);
+                ReadConnections(project, root["connections"].AsObject);
 
                 // Read notes
                 EditorUtility.DisplayProgressBar("Arcweave", "Creating notes...", 60.0f);
@@ -137,6 +137,30 @@ namespace AW.Editor
         }
 
         /*
+         * Read attributes from given JSON Class.
+         */
+        private static void ReadAttributes(Project project, JSONClass attributesRoot)
+        {
+            List<Attribute> tmp = new List<Attribute>();
+
+            IEnumerator children = attributesRoot.GetEnumerator();
+            while (children.MoveNext()) {
+                // Get current
+                KeyValuePair<string, JSONNode> current = (children.Current != null) ?
+                    (KeyValuePair<string, JSONNode>)children.Current : default(KeyValuePair<string, JSONNode>);
+                JSONNode child = current.Value;
+
+                Attribute a = new Attribute();
+                a.id = child["id"];
+                a.label = child["label"];
+                a.content = child["content"];
+                tmp.Add(a);
+            }
+
+            project.attributes = tmp.ToArray();
+        }
+
+        /*
          * Read components from given JSON Class.
          */
         private static void ReadComponents(Project project, JSONClass componentRoot, string projectPath)
@@ -153,8 +177,7 @@ namespace AW.Editor
                 JSONNode child = current.Value;
 
                 // Get its ID
-                int id = int.Parse(current.Key);
-
+                string id = current.Key;
                 bool isFolder = child["children"] != null;
 
                 if (isFolder) {
@@ -167,7 +190,7 @@ namespace AW.Editor
                     // Async operation because it might load images
                     Component component = ScriptableObject.CreateInstance<Component>();
                     component.id = id;
-                    ReadComponent(component, child, projectPath);
+                    ReadComponent(project, component, child, projectPath);
                     entries.Add(component);
                     AssetDatabase.CreateAsset(component, componentPath + component.name + ".asset");
                 }
@@ -196,7 +219,7 @@ namespace AW.Editor
         /*
          * Read component from JSON entry.
          */
-        private static void ReadComponent(Component c, JSONNode root, string projectPath)
+        private static void ReadComponent(Project project, Component c, JSONNode root, string projectPath)
         {
             c.name = root["name"];
 
@@ -213,15 +236,11 @@ namespace AW.Editor
 
             // Load the attributes
             JSONArray attributeArray = root["attributes"].AsArray;
-            List<Attribute> tmp = new List<Attribute>();
+            c.attributes = new Attribute[attributeArray.Count];
             for (int i = 0; i < attributeArray.Count; i++) {
-                Attribute a = new Attribute();
-                a.id = attributeArray[i]["id"].AsInt;
-                a.label = attributeArray[i]["label"];
-                a.content = attributeArray[i]["content"];
-                tmp.Add(a);
+                string attributeID = attributeArray[i];
+                c.attributes[i] = project.GetAttribute(attributeID);
             }
-            c.attributes = tmp.ToArray();
         }
 
         /*
@@ -237,13 +256,10 @@ namespace AW.Editor
                 KeyValuePair<string, JSONNode> current = (children.Current != null) ?
                     (KeyValuePair<string, JSONNode>)children.Current : default(KeyValuePair<string, JSONNode>);
                 JSONNode child = current.Value;
-
-                // Get id
-                int id = int.Parse(current.Key);
-
+                
                 // Create element
                 Element element = new Element();
-                element.id = id;
+                element.id = current.Key;
                 ReadElement(element, project, current.Value);
 
                 // Add
@@ -268,27 +284,15 @@ namespace AW.Editor
             JSONArray componentArray = root["components"].AsArray;
             e.components = new Component[componentArray.Count];
             for (int i = 0; i < componentArray.Count; i++) {
-                int compId = componentArray[i].AsInt;
+                string compId = componentArray[i];
 
-                IComponentEntry cEntry = null;
-                for (int cIdx = 0; cIdx < project.components.Length; cIdx++) {
-                    if (project.components[cIdx].id == compId) {
-                        cEntry = project.components[cIdx];
-                        break;
-                    }
-                }
-
-                if (cEntry == null) {
+                Component c = project.GetComponent(compId);
+                
+                if (c == null) {
                     Debug.LogWarning("[Arcweave] Cannot find component for given id: " + compId);
                     continue;
                 }
 
-                if (!(cEntry is Component)) {
-                    Debug.LogWarning("[Arcweave] Requested component id=" + compId + " found, but not valid.");
-                    continue;
-                }
-
-                Component c = cEntry as Component;
                 e.components[i] = c;
             }
 
@@ -302,19 +306,30 @@ namespace AW.Editor
         /*
          * Read connections from JSON entry.
          */
-        private static void ReadConnections(Project project, JSONArray connectionArray)
+        private static void ReadConnections(Project project, JSONClass root)
         {
-            project.connections = new Connection[connectionArray.Count];
-            for (int i = 0; i < connectionArray.Count; i++) {
-                JSONNode connNode = connectionArray[i];
+            List<Connection> tmp = new List<Connection>();
 
+            IEnumerator children = root.GetEnumerator();
+            while (children.MoveNext()) {
+                // Get current
+                KeyValuePair<string, JSONNode> current = (children.Current != null) ?
+                    (KeyValuePair<string, JSONNode>)children.Current : default(KeyValuePair<string, JSONNode>);
+                JSONNode child = current.Value;
+
+                // Create element
                 Connection c = new Connection();
-                c.label = connNode["label"];
-                c.sourceElementIdx = connNode["sourceid"].AsInt;
-                c.targetElementIdx = connNode["targetid"].AsInt;
+                c.id = current.Key;
+                c.label = child["label"];
+                c.sourceElementId = child["sourceid"];
+                c.targetElementId = child["targetid"];
                 c.AttributeConnections(project);
-                project.connections[i] = c;
+
+                // Add
+                tmp.Add(c);
             }
+
+            project.connections = tmp.ToArray();
         }
 
         /*

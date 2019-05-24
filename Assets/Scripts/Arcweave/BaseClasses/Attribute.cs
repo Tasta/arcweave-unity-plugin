@@ -12,7 +12,7 @@ namespace AW
     public class Attribute
     {
         // Arcweave imported data
-        public int id;
+        public string id;
         public string label;
         public string content;
     } // class Attribute

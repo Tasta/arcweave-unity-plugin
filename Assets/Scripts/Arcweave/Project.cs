@@ -21,6 +21,7 @@ namespace AW
     {    
         [Header("The Arcweave Data")]
         public string project;
+        public Attribute[] attributes;
         public IComponentEntry[] components;
         public Element[] elements;
         public Connection[] connections;
@@ -31,7 +32,7 @@ namespace AW
         [Space(15.0f)]
         [Header("User Preferences")]
         public int startingBoardIdx = 0;
-        public int boardRootId = 0;
+        public string boardRootId = null;
 
         [Space(15.0f)]
         [Header("Editor Preferences")]
@@ -40,7 +41,7 @@ namespace AW
         /*
          * Get board with given id.
          */
-        public Board GetBoard(int id)
+        public Board GetBoard(string id)
         {
             for (int i = 0; i < boards.Length; i++) {
                 if (boards[i].id == id)
@@ -54,7 +55,7 @@ namespace AW
         /*
          * Get board with given name.
          */
-        public Board GetBoard(string boardName)
+        public Board GetBoardByName(string boardName)
         {
             for (int i = 0; i < boards.Length; i++) {
                 if (boards[i].name == boardName)
@@ -79,9 +80,37 @@ namespace AW
         }
 
         /*
+         * Get attribute.
+         */
+        public Attribute GetAttribute(string id)
+        {
+            for (int aIdx = 0; aIdx < attributes.Length; aIdx++) {
+                if (attributes[aIdx].id == id) {
+                    return attributes[aIdx] as Attribute;
+                }
+            }
+
+            return null;
+        }
+
+        /*
+         * Get component.
+         */
+        public Component GetComponent(string id)
+        {
+            for (int cIdx = 0; cIdx < components.Length; cIdx++) {
+                if (components[cIdx].id == id) {
+                    return components[cIdx] as Component;
+                }
+            }
+
+            return null;
+        }
+
+        /*
          * Get element by id.
          */
-        public Element GetElement(int id)
+        public Element GetElement(string id)
         {
             for (int eIdx = 0; eIdx < elements.Length; eIdx++) {
                 if (elements[eIdx].id == id) {

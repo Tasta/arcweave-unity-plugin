@@ -22,7 +22,7 @@ namespace AW
         /*
          * Get element by id.
          */
-        public Element GetElement(int id)
+        public Element GetElement(string id)
         {
             for (int eIdx = 0; eIdx < elements.Length; eIdx++) {
                 if (elements[eIdx].id == id) {

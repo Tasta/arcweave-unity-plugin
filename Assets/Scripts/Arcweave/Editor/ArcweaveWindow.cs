@@ -29,6 +29,7 @@ namespace AW.Editor
             ProjectUtils.ClearProjectFolder();
             if (ArcweaveWindow.Instance != null)
                 ArcweaveWindow.Instance.folderPath = null;
+            Debug.Log("[Arcweave] Project folder cleared.");
         }
 
         // Members
@@ -135,7 +136,7 @@ namespace AW.Editor
                             project = newProject;
                             project.folderPath = newFolderPath;
                             project.startingBoardIdx = 0;
-                            project.boardRootId = -1;
+                            project.boardRootId = newProject.boards[0].elements[0].id;
 
                             // Setup the board names
                             PrecomputeBoardNames();
@@ -180,7 +181,7 @@ namespace AW.Editor
 
             if (newIdx != selectedIdx) {
                 project.startingBoardIdx = newIdx;
-                project.boardRootId = -1;
+                project.boardRootId = null;
                 PrecomputeElementNames(project.boards[project.startingBoardIdx]);
             }
         }
