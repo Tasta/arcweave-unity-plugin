@@ -1,4 +1,3 @@
-using SimpleJSON;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,33 +11,39 @@ namespace AW
     /*
      * An element in the Arcweave context.
      */
+    [Serializable]
     public class Element
     {
         // Arcweave imported data
-        public string title { get; protected set; }
-        public string content { get; protected set; }
-        public List<Component> components { get; protected set; }
-        public Board linkedBoard { get; protected set; }
+        public int id;
+        public string title;
+        public string content;
+        public Component[] components;
+        public Board linkedBoard;
 
-        // Runtime instantiated data
-        public List<Connection> inConnections { get; protected set; }
-        public List<Connection> outConnections { get; protected set; }
-
+        // Computed data
+        public Connection[] inConnections;
+        public Connection[] outConnections;
+        
         /*
          * Basic constructor.
          */
         public Element()
         {
-            inConnections = new List<Connection>();
-            outConnections = new List<Connection>();
+            inConnections = new Connection[0];
+            outConnections = new Connection[0];
         }
 
         /*
          * Add given connection as input.
          */
-        public void AddInConnection(Connection con)
+        public void AddInConnection(Connection conn)
         {
-            inConnections.Add(con);
+            Connection[] old = inConnections;
+            inConnections = new Connection[old.Length + 1];
+            for (int i = 0; i < old.Length; i++)
+                inConnections[i] = old[i];
+            inConnections[old.Length] = conn;
         }
 
         /*
@@ -46,7 +51,11 @@ namespace AW
          */
         public void AddOutConnection(Connection conn)
         {
-            outConnections.Add(conn);
+            Connection[] old = outConnections;
+            outConnections = new Connection[old.Length + 1];
+            for (int i = 0; i < old.Length; i++)
+                outConnections[i] = old[i];
+            outConnections[old.Length] = conn;
         }
 
         /*
@@ -54,15 +63,15 @@ namespace AW
          */
         public Element GetInNeighbour(int connectionIdx, Project project)
         {
-            if (inConnections.Count == 0)
+            if (inConnections.Length == 0)
                 return null;
 
-            if (connectionIdx < 0 || connectionIdx >= inConnections.Count)
+            if (connectionIdx < 0 || connectionIdx >= inConnections.Length)
                 return null;
 
             Connection conn = inConnections[connectionIdx];
             try {
-                return project.elements[conn.sourceElementIdx];
+                return project.GetElement(conn.sourceElementIdx);
             } catch (Exception) {
                 return null;
             }
@@ -73,15 +82,15 @@ namespace AW
          */
         public Element GetOutNeighbour(int connectionIdx, Project project)
         {
-            if (outConnections.Count == 0)
+            if (outConnections.Length == 0)
                 return null;
 
-            if (connectionIdx < 0 || connectionIdx >= outConnections.Count)
+            if (connectionIdx < 0 || connectionIdx >= outConnections.Length)
                 return null;
 
             Connection conn = outConnections[connectionIdx];
             try {
-                return project.elements[conn.targetElementIdx];
+                return project.GetElement(conn.targetElementIdx);
             } catch (Exception) {
                 return null;
             }
@@ -97,14 +106,14 @@ namespace AW
 		 * Return element that acts as root.
 		 */
 		public Element GoBack(Project project) {
-			if (inConnections.Count == 0) {
+			if (inConnections.Length == 0) {
 				Debug.LogWarning("[Arcweave] Cannot GoBack. No inConnections.");
 				return null;
 			}
 
 			Element parent = this;
 			do {
-				if (parent.inConnections.Count == 0)
+				if (parent.inConnections.Length == 0)
 					break;
 
 				string label = parent.inConnections[0].label;
@@ -118,40 +127,26 @@ namespace AW
 			return null;
 		}
 
-
         /*
-         * Read from json.
+         * Get displayable string for this node.
+         * Used when action pointing to it has no label.
+         * Used in Editor Utility.
          */
-        public void FromJSON(JSONNode root, Project project)
+        public string GetTitle()
         {
-			// Read & Parse Title
-            title = root["title"];
-
-			// Read & Parse Content
-            content = root["content"];
-
-            components = new List<Component>();
-            JSONArray componentArray = root["components"].AsArray;
-            for (int i = 0; i < componentArray.Count; i++) {
-                int compId = componentArray[i].AsInt;
-                if (!project.components.ContainsKey(compId)) {
-                    Debug.LogWarning("[Arcweave] Cannot find component for given id: " + compId);
-                    continue;
-                }
-
-                IComponentEntry cEntry = project.components[compId];
-                if (!(cEntry is Component)) {
-                    Debug.LogWarning("[Arcweave] Requested component id=" + compId + " found, but not valid.");
-                    continue;
-                }
-
-                Component c = cEntry as Component;
-                components.Add(c);
-            }
-
-            string linkedBoardID = root["linkedBoard"];
-            if (linkedBoard != null) {
-                Debug.LogWarning("[Arcweave] Linked board became available for reading!");
+            const int maxDisplayChar = 12;
+            if (!string.IsNullOrEmpty(title) && title != "null") {
+                if (title.Length > maxDisplayChar)
+                    return title.Substring(0, maxDisplayChar) + "...";
+                else
+                    return title;
+            } else if (!string.IsNullOrEmpty(content) && content != "null") {
+                if (content.Length > maxDisplayChar)
+                    return content.Substring(0, maxDisplayChar) + "...";
+                else
+                    return content;
+            } else {
+                return "Empty Element";
             }
         }
 
@@ -163,7 +158,9 @@ namespace AW
 			int linkedBoardId = -1;
 			title = Utils.ParseHTML(title, ref linkedBoardId);
 			if (linkedBoardId != -1) {
-				if (!project.boards.ContainsKey(linkedBoardId)) {
+                Board board = project.GetBoard(linkedBoardId);
+
+				if (board == null) {
 					Debug.LogWarning("[Arcweave] Cannot find linked board of id: " + linkedBoardId);
 				} else {
 					IBoardEntry boardEntry = project.boards[linkedBoardId];

@@ -1,4 +1,3 @@
-using SimpleJSON;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,36 +9,30 @@ namespace AW
     /*
      * A connection between two elements in the Arcweave context.
      */
+    [Serializable]
     public class Connection
     {
         // Arcweave imported data
-        public string label { get; protected set; }
-        public int sourceElementIdx { get; protected set; }
-        public int targetElementIdx { get; protected set; }
+        public string label;
+        public int sourceElementIdx;
+        public int targetElementIdx;
 
         /*
-         * Load from json.
+         * Attribute connections
          */
-        public void FromJSON(JSONNode root, Project project)
+        public void AttributeConnections(Project project)
         {
-            // Read data
-            label = root["label"];
-
-			// Read source & target
-            sourceElementIdx = root["sourceid"].AsInt;
-            targetElementIdx = root["targetid"].AsInt;
-
             // Add in connection to element
-            if (project.elements.ContainsKey(targetElementIdx)) {
-                Element target = project.elements[targetElementIdx];
+            Element target = project.GetElement(targetElementIdx);
+            if (target != null) {
                 target.AddInConnection(this);
             } else {
                 Debug.LogWarning("[Arcweave] Cannot find target element of id " + targetElementIdx + ".");
             }
 
             // Add out connection to element
-            if (project.elements.ContainsKey(sourceElementIdx)) {
-                Element source = project.elements[sourceElementIdx];
+            Element source = project.GetElement(sourceElementIdx);
+            if (source != null) {
                 source.AddOutConnection(this);
             } else {
                 Debug.LogWarning("[Arcweave] Cannot find source element of id " + sourceElementIdx + ".");

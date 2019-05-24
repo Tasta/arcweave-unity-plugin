@@ -25,7 +25,7 @@ namespace AW
 		public Board board { get; protected set; }
 
         // Current element
-        public Element current { get; protected set; }
+        public Element current;
 
         // Callback with current element in play
         private UnityAction<Element> onElementTriggered = null;

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,27 +40,31 @@ namespace AW
 			this.runner = runner;
 
 			walkers = new List<BoardWalker>();
-			foreach (var item in project.boards) {
-				if (!(item.Value is Board))
-					continue;
+            for (int i = 0; i < project.boards.Length; i++) {
+                IBoardEntry entry = project.boards[i];
 
-				Board board = item.Value as Board;
-				board.ComputeRoot();
+                if (!(entry is Board))
+                    continue;
 
-				try {
-					BoardWalker walker = new BoardWalker(board, this.project);
-					walkers.Add(walker);
-				} catch (Exception e) {
-					Debug.LogWarning("[Arcweave] Cannot create BoardWalker for Board " + board.name + ".\n" + e.Message);
-				}
-			}
+                Board board = entry as Board;
+                //board.ComputeRoot();
 
+                try {
+                    BoardWalker walker = new BoardWalker(board, this.project);
+                    walkers.Add(walker);
+                } catch (Exception e) {
+                    Debug.LogWarning("[Arcweave] Cannot create BoardWalker for Board " + board.name + ".\n" + e.Message);
+                }
+            }
+            
 			// If there's no walker loaded, bail!
 			if (walkers.Count == 0)
 				throw new Exception("Cannot create ProjectRunner. No board loaded.");
 
-			// ToDo: Maybe identify starting board by some other mechanism
-			active = walkers[0];
+            // Use starting board and root node of that board
+            Board startingBoard = project.boards[project.startingBoardIdx];
+            active = walkers[project.startingBoardIdx];
+            active.current = startingBoard.GetElement(project.boardRootId);
 
 			// Set callbacks to board runners
 			walkers.ForEach(x => x.SetElementCallback(OnBoardCallback));

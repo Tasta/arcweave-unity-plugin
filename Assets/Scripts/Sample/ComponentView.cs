@@ -45,11 +45,9 @@ public class ComponentView : MonoBehaviour {
         title.text = component.name;
         
 		// Populate attributes
-		int i = 0;
-
         //for (int j = 0; j < 3; j++) {
-            foreach (var item in component.attributes) {
-                Attribute attribute = item.Value;
+            for (int i = 0; i < component.attributes.Length; i++) {
+            Attribute attribute = component.attributes[i];
 
                 GameObject obj = GameObject.Instantiate(AttributePrefab, attributeParent);
 
@@ -66,8 +64,6 @@ public class ComponentView : MonoBehaviour {
                 Vector2 size = attributeRT.sizeDelta;
                 size.y = height;
                 attributeRT.sizeDelta = size;
-
-                i++;
             }
         //}
 

@@ -78,8 +78,8 @@ public class SampleViewController : MonoBehaviour
         }
 
         // Set new ones, if necessary
-        if (awElement.components.Count > 0) {
-            for (int i = 0; i < awElement.components.Count; i++) {
+        if (awElement.components.Length > 0) {
+            for (int i = 0; i < awElement.components.Length; i++) {
                 GameObject compObj = GameObject.Instantiate(ComponentPrefab, componentLayout.transform);
                 compObj.SetActive(true);
 
@@ -129,19 +129,26 @@ public class SampleViewController : MonoBehaviour
         }
 
         // Enable/Disable action parent
-        bool hasActions = awElement.outConnections.Count > 0;
+        bool hasActions = awElement.outConnections.Length > 0;
         actionLayout.gameObject.SetActive(hasActions);
 
         // Set new ones, if necessary
         if (hasActions) {
             // Put the action
-            for (int i = 0; i < awElement.outConnections.Count; i++) {
+            for (int i = 0; i < awElement.outConnections.Length; i++) {
                 GameObject actionObj = GameObject.Instantiate(ActionPrefab, actionLayout.transform);
                 
                 // Set text
                 string connLabel = awElement.outConnections[i].label;
                 Text label = actionObj.transform.Find("Text").GetComponent<Text>();
-                label.text = (string.IsNullOrEmpty(connLabel) || connLabel == "null") ? "Proceed" : connLabel;
+
+                if (string.IsNullOrEmpty(connLabel) || connLabel == "null") {
+                    // Fetch label from out node
+                    Element e = sample.project.GetElement(awElement.outConnections[i].targetElementIdx);
+                    label.text = e.GetTitle();
+                } else {
+                    label.text = connLabel;
+                }
 
                 // Bind an action to it, to advance the Play.
                 int connIdx = i;
@@ -239,6 +246,11 @@ public class SampleViewController : MonoBehaviour
 
         while (elementStack.Count > 0) {
             Element top = elementStack.Pop();
+
+            if (top.inConnections.Length == 0) {
+                walker.SetCurrent(top);
+                break;
+            }
 
             string label = top.inConnections[0].label;
             if (!string.IsNullOrEmpty(label) && label != "null") {

@@ -39,9 +39,10 @@ public class Sample : MonoBehaviour {
      */
     private IEnumerator Play()
     {
-        project = new Project();
-        yield return project.Read();
-
+        ResourceRequest rr = Resources.LoadAsync("Arcweave/Project");
+        yield return rr;
+        project = rr.asset as Project;
+        
         // Create the walker
 		runner = new ProjectRunner(project, this);
 		runner.Play(OnElementTriggered);

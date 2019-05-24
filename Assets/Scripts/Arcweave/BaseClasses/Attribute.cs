@@ -1,4 +1,3 @@
-using SimpleJSON;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,19 +8,12 @@ namespace AW
     /* 
      * A component Attribute in the Arcweave context.
      */
+    [Serializable]
     public class Attribute
     {
         // Arcweave imported data
-        public string label { get; protected set; }
-        public string content { get; protected set; }
-
-        /*
-         * Load from JSON.
-         */
-        public void FromJSON(JSONNode root)
-        {
-            label = root["label"];
-            content = root["content"];
-        }
+        public int id;
+        public string label;
+        public string content;
     } // class Attribute
 } // namespace AW

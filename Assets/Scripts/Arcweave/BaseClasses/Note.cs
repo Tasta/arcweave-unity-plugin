@@ -1,4 +1,3 @@
-using SimpleJSON;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +11,7 @@ namespace AW
      * Maybe never load them in-game.
      * For now, just load them too in order to have a precise import.
      */
+    [Serializable]
     public class Note
     {
         // Arcweave imported data
@@ -21,17 +21,10 @@ namespace AW
         /*
          * Construct with id, which is read before construction.
          */
-        public Note(string id)
+        public Note(string id, string content)
         {
             this.id = id;
-        }
-
-        /*
-         * Read from json.
-         */
-        public void FromJSON(JSONNode root)
-        {
-            content = root["content"];
+            this.content = content;
         }
     } // class Note
 } // namespace AW
