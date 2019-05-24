@@ -75,7 +75,8 @@ namespace AW.Editor
         public static void ClearProjectFolder()
         {
             string resPath = Application.dataPath + projectResourceFolder;
-            Directory.Delete(resPath, true);
+            if (Directory.Exists(resPath))
+                Directory.Delete(resPath, true);
         }
 
         /*

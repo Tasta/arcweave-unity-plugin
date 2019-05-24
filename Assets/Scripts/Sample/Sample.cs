@@ -43,6 +43,11 @@ public class Sample : MonoBehaviour {
         yield return rr;
         project = rr.asset as Project;
         
+        if (project == null) {
+            Debug.LogWarning("No project found. Please use the Arcweave Utility to import a project.");
+            yield break;
+        }
+
         // Create the walker
 		runner = new ProjectRunner(project, this);
 		runner.Play(OnElementTriggered);
