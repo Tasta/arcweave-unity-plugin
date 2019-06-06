@@ -90,7 +90,15 @@ public class SampleViewController : MonoBehaviour
                 // The component icon
                 Image icon = compObj.transform.Find("Mask/Image").GetComponent<Image>();
                 icon.sprite = awElement.components[i].image;
+                icon.preserveAspect = true;
+
                 // ToDo: Rescale to fit the circle neat and tidy
+                RectTransform iconRT = icon.GetComponent<RectTransform>();
+                RectTransform maskRT = iconRT.parent.GetComponent<RectTransform>();
+                float widthRatio = maskRT.sizeDelta.x / iconRT.sizeDelta.x;
+                float heightRatio = maskRT.sizeDelta.y / iconRT.sizeDelta.y;
+                float minRatio = Mathf.Min(widthRatio, heightRatio);
+                iconRT.localScale = Vector3.one * minRatio;
 
                 // Bind an action to it, to show component description.
                 AW.Component awComponent = awElement.components[i];
