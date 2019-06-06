@@ -56,12 +56,12 @@ public class SampleViewController : MonoBehaviour
         PopulateContent(awElement);
         PopulateActions(awElement);
 
+        // Handle back button in respect of stack status
+        backAction.SetActive(elementStack.Count > 0);
+
         // Force layout recalculations
         LayoutRebuilder.ForceRebuildLayoutImmediate(elementLayout);
         Canvas.ForceUpdateCanvases();
-
-        // Handle back button in respect of stack status
-        backAction.SetActive(elementStack.Count > 0);
 
         // Push this element on stack
         elementStack.Push(awElement);

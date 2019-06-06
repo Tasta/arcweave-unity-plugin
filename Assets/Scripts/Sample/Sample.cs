@@ -53,7 +53,7 @@ public class Sample : MonoBehaviour {
 		runner.Play(OnElementTriggered);
 
         // Destroy the Loader
-        const float loadOffDuration = 0.66f;
+        const float loadOffDuration = 1.25f;
         float accum = 0.0f;
         while (accum < loadOffDuration) {
             accum += Time.deltaTime;

@@ -45,31 +45,25 @@ public class ComponentView : MonoBehaviour {
         title.text = component.name;
         
 		// Populate attributes
-        //for (int j = 0; j < 3; j++) {
-            for (int i = 0; i < component.attributes.Length; i++) {
-            Attribute attribute = component.attributes[i];
+        for (int i = 0; i < component.attributes.Length; i++) {
+        Attribute attribute = component.attributes[i];
 
-                GameObject obj = GameObject.Instantiate(AttributePrefab, attributeParent);
+            GameObject obj = GameObject.Instantiate(AttributePrefab, attributeParent);
 
-                Text label = obj.transform.Find("Name").GetComponent<Text>();
-                Text value = obj.transform.Find("Value").GetComponent<Text>();
+            Text label = obj.transform.Find("Name").GetComponent<Text>();
+            Text value = obj.transform.Find("Value").GetComponent<Text>();
 
-                label.text = attribute.label.ToUpper();
-                value.text = attribute.content;
+            label.text = attribute.label.ToUpper();
+            value.text = attribute.content;
 
-                // Set attribute size manually, because VerticalLayoutGroup fucks up
-                const float spacing = 8;
-                float height = label.preferredHeight + spacing + value.preferredHeight;
-                RectTransform attributeRT = obj.GetComponent<RectTransform>();
-                Vector2 size = attributeRT.sizeDelta;
-                size.y = height;
-                attributeRT.sizeDelta = size;
-            }
-        //}
-
-        // Recompute shit
-        LayoutRebuilder.ForceRebuildLayoutImmediate(attributeParent);
-        Canvas.ForceUpdateCanvases();
+            // Set attribute size manually, because VerticalLayoutGroup fucks up
+            const float spacing = 8;
+            float height = label.preferredHeight + spacing + value.preferredHeight;
+            RectTransform attributeRT = obj.GetComponent<RectTransform>();
+            Vector2 size = attributeRT.sizeDelta;
+            size.y = height;
+            attributeRT.sizeDelta = size;
+        }
 
         // Do show animation
         StartCoroutine(DoViewAnimation(true, null));
