@@ -87,7 +87,6 @@ namespace AW.Editor
             // Asset paths are relative to project folder
             string unityPrjFolder = Application.dataPath.Replace("Assets", "");
             projectFolder = projectFolder.Replace(unityPrjFolder, "");
-            EditorUtility.DisplayProgressBar("Arcweave", "Creating components...", 15.0f);
 
             try {
                 TextAsset projectAsset = AssetDatabase.LoadAssetAtPath<TextAsset>(projectFolder + "/" + projectFileName);
@@ -95,6 +94,10 @@ namespace AW.Editor
                 JSONNode root = JSONNode.Parse(projectContents);
 
                 project.project = root["name"];
+
+                // Read attributes
+                EditorUtility.DisplayProgressBar("Arcweave", "Creating attributes...", 0.0f);
+                ReadAttributes(project, root["attributes"].AsObject);
 
                 // Read components
                 EditorUtility.DisplayProgressBar("Arcweave", "Creating components...", 15.0f);
