@@ -27,8 +27,12 @@ namespace AW.Editor
         static void ClearProject()
         {
             ProjectUtils.ClearProjectFolder();
-            if (ArcweaveWindow.Instance != null)
+            if (ArcweaveWindow.Instance != null) {
                 ArcweaveWindow.Instance.folderPath = null;
+                ArcweaveWindow.Instance.project = null;
+                ArcweaveWindow.Instance.Repaint();
+            }
+                
             Debug.Log("[Arcweave] Project folder cleared.");
         }
 
