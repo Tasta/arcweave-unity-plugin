@@ -89,7 +89,11 @@ namespace AW.Editor
             projectFolder = projectFolder.Replace(unityPrjFolder, "");
 
             try {
-                TextAsset projectAsset = AssetDatabase.LoadAssetAtPath<TextAsset>(projectFolder + "/" + projectFileName);
+                string fullPrjPath = projectFolder + "/" + projectFileName;
+                TextAsset projectAsset = AssetDatabase.LoadAssetAtPath<TextAsset>(fullPrjPath);
+                if (projectAsset == null)
+                    throw new Exception("No project asset found at " + fullPrjPath + ".");
+
                 string projectContents = Encoding.UTF8.GetString(projectAsset.bytes);
                 JSONNode root = JSONNode.Parse(projectContents);
 
