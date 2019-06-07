@@ -39,7 +39,7 @@ namespace AW
         public string folderPath = null;
 
         // Timestamp of Arcweave Project JSON that generated this
-        [HideInInspector] public DateTime sourceTimestamp;
+        [HideInInspector] public long sourceTimestamp;
 
         /*
          * Get board with given id.

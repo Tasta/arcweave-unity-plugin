@@ -83,7 +83,7 @@ namespace AW.Editor
                 if (project != null) {
                     // Check if timestamp changed
                     FileInfo prjFile = new FileInfo(project.folderPath + "/" + ProjectUtils.projectFileName);
-                    if (prjFile.Exists && prjFile.LastWriteTimeUtc != project.sourceTimestamp) {
+                    if (prjFile.Exists && prjFile.LastWriteTimeUtc.ToBinary() != project.sourceTimestamp) {
                         // Some space
                         for (int i = 0; i < 5; i++)
                             EditorGUILayout.Space();
@@ -177,7 +177,7 @@ namespace AW.Editor
                             PrecomputeElementNames(main);
 
                             // Setup the project file timestamp
-                            project.sourceTimestamp = projectFileInfo.LastWriteTimeUtc;
+                            project.sourceTimestamp = projectFileInfo.LastWriteTimeUtc.ToBinary();
 
                             // Save project asset
                             string projectPath = "Assets" + ProjectUtils.projectResourceFolder + "Project.asset";
@@ -264,7 +264,9 @@ namespace AW.Editor
             EditorGUILayout.LabelField("Project sources are newer than the generated Arcweave data.", Resources.styles.refreshWarningLabelStyle);
             if (GUILayout.Button("Refresh")) {
                 if (ProjectUtils.ReadProject(project, project.folderPath)) {
-                    project.sourceTimestamp = newTimestamp;
+                    project.sourceTimestamp = newTimestamp.ToBinary();
+                    EditorUtility.SetDirty(project);
+                    AssetDatabase.SaveAssets();
                 }
             }
         }
