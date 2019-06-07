@@ -116,7 +116,7 @@ public class ComponentView : MonoBehaviour {
         startPos.x = show ? xDelta : 0.0f;
         endPos.x = show ? 0.0f : xDelta;
 
-        const float duration = 0.66f;
+        const float duration = 0.33f;
         float accum = 0.0f;
 
         RectTransform self = GetComponent<RectTransform>();
