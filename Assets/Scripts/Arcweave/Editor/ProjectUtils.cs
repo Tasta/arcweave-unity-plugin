@@ -158,7 +158,7 @@ namespace AW.Editor
                 JSONNode child = current.Value;
 
                 Attribute a = new Attribute();
-                a.id = child["id"];
+                a.id = current.Key;
                 a.label = child["label"];
                 a.content = child["content"];
                 tmp.Add(a);
