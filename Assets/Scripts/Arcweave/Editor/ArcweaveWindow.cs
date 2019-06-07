@@ -80,20 +80,33 @@ namespace AW.Editor
                 // Handle Project path
                 HandleProjectFolderSelector();
 
-                EditorGUILayout.Separator();
-                EditorGUILayout.Separator();
-                EditorGUILayout.Separator();
+                if (project != null) {
+                    // Check if timestamp changed
+                    FileInfo prjFile = new FileInfo(project.folderPath + "/" + ProjectUtils.projectFileName);
+                    if (prjFile.Exists && prjFile.LastWriteTimeUtc != project.sourceTimestamp) {
+                        // Some space
+                        for (int i = 0; i < 5; i++)
+                            EditorGUILayout.Space();
 
-                if (project != null && project.startingBoardIdx != -1) {
-                    // Hint
-                    const string selectionHint = "This section is for assigning the starting board, and the starting node for each board.";
-                    EditorGUILayout.LabelField(selectionHint, Resources.styles.folderLabelStyle);
+                        // Handle project refresh
+                        HandleProjectRefresh(project, prjFile.LastWriteTimeUtc);
+                    }
 
-                    // Handle Board Selection
-                    HandleStartingBoard(project);
+                    // Handle board and root element selection
+                    if (project.startingBoardIdx != -1) {
+                        for (int i = 0; i < 5; i++)
+                            EditorGUILayout.Space();
 
-                    // Handle Root Node Selection
-                    HandleStartingRoot(project);
+                        // Hint
+                        const string selectionHint = "This section is for assigning the starting board, and the starting node for each board.";
+                        EditorGUILayout.LabelField(selectionHint, Resources.styles.folderLabelStyle);
+
+                        // Handle Board Selection
+                        HandleStartingBoard(project);
+
+                        // Handle Root Node Selection
+                        HandleStartingRoot(project);
+                    }
                 }
             } catch (Exception e) {
                 Debug.LogWarning("[Arcweave] Cannot draw plugin settings window: " + e.Message + "\n" + e.StackTrace);
@@ -162,6 +175,9 @@ namespace AW.Editor
                             // Setup the element names
                             Board main = project.boards[project.startingBoardIdx];
                             PrecomputeElementNames(main);
+
+                            // Setup the project file timestamp
+                            project.sourceTimestamp = projectFileInfo.LastWriteTimeUtc;
 
                             // Save project asset
                             string projectPath = "Assets" + ProjectUtils.projectResourceFolder + "Project.asset";
@@ -237,6 +253,19 @@ namespace AW.Editor
             elementNameList = new string[potentialRoots.Count];
             for (int i = 0; i < potentialRoots.Count; i++) {
                 elementNameList[i] = potentialRoots[i].GetTitle();
+            }
+        }
+
+        /*
+         * Handle project refresh button.
+         */
+        private void HandleProjectRefresh(Project project, DateTime newTimestamp)
+        {
+            EditorGUILayout.LabelField("Project sources are newer than the generated Arcweave data.", Resources.styles.refreshWarningLabelStyle);
+            if (GUILayout.Button("Refresh")) {
+                if (ProjectUtils.ReadProject(project, project.folderPath)) {
+                    project.sourceTimestamp = newTimestamp;
+                }
             }
         }
     } // class ArcweaveWindow

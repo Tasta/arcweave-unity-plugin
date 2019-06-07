@@ -22,6 +22,7 @@ namespace AW.Editor
         {
             public GUIStyle folderLabelStyle;
             public GUIStyle boardSelectionLabelStyle;
+            public GUIStyle refreshWarningLabelStyle;
 
             public Styles()
             {
@@ -30,6 +31,10 @@ namespace AW.Editor
 
                 boardSelectionLabelStyle = new GUIStyle("Label");
                 boardSelectionLabelStyle.wordWrap = true;
+
+                refreshWarningLabelStyle = new GUIStyle("Label");
+                refreshWarningLabelStyle.wordWrap = true;
+                refreshWarningLabelStyle.normal.textColor = Color.yellow;
             }
         }
     } // class ArcweaveStyles
