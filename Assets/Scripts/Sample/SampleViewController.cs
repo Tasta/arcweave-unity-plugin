@@ -199,7 +199,7 @@ public class SampleViewController : MonoBehaviour
                 backActionLabel.text = "Back";
 
 				// Bind an action to it, to advance the Play.
-                BindBackBtn(EmergencyBack);
+                BindBackBtn(DefaultBackAction);
 			}
         }
 
@@ -244,30 +244,5 @@ public class SampleViewController : MonoBehaviour
 
         // Clear selection to avoid stupid button remaining selected/highlighted
         EventSystem.current.SetSelectedGameObject(null);
-    }
-
-    private void EmergencyBack()
-    {
-        // Get active BoardWalker
-        BoardWalker walker = sample.runner.active;
-
-        while (elementStack.Count > 0) {
-            Element top = elementStack.Pop();
-
-            if (top.inConnections.Length == 0) {
-                walker.SetCurrent(top);
-                break;
-            }
-
-            string label = top.inConnections[0].label;
-            if (!string.IsNullOrEmpty(label) && label != "null") {
-                // Override in runner, which will repopulate
-                walker.SetCurrent(top.GetInNeighbour(0, sample.project));
-                break;
-            }
-        }
-
-        // Clear selection to avoid stupid button remaining selected/highlighted
-        EventSystem.current = null;
     }
 } // class SampleViewController
