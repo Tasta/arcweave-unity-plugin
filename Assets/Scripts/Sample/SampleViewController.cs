@@ -119,9 +119,8 @@ public class SampleViewController : MonoBehaviour
     {
         // ToDo: Remove "null" comparison when null is properly passed.
         if (string.IsNullOrEmpty(awElement.content) || awElement.content == "null") {
-            elementContent.transform.parent.gameObject.SetActive(false);
+            elementContent.text = "";
         } else {
-            elementContent.transform.parent.gameObject.SetActive(true);
             elementContent.text = awElement.content;
         }
     }
