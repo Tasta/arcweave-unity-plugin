@@ -46,9 +46,9 @@ namespace AW
 					case XmlNodeType.Element:
 						if (reader.Name == "root")
 							break;
-						else if (reader.Name == "b")
+						else if (reader.Name == "b" || reader.Name == "strong")
 							parsedContent += "<b>";
-						else if (reader.Name == "i")
+						else if (reader.Name == "i" || reader.Name == "em")
 							parsedContent += "<i>";
 						else if (reader.Name == "p" && paragraphCount > 0)
 							parsedContent += "\n\n";
@@ -82,9 +82,9 @@ namespace AW
 						}
 						break;
 					case XmlNodeType.EndElement:
-						if (reader.Name == "b")
+						if (reader.Name == "b" || reader.Name == "strong")
 							parsedContent += "</b>";
-						else if (reader.Name == "i")
+						else if (reader.Name == "i" || reader.Name == "em")
 							parsedContent += "</i>";
 						else if (reader.Name == "p")
 							paragraphCount++;
