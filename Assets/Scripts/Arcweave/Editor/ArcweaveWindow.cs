@@ -108,6 +108,20 @@ namespace AW.Editor
             UnityAction<string> onSetFolder = (string currentPath) =>
             {
                 string newFolderPath = EditorUtility.OpenFolderPanel("Project path", currentPath, null);
+
+                // Check that project is inside Unity's Assets
+                DirectoryInfo dir = new DirectoryInfo(newFolderPath);
+                DirectoryInfo assetDir = new DirectoryInfo(Application.dataPath);
+                if (!dir.FullName.Contains(assetDir.FullName)) {
+                    string message = "The Arcweave project must be placed inside Unity's Asset Folder.\n";
+                    message += "Unity Asset Folder: " + assetDir.FullName + "\n";
+                    message += "Selected Folder: " + dir.FullName + "\n";
+                    message += "Please try again.";
+                    EditorUtility.DisplayDialog("Wrong Path", message, "Okay");
+                    return;
+                }
+
+                // Check project file
                 FileInfo projectFileInfo = ProjectUtils.GetProjectFile(newFolderPath);
                 if (projectFileInfo == null) {
                     string message = "Oops... We cannot find the project at the specified path:\n";
