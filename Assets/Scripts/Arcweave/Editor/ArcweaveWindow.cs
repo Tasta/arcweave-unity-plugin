@@ -184,6 +184,7 @@ namespace AW.Editor
                             // Save project asset
                             string projectPath = "Assets" + ProjectUtils.projectResourceFolder + "Project.asset";
                             AssetDatabase.CreateAsset(newProject, projectPath);
+                            EditorUtility.SetDirty(newProject);
                             AssetDatabase.SaveAssets();
                         } else {
                             DestroyImmediate(newProject);
