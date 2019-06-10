@@ -51,7 +51,9 @@ namespace AW.Editor
          */
         public static void ShowSettings()
         {
-            Instance = GetWindow(typeof(ArcweaveWindow), false, "Arcweave") as ArcweaveWindow;
+            // Spawn this window alongside the default Inspector and focus it
+            Type inspectorType = Type.GetType("UnityEditor.InspectorWindow,UnityEditor.dll");
+            Instance = GetWindow<ArcweaveWindow>("Arcweave", true, new Type[] { inspectorType });
             Instance.project = AssetDatabase.LoadAssetAtPath<Project>("Assets/Resources/Arcweave/Project.asset");
 
             if (Instance.project != null) {
