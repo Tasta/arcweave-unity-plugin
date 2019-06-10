@@ -54,15 +54,22 @@ namespace AW.Editor
             // Spawn this window alongside the default Inspector and focus it
             Type inspectorType = Type.GetType("UnityEditor.InspectorWindow,UnityEditor.dll");
             Instance = GetWindow<ArcweaveWindow>("Arcweave", true, new Type[] { inspectorType });
-            Instance.project = AssetDatabase.LoadAssetAtPath<Project>("Assets/Resources/Arcweave/Project.asset");
+        }
 
-            if (Instance.project != null) {
+        /*
+         * Populate with items on Awake.
+         */
+        private void Awake()
+        {
+            project = AssetDatabase.LoadAssetAtPath<Project>("Assets/Resources/Arcweave/Project.asset");
+
+            if (project != null) {
                 // Load stuff from the object
-                Instance.folderPath = Instance.project.folderPath;
-                Instance.PrecomputeBoardNames();
+                folderPath = project.folderPath;
+                PrecomputeBoardNames();
 
-                Board main = Instance.project.boards[Instance.project.startingBoardIdx];
-                Instance.PrecomputeElementNames(main);
+                Board main = project.boards[project.startingBoardIdx];
+                PrecomputeElementNames(main);
             }
         }
 
