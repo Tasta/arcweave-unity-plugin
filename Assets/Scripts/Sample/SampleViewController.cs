@@ -23,6 +23,7 @@ public class SampleViewController : MonoBehaviour
 
     [Header("Component Items")]
     [Space(7.0f)]
+    public GameObject componentParent;
     public RectTransform componentLayout;
     public GameObject ComponentPrefab;
     public ComponentView componentView;
@@ -78,6 +79,7 @@ public class SampleViewController : MonoBehaviour
         }
 
         // Set new ones, if necessary
+        componentParent.SetActive(awElement.components.Length > 0);
         if (awElement.components.Length > 0) {
             for (int i = 0; i < awElement.components.Length; i++) {
                 GameObject compObj = GameObject.Instantiate(ComponentPrefab, componentLayout.transform);
