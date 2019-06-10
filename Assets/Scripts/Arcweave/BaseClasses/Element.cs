@@ -22,16 +22,15 @@ namespace AW
         public Board linkedBoard;
 
         // Computed data
-        public Connection[] inConnections;
-        public Connection[] outConnections;
+        [NonSerialized] public List<Connection> inConnections;
+        [NonSerialized] public List<Connection> outConnections;
         
         /*
          * Basic constructor.
          */
         public Element()
         {
-            inConnections = new Connection[0];
-            outConnections = new Connection[0];
+            ResetConnections();
         }
 
         /*
@@ -39,11 +38,7 @@ namespace AW
          */
         public void AddInConnection(Connection conn)
         {
-            Connection[] old = inConnections;
-            inConnections = new Connection[old.Length + 1];
-            for (int i = 0; i < old.Length; i++)
-                inConnections[i] = old[i];
-            inConnections[old.Length] = conn;
+            inConnections.Add(conn);
         }
 
         /*
@@ -51,11 +46,16 @@ namespace AW
          */
         public void AddOutConnection(Connection conn)
         {
-            Connection[] old = outConnections;
-            outConnections = new Connection[old.Length + 1];
-            for (int i = 0; i < old.Length; i++)
-                outConnections[i] = old[i];
-            outConnections[old.Length] = conn;
+            outConnections.Add(conn);
+        }
+
+        /*
+         * Reset connections.
+         */
+        public void ResetConnections()
+        {
+            inConnections = new List<Connection>();
+            outConnections = new List<Connection>();
         }
 
         /*
@@ -63,10 +63,10 @@ namespace AW
          */
         public Element GetInNeighbour(int connectionIdx, Project project)
         {
-            if (inConnections.Length == 0)
+            if (inConnections.Count == 0)
                 return null;
 
-            if (connectionIdx < 0 || connectionIdx >= inConnections.Length)
+            if (connectionIdx < 0 || connectionIdx >= inConnections.Count)
                 return null;
 
             Connection conn = inConnections[connectionIdx];
@@ -82,10 +82,10 @@ namespace AW
          */
         public Element GetOutNeighbour(int connectionIdx, Project project)
         {
-            if (outConnections.Length == 0)
+            if (outConnections.Count == 0)
                 return null;
 
-            if (connectionIdx < 0 || connectionIdx >= outConnections.Length)
+            if (connectionIdx < 0 || connectionIdx >= outConnections.Count)
                 return null;
 
             Connection conn = outConnections[connectionIdx];
@@ -106,14 +106,14 @@ namespace AW
 		 * Return element that acts as root.
 		 */
 		public Element GoBack(Project project) {
-			if (inConnections.Length == 0) {
+			if (inConnections.Count == 0) {
 				Debug.LogWarning("[Arcweave] Cannot GoBack. No inConnections.");
 				return null;
 			}
 
 			Element parent = this;
 			do {
-				if (parent.inConnections.Length == 0)
+				if (parent.inConnections.Count == 0)
 					break;
 
 				string label = parent.inConnections[0].label;

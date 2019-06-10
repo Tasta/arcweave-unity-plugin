@@ -138,13 +138,13 @@ public class SampleViewController : MonoBehaviour
         }
 
         // Enable/Disable action parent
-        bool hasActions = awElement.outConnections.Length > 0;
+        bool hasActions = awElement.outConnections.Count > 0;
         actionLayout.gameObject.SetActive(hasActions);
 
         // Set new ones, if necessary
         if (hasActions) {
             // Put the action
-            for (int i = 0; i < awElement.outConnections.Length; i++) {
+            for (int i = 0; i < awElement.outConnections.Count; i++) {
                 GameObject actionObj = GameObject.Instantiate(ActionPrefab, actionLayout.transform);
                 
                 // Set text

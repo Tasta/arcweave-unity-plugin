@@ -45,8 +45,8 @@ public class ComponentView : MonoBehaviour {
         title.text = component.name;
         
 		// Populate attributes
-        for (int i = 0; i < component.attributes.Length; i++) {
-        Attribute attribute = component.attributes[i];
+        for (int i = 0; i < component.attributes.Count; i++) {
+            Attribute attribute = component.attributes[i];
 
             GameObject obj = GameObject.Instantiate(AttributePrefab, attributeParent);
 

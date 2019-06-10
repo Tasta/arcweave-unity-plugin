@@ -123,6 +123,9 @@ namespace AW.Editor
                 EditorUtility.DisplayProgressBar("Arcweave", "Creating boards...", 75.0f);
                 BoardUtils.ReadBoards(project, root["boards"].AsObject);
 
+                // Re-do the entity linking
+                project.Relink();
+
                 // Resolve references inside elements and connections
                 // Must happen after reading everything, so Arcweave has the referenced elements instantiated.
                 EditorUtility.DisplayProgressBar("Arcweave", "Preprocessing HTML...", 90.0f);
@@ -243,10 +246,10 @@ namespace AW.Editor
 
             // Load the attributes
             JSONArray attributeArray = root["attributes"].AsArray;
-            c.attributes = new Attribute[attributeArray.Count];
+            c.attributeIDs = new string[attributeArray.Count];;
             for (int i = 0; i < attributeArray.Count; i++) {
                 string attributeID = attributeArray[i];
-                c.attributes[i] = project.GetAttribute(attributeID);
+                c.attributeIDs[i] = attributeID;
             }
         }
 
@@ -330,7 +333,6 @@ namespace AW.Editor
                 c.label = child["label"];
                 c.sourceElementId = child["sourceid"];
                 c.targetElementId = child["targetid"];
-                c.AttributeConnections(project);
 
                 // Add
                 tmp.Add(c);

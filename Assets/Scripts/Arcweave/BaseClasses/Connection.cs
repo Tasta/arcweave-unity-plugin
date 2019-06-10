@@ -21,7 +21,7 @@ namespace AW
         /*
          * Attribute connections
          */
-        public void AttributeConnections(Project project)
+        public void Relink(Project project)
         {
             // Add in connection to element
             Element target = project.GetElement(targetElementId);

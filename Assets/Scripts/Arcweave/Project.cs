@@ -42,6 +42,49 @@ namespace AW
         [HideInInspector] public long sourceTimestamp;
 
         /*
+         * Re-establish links inside Entities from serialized IDs.
+         */
+        private void OnEnable()
+        {
+            // 'Cause OnEnable is called right after empty object was created too.
+            if (project != null)
+                Relink();
+        }
+
+        /*
+         * A method to re-establish links of non-ScriptableObjects members.
+         * (components, connections, boards)
+         *
+         * A regular C# class member, like Element, gets serialized.
+         * If the member is referenced by both Board and Project, upon deserialization,
+         * two copies of the same member are created.
+         *
+         * So instead of serializing them as they are, we'll serialize IDs, 
+         * and reestablish the links after deserialization.
+         */
+        public void Relink()
+        {
+            // Handle components
+            for (int i = 0; i < components.Length; i++) {
+                if (!(components[i] is Component))
+                    continue;
+
+                Component c = components[i] as Component;
+                c.RelinkAttributes(this);
+            }
+
+            // Handle connections
+            for (int i = 0; i < elements.Length; i++)
+                elements[i].ResetConnections();
+            for (int i = 0; i < connections.Length; i++)
+                connections[i].Relink(this);
+
+            // Handle boards
+            for (int i = 0; i < boards.Length; i++)
+                boards[i].Relink(this);
+        }
+
+        /*
          * Get board with given id.
          */
         public Board GetBoard(string id)

@@ -81,29 +81,18 @@ namespace AW.Editor
 
             // Notes
             JSONArray noteArray = node["notes"].AsArray;
-            b.notes = new Note[noteArray.Count];
+            b.noteIds = new string[noteArray.Count];
             for (int i = 0; i < noteArray.Count; i++) {
                 string noteID = noteArray[i].Value;
-                Note n = project.GetNote(noteID);
-                if (n != null) {
-                    b.notes[i] = n;
-                } else {
-                    Debug.LogWarning("[Arcweave] Cannot find note " + noteID + " for board " + b.name + ".");
-                }
+                b.noteIds[i] = noteID;
             }
 
             // Elements
             JSONArray elementArray = node["elements"].AsArray;
-            b.elements = new Element[elementArray.Count];
+            b.elementIds = new string[elementArray.Count];
             for (int i = 0; i < elementArray.Count; i++) {
                 string elementId = elementArray[i];
-                Element element = project.GetElement(elementId);
-
-                if (element != null) {
-                    b.elements[i] = element;
-                } else {
-                    Debug.LogWarning("[Arcweave] Cannot find element " + elementId + " for board " + b.name + ".");
-                }
+                b.elementIds[i] = elementId;
             }
         }
 
@@ -115,9 +104,9 @@ namespace AW.Editor
         {
             List<Element> potentialRoots = new List<Element>();
 
-            for (int i = 0; i < board.elements.Length; i++) {
+            for (int i = 0; i < board.elements.Count; i++) {
                 Element e = board.elements[i];
-                if (e.inConnections.Length == 0)
+                if (e.inConnections.Count == 0)
                     potentialRoots.Add(e);
             }
 

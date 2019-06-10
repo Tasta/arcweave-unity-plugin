@@ -16,6 +16,26 @@ namespace AW
     {
         // Arcweave imported data
         public Sprite image;
-        public Attribute[] attributes;
+        public string[] attributeIDs;
+
+        // Populate upon relink
+        [NonSerialized] public List<Attribute> attributes;
+
+        /*
+         * Relink attributes
+         */
+        public void RelinkAttributes(Project prj)
+        {
+            attributes = new List<Attribute>();
+            for (int i = 0; i < attributeIDs.Length; i++) {
+                Attribute a = prj.GetAttribute(attributeIDs[i]);
+                if (a == null) {
+                    Debug.LogWarning("[Arcweave] Cannot find attribute of id: " + attributeIDs[i]);
+                    continue;
+                }
+
+                attributes.Add(a);
+            }
+        }
     } // class Component
 } // namespace AW
