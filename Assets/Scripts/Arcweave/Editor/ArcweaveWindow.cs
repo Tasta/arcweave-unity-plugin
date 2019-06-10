@@ -178,6 +178,9 @@ namespace AW.Editor
                             Board main = project.boards[project.startingBoardIdx];
                             PrecomputeElementNames(main);
 
+                            // Set up first available option for root
+                            project.boardRootId = potentialRoots[0].id;
+
                             // Setup the project file timestamp
                             project.sourceTimestamp = projectFileInfo.LastWriteTimeUtc.ToBinary();
 

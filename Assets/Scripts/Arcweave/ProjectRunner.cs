@@ -47,8 +47,6 @@ namespace AW
                     continue;
 
                 Board board = entry as Board;
-                //board.ComputeRoot();
-
                 try {
                     BoardWalker walker = new BoardWalker(board, this.project);
                     walkers.Add(walker);

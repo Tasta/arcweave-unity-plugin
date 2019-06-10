@@ -16,9 +16,6 @@ namespace AW
         public Note[] notes;
         public Element[] elements;
 
-        // Runtime data
-        public Element root;
-
         /*
          * Get element by id.
          */

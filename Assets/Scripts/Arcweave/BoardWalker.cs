@@ -38,12 +38,6 @@ namespace AW
             this.project = project;
 
 			this.board = board;
-			if (this.board.root == null) {
-				throw new Exception("Board set for running has no valid root.");
-			}
-
-			// Set current from root
-			current = this.board.root;
         }
 
 		/*
