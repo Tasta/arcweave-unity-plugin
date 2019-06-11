@@ -13,7 +13,8 @@ public class ComponentView : MonoBehaviour {
     public Image icon;
 
     [Header("Content")]
-    public RectTransform contentParent;
+    public RectTransform scroll;
+    public VerticalLayoutGroup content;
 	public Text title;
     public RectTransform scroller;
 	public RectTransform attributeParent;
@@ -42,8 +43,28 @@ public class ComponentView : MonoBehaviour {
 
         // Set icon and compute size
         icon.sprite = component.image;
-        if (component.image != null)
+        if (component.image != null) {
+            // Best fit of image into view size
             HandlePictureSize();
+
+            // Enable image slot
+            iconParent.gameObject.SetActive(true);
+
+            // Resize attribute list
+            Vector2 offsetMax = scroll.offsetMax;
+            offsetMax.y = -450.0f;
+            scroll.offsetMax = offsetMax;
+            content.padding.top = 35;
+        } else {
+            // Disable image slot
+            iconParent.gameObject.SetActive(false);
+
+            // Resize attribute list
+            Vector2 offsetMax = scroll.offsetMax;
+            offsetMax.y = -75.0f;
+            scroll.offsetMax = offsetMax;
+            content.padding.top = 0;
+        }
 
         // Set title
         title.text = component.name;
