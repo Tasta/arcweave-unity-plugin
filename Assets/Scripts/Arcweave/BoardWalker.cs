@@ -38,6 +38,7 @@ namespace AW
             this.project = project;
 
 			this.board = board;
+            this.current = project.GetElement(board.rootElementId);
         }
 
 		/*
@@ -73,7 +74,7 @@ namespace AW
 			yield return new WaitForEndOfFrame();
 			yield return new WaitForEndOfFrame();
 
-			if (nextElement.linkedBoard == null) {
+            if (string.IsNullOrEmpty(nextElement.linkedBoardId)) {
 				// Set next element as current
 				current = nextElement;
 
@@ -88,7 +89,7 @@ namespace AW
 
         /*
          * Push the given element as current.
-         * ToDo: Check if this realy is needed, or we add a "Trigger" method to each node
+         * ToDo: Check if this really is needed, or we add a "Trigger" method to each node
          *       and links to the Runner in order to make the Play themselves.
          */
         public void SetCurrent(Element element)

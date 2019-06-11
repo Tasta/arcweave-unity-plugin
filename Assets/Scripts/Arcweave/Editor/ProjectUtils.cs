@@ -136,6 +136,12 @@ namespace AW.Editor
                 for (int i = 0; i < project.connections.Length; i++) {
                     project.connections[i].ParseHTML(project);
                 }
+
+                // Set default roots for boards
+                for (int i = 0; i < project.boards.Length; i++) {
+                    BoardUtils.SetDefaultRoot(project.boards[i]);
+                    EditorUtility.SetDirty(project.boards[i]);
+                }
             } catch (Exception e) {
                 Debug.LogError("[Arcweave] Cannot load project: " + e.Message + "\n" + e.StackTrace);
                 EditorUtility.ClearProgressBar();
@@ -308,8 +314,8 @@ namespace AW.Editor
 
             // Handle linked board tag
             string linkedBoardID = root["linkedBoard"];
-            if (e.linkedBoard != null) {
-                Debug.LogWarning("[Arcweave] Linked board became available for reading!");
+            if (e.linkedBoardId != null) {
+                //Debug.LogWarning("[Arcweave] Linked board became available for reading!");
             }
         }
 

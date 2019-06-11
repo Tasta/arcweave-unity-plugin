@@ -62,7 +62,7 @@ namespace AW
             // Use starting board and root node of that board
             Board startingBoard = project.boards[project.startingBoardIdx];
             active = walkers[project.startingBoardIdx];
-            active.current = startingBoard.GetElement(project.boardRootId);
+            active.current = startingBoard.GetElement(startingBoard.rootElementId);
 
 			// Set callbacks to board runners
 			walkers.ForEach(x => x.SetElementCallback(OnBoardCallback));
@@ -86,14 +86,14 @@ namespace AW
 		 * to their callbacks.
 		 */
 		private void OnBoardCallback(Element element) {
-			if (element.linkedBoard == null) {
+            if (string.IsNullOrEmpty(element.linkedBoardId)) {
 				// Regular flow
 				if (onElementTriggered != null)
 					onElementTriggered(element);
 			} else {
-				BoardWalker nextBoard = walkers.Find(x => x.board == element.linkedBoard);
-				if (nextBoard == null) {
-					Debug.LogWarning("[Arcweave] Cannot find linked board runner for: " + element.linkedBoard.name);
+				BoardWalker nextBoard = walkers.Find(x => x.board.id == element.linkedBoardId);
+                if (nextBoard == null) {
+					Debug.LogWarning("[Arcweave] Cannot find linked board runner for: " + element.linkedBoardId);
 
 					// Fallback to regular flow, pray to god something handles this
 					if (onElementTriggered != null)

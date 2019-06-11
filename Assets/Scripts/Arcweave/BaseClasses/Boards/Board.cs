@@ -16,8 +16,9 @@ namespace AW
         // Arcweave imported data
         public string[] noteIds;
         public string[] elementIds;
+        public string rootElementId;
 
-        // Arcweave imported data
+        // Runtime data
         [NonSerialized] public List<Note> notes;
         [NonSerialized] public List<Element> elements;
         

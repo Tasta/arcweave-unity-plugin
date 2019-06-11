@@ -32,7 +32,6 @@ namespace AW
         [Space(15.0f)]
         [Header("User Preferences")]
         public int startingBoardIdx = 0;
-        public string boardRootId = null;
 
         [Space(15.0f)]
         [Header("Editor Preferences")]

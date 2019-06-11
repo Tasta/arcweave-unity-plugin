@@ -42,7 +42,6 @@ namespace AW.Editor
                     tmpFolders.Add(folder);
                     AssetDatabase.CreateAsset(folder, boardsPath + folder.name + ".asset");
                 } else {
-                    // Async operation because it might load images
                     Board board = ScriptableObject.CreateInstance<Board>();
                     board.id = id;
                     ReadBoard(board, project, child);
@@ -93,6 +92,18 @@ namespace AW.Editor
             for (int i = 0; i < elementArray.Count; i++) {
                 string elementId = elementArray[i];
                 b.elementIds[i] = elementId;
+            }
+        }
+
+        /*
+         * Setup default root for given board.
+         */
+        public static void SetDefaultRoot(Board board)
+        {
+            // Compute potential roots
+            List<Element> potentialRoots = ComputeRoots(board);
+            if (potentialRoots.Count > 0) {
+                board.rootElementId = potentialRoots[0].id;
             }
         }
 

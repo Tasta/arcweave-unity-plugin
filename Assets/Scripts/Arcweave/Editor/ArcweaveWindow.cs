@@ -131,6 +131,9 @@ namespace AW.Editor
             {
                 string newFolderPath = EditorUtility.OpenFolderPanel("Project path", currentPath, null);
 
+                if (string.IsNullOrEmpty(newFolderPath))
+                    return;
+
                 // Check that project is inside Unity's Assets
                 DirectoryInfo dir = new DirectoryInfo(newFolderPath);
                 DirectoryInfo assetDir = new DirectoryInfo(Application.dataPath);
@@ -175,8 +178,7 @@ namespace AW.Editor
                             // Set board
                             project = newProject;
                             project.folderPath = newFolderPath;
-                            project.startingBoardIdx = 0;
-                            project.boardRootId = newProject.boards[0].elements[0].id;
+                            project.startingBoardIdx = 0; 
 
                             // Setup the board names
                             PrecomputeBoardNames();
@@ -184,9 +186,6 @@ namespace AW.Editor
                             // Setup the element names
                             Board main = project.boards[project.startingBoardIdx];
                             PrecomputeElementNames(main);
-
-                            // Set up first available option for root
-                            project.boardRootId = potentialRoots[0].id;
 
                             // Setup the project file timestamp
                             project.sourceTimestamp = projectFileInfo.LastWriteTimeUtc.ToBinary();
@@ -228,8 +227,10 @@ namespace AW.Editor
 
             if (newIdx != selectedIdx) {
                 project.startingBoardIdx = newIdx;
-                project.boardRootId = null;
                 PrecomputeElementNames(project.boards[project.startingBoardIdx]);
+
+                EditorUtility.SetDirty(project);
+                AssetDatabase.SaveAssets();
             }
         }
 
@@ -240,10 +241,17 @@ namespace AW.Editor
         {
             EditorGUILayout.LabelField("Select a root node:");
 
-            Element current = potentialRoots.Find(x => x.id == project.boardRootId);
-            int selectedIdx = (current != null) ? potentialRoots.IndexOf(current) : 0;
+            Board currentBoard = project.boards[project.startingBoardIdx];
+            Element currentRoot = potentialRoots.Find(x => x.id == currentBoard.rootElementId);
+            int selectedIdx = (currentRoot != null) ? potentialRoots.IndexOf(currentRoot) : 0;
+
             int newIdx = EditorGUILayout.Popup(selectedIdx, elementNameList);
-            project.boardRootId = potentialRoots[newIdx].id;
+            if (newIdx != selectedIdx) {
+                currentBoard.rootElementId = potentialRoots[newIdx].id;
+
+                EditorUtility.SetDirty(currentBoard);
+                AssetDatabase.SaveAssets();
+            }
         }
 
         /*

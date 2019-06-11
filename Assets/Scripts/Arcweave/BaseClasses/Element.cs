@@ -19,7 +19,7 @@ namespace AW
         public string title;
         public string content;
         public Component[] components;
-        public Board linkedBoard;
+        public string linkedBoardId;
 
         // Computed data
         [NonSerialized] public List<Connection> inConnections;
@@ -135,14 +135,21 @@ namespace AW
         public string GetTitle()
         {
             const int maxDisplayChar = 12;
+
             if (!string.IsNullOrEmpty(title) && title != "null") {
-                if (title.Length > maxDisplayChar)
-                    return title.Substring(0, maxDisplayChar) + "...";
+                string strippedTitle = title.Replace("<b>", "").Replace("</b>", "");
+                strippedTitle = strippedTitle.Replace("<i>", "").Replace("</i>", "");
+
+                if (strippedTitle.Length > maxDisplayChar)
+                    return strippedTitle.Substring(0, maxDisplayChar) + "...";
                 else
                     return title;
             } else if (!string.IsNullOrEmpty(content) && content != "null") {
+                string strippedContent = content.Replace("<b>", "").Replace("</b>", "");
+                strippedContent = strippedContent.Replace("<i>", "").Replace("</i>", "");
+
                 if (content.Length > maxDisplayChar)
-                    return content.Substring(0, maxDisplayChar) + "...";
+                    return strippedContent.Substring(0, maxDisplayChar) + "...";
                 else
                     return content;
             } else {
@@ -155,22 +162,7 @@ namespace AW
 		 */
 		public void ParseHTML(Project project) {
 			// Parse the title, while looking for the linked board reference
-			string linkedBoardId = null;
 			title = Utils.ParseHTML(title, ref linkedBoardId);
-			if (!string.IsNullOrEmpty(linkedBoardId) && linkedBoardId != "null") {
-                Board board = project.GetBoard(linkedBoardId);
-
-				if (board == null) {
-					Debug.LogWarning("[Arcweave] Cannot find linked board of id: " + linkedBoardId);
-				} else {
-                    IBoardEntry boardEntry = project.GetBoard(linkedBoardId);
-					if (!(boardEntry is Board)) {
-						Debug.LogWarning("[Arcweave] Board of id " + linkedBoardId + " found but it's a BoardFolder.");
-					} else {
-						linkedBoard = boardEntry as Board;
-					}
-				}
-			}
 
 			// Parse the content
 			content = Utils.ParseHTML(content, ref linkedBoardId);
