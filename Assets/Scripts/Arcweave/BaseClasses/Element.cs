@@ -22,6 +22,7 @@ namespace AW
         public string linkedBoardId;
 
         // Computed data
+        [NonSerialized] public Board ownerBoard;
         [NonSerialized] public List<Connection> inConnections;
         [NonSerialized] public List<Connection> outConnections;
         

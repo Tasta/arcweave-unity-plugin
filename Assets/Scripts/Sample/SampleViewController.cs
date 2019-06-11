@@ -246,7 +246,7 @@ public class SampleViewController : MonoBehaviour
         Element newCurrent = elementStack.Pop();
 
         // Override in runner, which will repopulate
-        sample.runner.active.SetCurrent(newCurrent);
+        sample.runner.SetCurrentNode(newCurrent);
 
         // Clear selection to avoid stupid button remaining selected/highlighted
         EventSystem.current.SetSelectedGameObject(null);

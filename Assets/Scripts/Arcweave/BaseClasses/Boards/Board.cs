@@ -47,6 +47,7 @@ namespace AW
                 }
 
                 elements.Add(e);
+                e.ownerBoard = this;
             }
         }
 

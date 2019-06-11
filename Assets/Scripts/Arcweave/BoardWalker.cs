@@ -88,9 +88,7 @@ namespace AW
         }
 
         /*
-         * Push the given element as current.
-         * ToDo: Check if this really is needed, or we add a "Trigger" method to each node
-         *       and links to the Runner in order to make the Play themselves.
+         * Push the given element as current in this walker.
          */
         public void SetCurrent(Element element)
         {

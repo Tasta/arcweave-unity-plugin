@@ -102,7 +102,7 @@ namespace AW
 					// Set next board as active
 					active = nextBoard;
 
-					// Basicly, a refresh to trigger the callback
+					// Basically, a refresh to trigger the callback
 					active.SetCurrent(active.current);
 				}
 			}
@@ -116,5 +116,17 @@ namespace AW
 			// Start transition
 			runner.StartCoroutine(active.Advance(transitionIndex));
 		}
+
+        /*
+         * Used by the back action.
+         */
+        public void SetCurrentNode(Element node)
+        {
+            if (node.ownerBoard != active.board) {
+                active = walkers.Find(x => x.board == node.ownerBoard);
+            }
+
+            active.SetCurrent(node);
+        }
 	} // class ProjectRunner
 } // namespace AW
