@@ -78,6 +78,10 @@ public class SampleViewController : MonoBehaviour
             GameObject.Destroy(child.gameObject);
         }
 
+        // Wrap the ComponentView back
+        if (componentView.isUnwrapped)
+            componentView.OnClose();
+
         // Set new ones, if necessary
         componentParent.SetActive(awElement.components.Length > 0);
         if (awElement.components.Length > 0) {

@@ -19,6 +19,10 @@ public class ComponentView : MonoBehaviour {
 	public RectTransform attributeParent;
 	public GameObject AttributePrefab;
 
+    // A flag to mark when shown
+    public bool isUnwrapped = false;
+    private Coroutine showing = null;
+
     // Maximum image height is the initial one
     private Vector2 frameSize;
 
@@ -66,7 +70,7 @@ public class ComponentView : MonoBehaviour {
         }
 
         // Do show animation
-        StartCoroutine(DoViewAnimation(true, null));
+        showing = StartCoroutine(DoViewAnimation(true, null));
     }
 
     private void HandlePictureSize()
@@ -99,7 +103,7 @@ public class ComponentView : MonoBehaviour {
 	public void OnClose() {
 		ClearAttributes();
 
-        StartCoroutine(DoViewAnimation(false, () =>
+        showing = StartCoroutine(DoViewAnimation(false, () =>
         {
             gameObject.SetActive(false);
         }));
@@ -110,6 +114,11 @@ public class ComponentView : MonoBehaviour {
      */
     public IEnumerator DoViewAnimation(bool show, UnityAction endCallback)
     {
+        isUnwrapped = show;
+
+        if (showing != null)
+            StopCoroutine(showing);
+
         float xDelta = frameSize.x;
 
         Vector2 startPos, endPos;
@@ -134,5 +143,7 @@ public class ComponentView : MonoBehaviour {
 
         if (endCallback != null)
             endCallback();
+
+        showing = null;
     }
 } // class ComponentView
