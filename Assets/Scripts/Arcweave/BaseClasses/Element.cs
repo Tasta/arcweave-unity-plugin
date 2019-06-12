@@ -17,7 +17,9 @@ namespace AW
         // Arcweave imported data
         public string id;
         public string title;
+        public string titleNoStyle;
         public string content;
+        public string contentNoStyle;
         public Component[] components;
         public string linkedBoardId;
 
@@ -133,26 +135,20 @@ namespace AW
          * Used when action pointing to it has no label.
          * Used in Editor Utility.
          */
-        public string GetTitle()
+        public string GetActionLabel()
         {
             const int maxDisplayChar = 12;
 
-            if (!string.IsNullOrEmpty(title) && title != "null") {
-                string strippedTitle = title.Replace("<b>", "").Replace("</b>", "");
-                strippedTitle = strippedTitle.Replace("<i>", "").Replace("</i>", "");
-
-                if (strippedTitle.Length > maxDisplayChar)
-                    return strippedTitle.Substring(0, maxDisplayChar) + "...";
+            if (!string.IsNullOrEmpty(titleNoStyle) && title != "null") {
+                if (titleNoStyle.Length > maxDisplayChar)
+                    return titleNoStyle.Substring(0, maxDisplayChar) + "...";
                 else
-                    return title;
-            } else if (!string.IsNullOrEmpty(content) && content != "null") {
-                string strippedContent = content.Replace("<b>", "").Replace("</b>", "");
-                strippedContent = strippedContent.Replace("<i>", "").Replace("</i>", "");
-
-                if (content.Length > maxDisplayChar)
-                    return strippedContent.Substring(0, maxDisplayChar) + "...";
+                    return titleNoStyle;
+            } else if (!string.IsNullOrEmpty(contentNoStyle) && content != "null") {
+                if (contentNoStyle.Length > maxDisplayChar)
+                    return contentNoStyle.Substring(0, maxDisplayChar) + "...";
                 else
-                    return content;
+                    return contentNoStyle;
             } else {
                 return "Empty Element";
             }
@@ -162,11 +158,13 @@ namespace AW
 		 * Parse the HTML contents and resolve the links.
 		 */
 		public void ParseHTML(Project project) {
-			// Parse the title, while looking for the linked board reference
-			title = Utils.ParseHTML(title, ref linkedBoardId);
+            // Parse the title, while looking for the linked board reference
+            string tmpTitle = title;
+			Utils.ParseHTML(tmpTitle, ref title, ref titleNoStyle, ref linkedBoardId);
 
-			// Parse the content
-			content = Utils.ParseHTML(content, ref linkedBoardId);
+            // Parse the content
+            string tmpContent = content;
+			Utils.ParseHTML(tmpContent, ref content, ref contentNoStyle, ref linkedBoardId);
 		}
     } // class Node
 } // namespace AW

@@ -152,13 +152,13 @@ public class SampleViewController : MonoBehaviour
                 GameObject actionObj = GameObject.Instantiate(ActionPrefab, actionLayout.transform);
                 
                 // Set text
-                string connLabel = awElement.outConnections[i].label;
+                string connLabel = awElement.outConnections[i].labelNoStyle;
                 Text label = actionObj.transform.Find("Text").GetComponent<Text>();
 
                 if (string.IsNullOrEmpty(connLabel) || connLabel == "null") {
                     // Fetch label from out node
                     Element e = sample.project.GetElement(awElement.outConnections[i].targetElementId);
-                    label.text = e.GetTitle();
+                    label.text = e.GetActionLabel();
                 } else {
                     label.text = connLabel;
                 }

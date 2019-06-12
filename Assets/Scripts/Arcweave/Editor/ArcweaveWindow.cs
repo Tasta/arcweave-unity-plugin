@@ -273,7 +273,7 @@ namespace AW.Editor
             potentialRoots = BoardUtils.ComputeRoots(board);
             elementNameList = new string[potentialRoots.Count];
             for (int i = 0; i < potentialRoots.Count; i++) {
-                elementNameList[i] = potentialRoots[i].GetTitle();
+                elementNameList[i] = potentialRoots[i].GetActionLabel();
             }
         }
 

@@ -17,15 +17,16 @@ namespace AW
 		 * 
 		 * Resolve the |board| reference.
 		 */
-		public static string ParseHTML(string content, ref string linkedBoardId)
+		public static void ParseHTML(string content, ref string parsedContent, ref string parsedContentNoStyle, ref string linkedBoardId)
 		{
-			if (string.IsNullOrEmpty(content) || content == "null")
-				return content;
+            if (string.IsNullOrEmpty(content) || content == "null")
+                return;
 
 			// Add the &nbsp HTML entity, and put everything inside a <root> element
 			string nbspRef = "<!DOCTYPE doctypeName [\n   <!ENTITY nbsp \"&#160;\">\n]>";
 			string rootedContent = nbspRef + " <root>" + content + "</root>";
-			string parsedContent = "";
+            parsedContent = "";
+            parsedContentNoStyle = "";
 
 			// Create the XML reader
 			XmlReaderSettings settings = new XmlReaderSettings();
@@ -78,6 +79,7 @@ namespace AW
 
 								// Append the content
 								parsedContent += reader.Value;
+                                parsedContentNoStyle += reader.Value;
 							}
 						}
 						break;
@@ -100,15 +102,13 @@ namespace AW
 						break;
 					case XmlNodeType.Text:
 						parsedContent += reader.Value;
+                        parsedContentNoStyle += reader.Value;
 						break;
 					default:
 						Debug.LogWarning("[Arcweave] Unhandled node: " + reader.NodeType);
 						break;
 				}
 			}
-
-			// Return parsed content
-			return parsedContent;
 		}
 	} // class Utils
 } // namespace Utils

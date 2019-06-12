@@ -15,6 +15,7 @@ namespace AW
         // Arcweave imported data
         public string id;
         public string label;
+        public string labelNoStyle;
         public string sourceElementId;
         public string targetElementId;
 
@@ -45,7 +46,8 @@ namespace AW
 		 */
 		public void ParseHTML(Project project) {
 			string linkedBoardId = null;
-			label = Utils.ParseHTML(label, ref linkedBoardId);
+            string tmpLabel = label;
+			Utils.ParseHTML(tmpLabel, ref label, ref labelNoStyle, ref linkedBoardId);
 		}
     } // class Connection
 } // namespace AW
