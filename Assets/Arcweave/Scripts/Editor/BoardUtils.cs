@@ -126,7 +126,7 @@ namespace AW.Editor
 
             if (potentialRoots.Count == 0) {
                 // Still
-                Debug.LogWarning("[Arcweave] Given board has no elements. Cannot compute root for it.");
+                Debug.LogWarning("[Arcweave] Given board (" + board.name + ") has no elements. Cannot compute root for it.");
             }
 
             return potentialRoots;
