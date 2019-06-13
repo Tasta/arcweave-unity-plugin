@@ -138,13 +138,13 @@ namespace AW
         public string GetActionLabel()
         {
             const int maxDisplayChar = 40;
-
-            if (!string.IsNullOrEmpty(titleNoStyle) && title != "null") {
+            
+            if (!string.IsNullOrEmpty(titleNoStyle) && titleNoStyle != "null") {
                 if (titleNoStyle.Length > maxDisplayChar)
                     return titleNoStyle.Substring(0, maxDisplayChar) + "...";
                 else
                     return titleNoStyle;
-            } else if (!string.IsNullOrEmpty(contentNoStyle) && content != "null") {
+            } else if (!string.IsNullOrEmpty(contentNoStyle) && contentNoStyle != "null") {
                 if (contentNoStyle.Length > maxDisplayChar)
                     return contentNoStyle.Substring(0, maxDisplayChar) + "...";
                 else
