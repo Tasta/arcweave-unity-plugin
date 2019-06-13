@@ -20,6 +20,15 @@ namespace AW.Editor
         public const string projectResourceFolder = "/Resources/Arcweave/";
 
         /*
+         *
+         */
+        public static Project FetchProject()
+        {
+            string projectPath = "Assets" + ProjectUtils.projectResourceFolder + "Project.asset";
+            return AssetDatabase.LoadAssetAtPath<Project>(projectPath) as Project;
+        }
+
+        /*
          * Get project file at given path.
          */
         public static FileInfo GetProjectFile(string path)
@@ -67,16 +76,6 @@ namespace AW.Editor
             // Create other folders
             Directory.CreateDirectory(resPath + "/Components");
             Directory.CreateDirectory(resPath + "/Boards");
-        }
-
-        /*
-         * Clear project classes.
-         */
-        public static void ClearProjectFolder()
-        {
-            string resPath = Application.dataPath + projectResourceFolder;
-            if (Directory.Exists(resPath))
-                Directory.Delete(resPath, true);
         }
 
         /*
@@ -206,7 +205,6 @@ namespace AW.Editor
                 } else {
                     // Async operation because it might load images
                     Component component = ScriptableObject.CreateInstance<Component>();
-                    component.name = id;
                     component.id = id;
                     ReadComponent(project, component, child, projectPath);
                     entries.Add(component);
@@ -240,6 +238,7 @@ namespace AW.Editor
          */
         private static void ReadComponent(Project project, Component c, JSONNode root, string projectPath)
         {
+            c.name = c.id;
             c.realName = root["name"];
 
             // Attempt to load the image
@@ -372,6 +371,40 @@ namespace AW.Editor
             }
 
             project.notes = tmp.ToArray();
+        }
+
+        /*
+         * Destroy project
+         */
+        public static void DestroyProject(Project project)
+        {
+            for (int i = 0; i < project.components.Length; i++) {
+                string path = AssetDatabase.GetAssetPath(project.components[i]);
+                AssetDatabase.DeleteAsset(path);
+            }
+
+            for (int i = 0; i < project.boards.Length; i++) {
+                string path = AssetDatabase.GetAssetPath(project.boards[i]);
+                AssetDatabase.DeleteAsset(path);
+            }
+
+            for (int i = 0; i < project.boardFolders.Length; i++) {
+                string path = AssetDatabase.GetAssetPath(project.boardFolders[i]);
+                AssetDatabase.DeleteAsset(path);
+            }
+
+            string pPath = AssetDatabase.GetAssetPath(project);
+            AssetDatabase.DeleteAsset(pPath);
+        }
+
+        /*
+         * Clear project classes.
+         */
+        public static void ClearProjectFolder()
+        {
+            string resPath = Application.dataPath + projectResourceFolder;
+            if (Directory.Exists(resPath))
+                Directory.Delete(resPath, true);
         }
     } // ProjectUtils
 } // AW.Editor

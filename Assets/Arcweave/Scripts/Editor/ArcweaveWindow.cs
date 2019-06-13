@@ -26,13 +26,22 @@ namespace AW.Editor
         [MenuItem("Component/Arcweave/Reset settings")]
         static void ClearProject()
         {
-            ProjectUtils.ClearProjectFolder();
-            if (ArcweaveWindow.Instance != null) {
-                ArcweaveWindow.Instance.folderPath = null;
-                ArcweaveWindow.Instance.project = null;
-                ArcweaveWindow.Instance.Repaint();
+            if (Instance != null) {
+                if (Instance.project != null) {
+                    ProjectUtils.DestroyProject(Instance.project);
+                    Instance.project = null;
+                }
+
+                Instance.folderPath = null;
+                Instance.Repaint();
+            } else {
+                // Attempt to get a reference of the Project asset itself
+                Project project = ProjectUtils.FetchProject();
+                if (project != null) {
+                    ProjectUtils.DestroyProject(project);
+                }
             }
-                
+
             Debug.Log("[Arcweave] Project folder cleared.");
         }
 
@@ -61,6 +70,7 @@ namespace AW.Editor
          */
         private void Awake()
         {
+            Instance = this;
             project = AssetDatabase.LoadAssetAtPath<Project>("Assets/Resources/Arcweave/Project.asset");
 
             if (project != null) {
