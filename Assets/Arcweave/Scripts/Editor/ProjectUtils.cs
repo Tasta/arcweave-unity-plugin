@@ -201,14 +201,15 @@ namespace AW.Editor
                     folder.id = id;
                     ReadComponentFolder(folder, child);
                     entries.Add(folder);
-                    AssetDatabase.CreateAsset(folder, componentPath + folder.name + ".asset");
+                    AssetDatabase.CreateAsset(folder, componentPath + folder.id + ".asset");
                 } else {
                     // Async operation because it might load images
                     Component component = ScriptableObject.CreateInstance<Component>();
+                    component.name = id;
                     component.id = id;
                     ReadComponent(project, component, child, projectPath);
                     entries.Add(component);
-                    AssetDatabase.CreateAsset(component, componentPath + component.name + ".asset");
+                    AssetDatabase.CreateAsset(component, componentPath + component.id + ".asset");
                 }
             }
 
@@ -237,7 +238,7 @@ namespace AW.Editor
          */
         private static void ReadComponent(Project project, Component c, JSONNode root, string projectPath)
         {
-            c.name = root["name"];
+            c.realName = root["name"];
 
             // Attempt to load the image
             string imgPath = root["image"];

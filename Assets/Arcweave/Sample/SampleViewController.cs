@@ -91,7 +91,7 @@ public class SampleViewController : MonoBehaviour
 
                 // The component label
                 Text label = compObj.transform.Find("Text").GetComponent<Text>();
-                label.text = awElement.components[i].name;
+                label.text = awElement.components[i].realName;
 
                 // The component icon
                 Image icon = compObj.transform.Find("Mask/Image").GetComponent<Image>();

@@ -15,6 +15,7 @@ namespace AW
         : IComponentEntry
     {
         // Arcweave imported data
+        public string realName;
         public Sprite image;
         public string[] attributeIDs;
 

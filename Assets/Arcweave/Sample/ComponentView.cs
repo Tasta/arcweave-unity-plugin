@@ -67,7 +67,7 @@ public class ComponentView : MonoBehaviour {
         }
 
         // Set title
-        title.text = component.name;
+        title.text = component.realName;
         
 		// Populate attributes
         for (int i = 0; i < component.attributes.Count; i++) {
