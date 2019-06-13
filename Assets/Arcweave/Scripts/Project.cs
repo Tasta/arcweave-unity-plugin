@@ -103,7 +103,7 @@ namespace AW
         public Board GetBoardByName(string boardName)
         {
             for (int i = 0; i < boards.Length; i++) {
-                if (boards[i].name == boardName)
+                if (boards[i].realName == boardName)
                     return boards[i] as Board;
             }
             

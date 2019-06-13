@@ -221,7 +221,8 @@ namespace AW.Editor
          */
         private static void ReadComponentFolder(ComponentFolder cf, JSONNode node)
         {
-            cf.name = node["name"];
+            cf.name = cf.id;
+            cf.realName = node["name"];
 
             JSONArray idxArray = node["children"].AsArray;
             if (idxArray.Count == 0)

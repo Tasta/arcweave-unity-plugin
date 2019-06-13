@@ -51,7 +51,7 @@ namespace AW
                     BoardWalker walker = new BoardWalker(board, this.project);
                     walkers.Add(walker);
                 } catch (Exception e) {
-                    Debug.LogWarning("[Arcweave] Cannot create BoardWalker for Board " + board.name + ".\n" + e.Message);
+                    Debug.LogWarning("[Arcweave] Cannot create BoardWalker for Board " + board.realName + ".\n" + e.Message);
                 }
             }
             

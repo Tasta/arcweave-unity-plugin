@@ -13,5 +13,6 @@ namespace AW
     public abstract class IComponentEntry : ScriptableObject
     {
         public string id;
+        public string realName;
     } // interface IComponentEntry
 } // namespace AW

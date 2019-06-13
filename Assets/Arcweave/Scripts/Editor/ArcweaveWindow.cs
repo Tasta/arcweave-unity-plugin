@@ -262,7 +262,7 @@ namespace AW.Editor
             // Get list of boards
             boardNameList = new string[project.boards.Length];
             for (int i = 0; i < project.boards.Length; i++)
-                boardNameList[i] = project.boards[i].name;
+                boardNameList[i] = project.boards[i].realName;
         }
 
         /*

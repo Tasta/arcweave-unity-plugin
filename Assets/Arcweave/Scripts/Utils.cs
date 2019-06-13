@@ -121,7 +121,7 @@ namespace AW
                     }
                 }
             } catch (Exception e) {
-                Debug.LogWarning("[Arcweave] Failed to parse content. (see below)\n" + content);
+                Debug.LogWarning("[Arcweave] Failed to parse content. (see below)\n" + content + "\n" + e.Message);
             }
 		}
 	} // class Utils

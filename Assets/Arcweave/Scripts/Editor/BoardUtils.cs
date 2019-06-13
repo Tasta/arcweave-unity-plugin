@@ -59,7 +59,8 @@ namespace AW.Editor
          */
         private static void ReadBoardFolder(BoardFolder bf, Project project, JSONNode node)
         {
-            bf.name = node["name"];
+            bf.name = bf.id;
+            bf.realName = node["name"];
 
             JSONArray idxArray = node["children"].AsArray;
             if (idxArray.Count == 0)
@@ -76,7 +77,8 @@ namespace AW.Editor
          */
         private static void ReadBoard(Board b, Project project, JSONNode node)
         {
-            b.name = node["name"];
+            b.name = b.id;
+            b.realName = node["name"];
 
             // Notes
             JSONArray noteArray = node["notes"].AsArray;
@@ -126,7 +128,7 @@ namespace AW.Editor
 
             if (potentialRoots.Count == 0) {
                 // Still
-                Debug.LogWarning("[Arcweave] Given board (" + board.name + ") has no elements. Cannot compute root for it.");
+                Debug.LogWarning("[Arcweave] Given board (" + board.realName + ") has no elements. Cannot compute root for it.");
             }
 
             return potentialRoots;
