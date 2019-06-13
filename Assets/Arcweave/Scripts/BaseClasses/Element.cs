@@ -137,7 +137,7 @@ namespace AW
          */
         public string GetActionLabel()
         {
-            const int maxDisplayChar = 12;
+            const int maxDisplayChar = 40;
 
             if (!string.IsNullOrEmpty(titleNoStyle) && title != "null") {
                 if (titleNoStyle.Length > maxDisplayChar)
