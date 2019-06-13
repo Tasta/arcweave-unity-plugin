@@ -160,7 +160,12 @@ public class SampleViewController : MonoBehaviour
                     Element e = sample.project.GetElement(awElement.outConnections[i].targetElementId);
                     label.text = e.GetActionLabel();
                 } else {
-                    label.text = connLabel;
+                    const int maxDisplayChar = 40;
+
+                    if (connLabel.Length > maxDisplayChar)
+                        label.text = connLabel.Substring(0, maxDisplayChar) + "...";
+                    else
+                        label.text = connLabel;
                 }
 
                 // Bind an action to it, to advance the Play.
