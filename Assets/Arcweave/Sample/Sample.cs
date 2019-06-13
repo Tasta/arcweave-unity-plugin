@@ -61,8 +61,6 @@ public class Sample : MonoBehaviour {
             yield return null;
         }
         GameObject.Destroy(loader.gameObject);
-
-        Debug.LogWarning("Test started!");
     }
 
     /*
