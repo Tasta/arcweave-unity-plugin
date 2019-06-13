@@ -166,10 +166,11 @@ namespace AW.Editor
                     (KeyValuePair<string, JSONNode>)children.Current : default(KeyValuePair<string, JSONNode>);
                 JSONNode child = current.Value;
 
+                string unusedBoardId = null; // ToDo: The HTML parser is shit because I have to pass this useless parameter most of the time
                 Attribute a = new Attribute();
                 a.id = current.Key;
-                a.label = child["label"];
-                a.content = child["content"];
+                Utils.ParseHTML(child["label"], ref a.label, ref a.labelNoStyle, ref unusedBoardId);
+                Utils.ParseHTML(child["content"], ref a.content, ref a.contentNoStyle, ref unusedBoardId);
                 tmp.Add(a);
             }
 
