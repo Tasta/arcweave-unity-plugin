@@ -402,9 +402,13 @@ namespace AW.Editor
          */
         public static void ClearProjectFolder()
         {
-            string resPath = Application.dataPath + projectResourceFolder;
-            if (Directory.Exists(resPath))
-                Directory.Delete(resPath, true);
+            try {
+                string resPath = Application.dataPath + projectResourceFolder;
+                if (Directory.Exists(resPath))
+                    Directory.Delete(resPath, true);
+            } catch (Exception e) {
+                Debug.LogWarning("[Arcweave] Could not properly clean up project:\n" + e.Message + "\n" + e.StackTrace);
+            }
         }
     } // ProjectUtils
 } // AW.Editor

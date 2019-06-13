@@ -165,14 +165,14 @@ namespace AW.Editor
                     EditorUtility.DisplayDialog("Arcweave Project missing", message, "Okay");
                 } else {
                     bool generateClasses = true;
-                    if (!ProjectUtils.IsProjectFolderEmpty()) {
+                    Project current = ProjectUtils.FetchProject();
+                    if (current != null) {
                         string message = "Generated Project folder is not empty.\n";
                         message += "Do you wish to proceed?\n";
                         message += "(doing this will delete all contents in Assets/Resources/Arcweave/)";
                         bool continueWithErasing = EditorUtility.DisplayDialog("Directory not empty", message, "Do it", "Nevermind");
                         if (continueWithErasing) {
-                            ProjectUtils.ClearProjectFolder();
-                            ProjectUtils.CreateProjectFolders();
+                            ProjectUtils.DestroyProject(current);
                             generateClasses = true;
                         }
                     }
