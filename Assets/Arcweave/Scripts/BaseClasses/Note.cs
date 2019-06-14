@@ -15,8 +15,8 @@ namespace AW
     public class Note
     {
         // Arcweave imported data
-        public string id { get; protected set; }
-        public string content { get; protected set; }
+        public string id;
+        public string content;
 
         /*
          * Construct with id, which is read before construction.
