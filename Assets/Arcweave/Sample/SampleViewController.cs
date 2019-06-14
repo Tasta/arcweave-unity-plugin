@@ -93,18 +93,26 @@ public class SampleViewController : MonoBehaviour
                 Text label = compObj.transform.Find("Text").GetComponent<Text>();
                 label.text = awElement.components[i].realName;
 
-                // The component icon
-                Image icon = compObj.transform.Find("Mask/Image").GetComponent<Image>();
-                icon.sprite = awElement.components[i].image;
-                icon.preserveAspect = true;
+                // The mask
+                Sprite sprite = awElement.components[i].image;
+                RectTransform mask = compObj.transform.Find("Mask").GetComponent<RectTransform>();
+                mask.gameObject.SetActive(sprite != null);
+                if (sprite != null) {
+                    // The component icon
+                    Image icon = mask.Find("Image").GetComponent<Image>();
+                    icon.sprite = awElement.components[i].image;
+                    icon.SetNativeSize();
 
-                // ToDo: Rescale to fit the circle neat and tidy
-                RectTransform iconRT = icon.GetComponent<RectTransform>();
-                RectTransform maskRT = iconRT.parent.GetComponent<RectTransform>();
-                float widthRatio = maskRT.sizeDelta.x / iconRT.sizeDelta.x;
-                float heightRatio = maskRT.sizeDelta.y / iconRT.sizeDelta.y;
-                float minRatio = Mathf.Min(widthRatio, heightRatio);
-                iconRT.localScale = Vector3.one * minRatio;
+                    if (sprite.texture.width > sprite.texture.height) {
+                        // Scale by height
+                        float scale = mask.rect.height / sprite.texture.height;
+                        icon.transform.localScale = Vector3.one * scale;
+                    } else {
+                        // Scale by width
+                        float scale = mask.rect.width / sprite.texture.width;
+                        icon.transform.localScale = Vector3.one * scale;
+                    }
+                }
 
                 // Bind an action to it, to show component description.
                 AW.Component awComponent = awElement.components[i];
