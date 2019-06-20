@@ -2,7 +2,8 @@
 # Arcweave Unity Plugin
 
 Arcweave Unity Plugin is a boilerplate code for importing Arcweave Projects in Unity and running them.
-
+![How Arcweave looks and feels][Docs/img/readme_picture_1.png]
+![A component view][Docs/img/readme_picture_2.png]
 ## Getting Started
 
 These instructions will get you a sample UI and Arcweave project running inside your Unity project.
@@ -21,6 +22,16 @@ Open Unity and import arcweave-unity-plugin-1.0.unitypackage.
 Assets -> Import Package -> Custom Package...
 ```
 ### The Sample
+
+### What does the sample do?
+
+The sample contains an example UI and controls the Runner that plays the flow in your project.
+You can choose which connections to play and navigate your design to get a look-and-feel of your flow.
+On the right side, you can view the Components that are present in the current Element.
+![The awesome project runner][Docs/img/readme_picture_3.png]
+![Test your flow][Docs/img/readme_picture_4.png]
+
+### What must I do to have it?
 Go to Unity's Project tab and open up the sample scene
 ```
 Assets/Arcweave/Samples/sample_scene.unity
@@ -40,6 +51,8 @@ The loader will generate the Arcweave objects that will be used by Unity at runt
 
 ## Running your own project
 
+### First, export from Arcweave...
+
 Export your project from Arcweave by using the 'Export Project in JSON' option (top-right). It will export an archive.
 
 Unpack this archive and place it anywhere inside Unity's Assets folder.
@@ -52,12 +65,6 @@ Component -> Arcweave -> Settings
 Click 'Setup' and select your newly added folder to generate the runtime for your own project.
 
 After generation is done, you can run your own project inside the sample.
-
-### What does the sample do?
-
-The sample contains an example UI and controls the Runner that plays the flow in your project.
-You can choose which connections to play and navigate your design to get a look-and-feel of your flow.
-On the right side, you can view the Components that are present in the current Element.
 
 ### Boards and Root Elements
 There's no way to mark what board should be the starting board inside Arcweave. That's why, the Arcweave Utility Plugin has a second section, below the project path selection. You can choose there which board you want to be played when you Play the sample.
