@@ -2,8 +2,8 @@
 # Arcweave Unity Plugin
 
 Arcweave Unity Plugin is a boilerplate code for importing Arcweave Projects in Unity and running them.
-![How Arcweave looks and feels][/Docs/img/readme_picture_1.png?raw=true]
-![A component view][/Docs/img/readme_picture_2.png?raw=true]
+[![How Arcweave looks and feels](/Docs/img/readme_picture_1.png?raw=true)]
+[![A component view]([/Docs/img/readme_picture_2.png?raw=true)]
 ## Getting Started
 
 These instructions will get you a sample UI and Arcweave project running inside your Unity project.
