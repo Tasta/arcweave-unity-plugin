@@ -3,8 +3,13 @@
 
 Arcweave Unity Plugin is a boilerplate code for importing Arcweave Projects from [arcweave.com](https://arcweave.com) in Unity and running them.
 
-![How Arcweave looks and feels](/Docs/img/readme_picture_1.png?raw=true)
-![A component view](/Docs/img/readme_picture_2.png?raw=true)
+![Arcweave main flow view](/Docs/img/readme_picture_1.png?raw=true)
+:---:
+Arcweave main flow view 
+
+![Arcweave component view](/Docs/img/readme_picture_2.png?raw=true)
+:---:
+Arcweave component view
 
 ## Getting Started
 
@@ -32,8 +37,12 @@ You can choose which connections to play and navigate your design to get a look-
 On the right side, you can view the Components that are present in the current Element.
 
 ![Test your flow](/Docs/img/readme_picture_4.png?raw=true)
-![The awesome project runner](/Docs/img/readme_picture_3.png?raw=true)
+:---:
+Plugin interactive flow view 
 
+![The awesome project runner](/Docs/img/readme_picture_3.png?raw=true)
+:---:
+Plugin component view 
 
 ### What must I do to have it?
 Go to Unity's Project tab and open up the sample scene
