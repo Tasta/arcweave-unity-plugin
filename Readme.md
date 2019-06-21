@@ -31,8 +31,9 @@ The sample contains an example UI and controls the Runner that plays the flow in
 You can choose which connections to play and navigate your design to get a look-and-feel of your flow.
 On the right side, you can view the Components that are present in the current Element.
 
-![The awesome project runner](/Docs/img/readme_picture_3.png?raw=true)
 ![Test your flow](/Docs/img/readme_picture_4.png?raw=true)
+![The awesome project runner](/Docs/img/readme_picture_3.png?raw=true)
+
 
 ### What must I do to have it?
 Go to Unity's Project tab and open up the sample scene
