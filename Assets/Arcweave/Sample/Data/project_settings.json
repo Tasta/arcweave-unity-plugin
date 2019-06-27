@@ -1,0 +1,494 @@
+{
+    "name": "Treasure Island: The game",
+    "elements": {
+        "08a2961b-0f35-436e-81ef-3562ecf60c81": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>",
+            "content": "\"Please don't steal our spirits!\"",
+            "components": [
+                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
+            ],
+            "linkedBoard": null
+        },
+        "0f89e1cd-d518-4399-9fac-016c61f91ec9": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>",
+            "content": "\"Hey mister!\"",
+            "components": [
+                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
+            ],
+            "linkedBoard": null
+        },
+        "0fbe83cb-a694-44e5-845a-6bc9abab45c6": {
+            "title": "Introductory cutscene",
+            "content": "<p><i>Day, outside a village inn, west England 1850 A.D.<\/i><\/p><span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span> is doing his daily chores at the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"ee0fd612-7316-437f-9852-69f28d08471b\" data-type=\"component\">Admiral Benbow Inn<\/span> when <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span> arrives and demands infomation about a patron, <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"6c6b95ed-08b5-4979-8cc3-a60587635484\" data-type=\"component\">Billy Bones<\/span>.<p>When <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;tries to escape, <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;strikes him with the hilt of his cutlass and he loses consciousness.<\/p><p><i>Fade to Black.<\/i><\/p><p><\/p>",
+            "components": [
+                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0",
+                "d874d473-be11-43c3-a245-78b4772fc8ef"
+            ],
+            "linkedBoard": null
+        },
+        "181a9004-47a1-4449-99ca-3f92ccc79ca3": {
+            "title": "FAILED:&nbsp;<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;sees&nbsp;<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>!",
+            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;catches <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>! Now he will never be able to warn <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"6c6b95ed-08b5-4979-8cc3-a60587635484\" data-type=\"component\">Billy Bones<\/span>!&nbsp;",
+            "components": [
+                "d874d473-be11-43c3-a245-78b4772fc8ef",
+                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
+            ],
+            "linkedBoard": null
+        },
+        "19ee8a0b-ea38-4ed6-a86e-eb88c41351a5": {
+            "title": "Restart game",
+            "content": null,
+            "components": [],
+            "linkedBoard": null
+        },
+        "1b5df9a9-776b-469e-a3ba-8bd8715efb36": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>",
+            "content": "\"What's your name?\"",
+            "components": [
+                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
+            ],
+            "linkedBoard": null
+        },
+        "29e45a30-0df5-4185-8a77-fa6a67040b9b": {
+            "title": "Chapter II",
+            "content": null,
+            "components": [],
+            "linkedBoard": null
+        },
+        "331a3d0f-7349-4e85-8078-4f74d34e3a53": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>",
+            "content": "\"Could you untie me?\"",
+            "components": [
+                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
+            ],
+            "linkedBoard": null
+        },
+        "3d017d4d-9f09-478a-9ecf-4e5ffc688758": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>",
+            "content": "What do you want lad?",
+            "components": [
+                "d874d473-be11-43c3-a245-78b4772fc8ef"
+            ],
+            "linkedBoard": null
+        },
+        "5b43763f-3c05-46ac-917c-5b06f228c228": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span> is distracted!",
+            "content": "<i>[&nbsp;<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;is distracted and looking to find the rum. <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;has about 10 seconds to cut the rope with the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>&nbsp;]<\/i>",
+            "components": [
+                "d874d473-be11-43c3-a245-78b4772fc8ef"
+            ],
+            "linkedBoard": null
+        },
+        "7e686abd-3b37-4e06-a21c-aa485029d8c4": {
+            "title": "Back to <span class=\"mention mention-board\" contenteditable=\"false\" data-id=\"ff896534-18e6-4f78-b9c7-b15ce94827ef\" data-type=\"board\">Main Flow<\/span>",
+            "content": null,
+            "components": [],
+            "linkedBoard": null
+        },
+        "89f7ae58-1c16-410f-b534-cc2b3247a780": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>",
+            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;looks at the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>.&nbsp;",
+            "components": [
+                "3f0ba2ea-fc21-4fb4-a738-85e0a81c12df"
+            ],
+            "linkedBoard": null
+        },
+        "8ec91e4e-e9f1-4b03-8454-ee0a7b757232": {
+            "title": "Game start",
+            "content": null,
+            "components": [],
+            "linkedBoard": null
+        },
+        "a64062f4-1421-4467-936f-2eea1f7a8cf5": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>",
+            "content": "\"Mwahahaha! So that you can scurry away, while i am not looking? Not in a thousand years, lad! Now stay put...\"",
+            "components": [
+                "d874d473-be11-43c3-a245-78b4772fc8ef"
+            ],
+            "linkedBoard": null
+        },
+        "b44c6f75-60df-4071-9ad2-73764f99b77d": {
+            "title": "<span class=\"mention mention-board\" contenteditable=\"false\" data-id=\"e0db0f5e-70f5-4e12-85ee-c13f535cf2bf\" data-type=\"board\">Jim and Black Dog Dialog<\/span>",
+            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;talks to <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;to find out more information about him and perhaps distract him.",
+            "components": [
+                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0",
+                "d874d473-be11-43c3-a245-78b4772fc8ef"
+            ],
+            "linkedBoard": null
+        },
+        "c1bd7fcf-aa6b-4587-9d40-fb7633999e25": {
+            "title": "SUCCESS:&nbsp;<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;cuts the rope",
+            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;manages to free himself and jumps outside from the broken window. Now to find and warn <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"6c6b95ed-08b5-4979-8cc3-a60587635484\" data-type=\"component\">Billy Bones<\/span>&nbsp;that <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;is in town!",
+            "components": [
+                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
+            ],
+            "linkedBoard": null
+        },
+        "d05aff5a-be24-4b51-b4fa-7035d71ea0e3": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>",
+            "content": "\"It's <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>, scoundrel of the 7 seas lad, and this friend of yours, <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"6c6b95ed-08b5-4979-8cc3-a60587635484\" data-type=\"component\">Billy Bones<\/span>&nbsp;will swear by the sound of it before the sun sets today!\"&nbsp;",
+            "components": [
+                "d874d473-be11-43c3-a245-78b4772fc8ef"
+            ],
+            "linkedBoard": null
+        },
+        "d76878a0-4c25-40d6-827c-19c7cbba0fbb": {
+            "title": "Take the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>",
+            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;adds the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>&nbsp;to his inventory.",
+            "components": [
+                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0",
+                "3f0ba2ea-fc21-4fb4-a738-85e0a81c12df"
+            ],
+            "linkedBoard": null
+        },
+        "e0ff1a32-798a-42bd-ab7d-4bad4a48f11d": {
+            "title": "Cutting the rope",
+            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;starts cutting the rope with the&nbsp;<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>. He has about 10 seconds before <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;returns to his position.",
+            "components": [
+                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
+            ],
+            "linkedBoard": null
+        },
+        "f62fc8ce-e96d-4137-bb98-f8062c6a5c89": {
+            "title": "Inside <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"ee0fd612-7316-437f-9852-69f28d08471b\" data-type=\"component\">Admiral Benbow Inn<\/span>",
+            "content": "<p><i>Fade in. <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;regains consciousnes.&nbsp;<\/i><\/p><p><span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span> is standing at the door preventing him from exiting. Jim cannot move as long as he is tied. There is a <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span> lying nearby.<\/p>",
+            "components": [
+                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0",
+                "ee0fd612-7316-437f-9852-69f28d08471b",
+                "3f0ba2ea-fc21-4fb4-a738-85e0a81c12df"
+            ],
+            "linkedBoard": null
+        },
+        "ffc36691-d631-4200-9e8d-0b27bd8ea9fb": {
+            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>",
+            "content": "\"Spirits? Like... Rum? Now that is something interesting, arrr! Let's see where it is, my mouth is getting dry...\"",
+            "components": [
+                "d874d473-be11-43c3-a245-78b4772fc8ef"
+            ],
+            "linkedBoard": null
+        }
+    },
+    "notes": {
+        "31c64423-d448-4d30-9821-9eaa5edb97cd": {
+            "content": "<p>Drag n drop components from the sidebar to attach them as thumbnails inside elements.<\/p>"
+        },
+        "482c85d3-7e00-4487-a3aa-75000e9ad29e": {
+            "content": "<p>Change the color of an element or a note by <strong>right-clicking<\/strong> on it. Try it here!<\/p>"
+        },
+        "86120113-30e1-4606-80b9-f70c164c5b45": {
+            "content": "<p>Create connections between elements by dragging near the border of an element.<\/p>"
+        },
+        "f42f8ddc-0b4f-4d75-8302-60b3181c4d17": {
+            "content": "<p><strong>Welcome to Arcweave!<\/strong><\/p><p>Double click on an empty spot in the workspace to create an element. To edit its title or content just double click on it.<\/p>"
+        },
+        "f554b7de-5aaa-4285-81b2-dcc3e5290a5c": {
+            "content": "<p>Use the <strong>@<\/strong> symbol while writing to mention a component or board.<\/p>"
+        }
+    },
+    "boards": {
+        "abdc0ed4-54d3-4186-b9cb-139b73de19a2": {
+            "name": "Dialogues",
+            "children": [
+                "e0db0f5e-70f5-4e12-85ee-c13f535cf2bf"
+            ]
+        },
+        "d3c5e450-1f03-44d1-8a2b-ab851609501a": {
+            "name": "Root",
+            "root": true,
+            "children": [
+                "ff896534-18e6-4f78-b9c7-b15ce94827ef",
+                "abdc0ed4-54d3-4186-b9cb-139b73de19a2"
+            ]
+        },
+        "e0db0f5e-70f5-4e12-85ee-c13f535cf2bf": {
+            "name": "Jim & Black Dog Dialogue",
+            "notes": [
+                "31c64423-d448-4d30-9821-9eaa5edb97cd"
+            ],
+            "elements": [
+                "0f89e1cd-d518-4399-9fac-016c61f91ec9",
+                "3d017d4d-9f09-478a-9ecf-4e5ffc688758",
+                "1b5df9a9-776b-469e-a3ba-8bd8715efb36",
+                "331a3d0f-7349-4e85-8078-4f74d34e3a53",
+                "a64062f4-1421-4467-936f-2eea1f7a8cf5",
+                "d05aff5a-be24-4b51-b4fa-7035d71ea0e3",
+                "08a2961b-0f35-436e-81ef-3562ecf60c81",
+                "ffc36691-d631-4200-9e8d-0b27bd8ea9fb",
+                "5b43763f-3c05-46ac-917c-5b06f228c228",
+                "7e686abd-3b37-4e06-a21c-aa485029d8c4"
+            ],
+            "connections": [
+                "b7122654-d7a4-47b5-828c-d9d3eab63b87",
+                "991361e7-b2aa-4c20-97f7-6c5fc84603e6",
+                "46cd289e-ab39-4621-bfb5-838132c7bf7c",
+                "7e27c7aa-a130-4e12-be64-9b4c3e551924",
+                "aa6354ae-6c42-4122-97e3-a0b923548570",
+                "f73e8c39-6c27-4dff-8c1a-5a81744ef12c",
+                "e59b326f-9519-4758-9d8d-76ef60608fc7",
+                "2a6edc88-6d8c-4853-9a51-6c5b3df0ff6e",
+                "b0afc1b3-1352-428e-9f72-b6733df8d478"
+            ]
+        },
+        "ff896534-18e6-4f78-b9c7-b15ce94827ef": {
+            "name": "Main Flow",
+            "notes": [
+                "f42f8ddc-0b4f-4d75-8302-60b3181c4d17",
+                "86120113-30e1-4606-80b9-f70c164c5b45",
+                "482c85d3-7e00-4487-a3aa-75000e9ad29e",
+                "f554b7de-5aaa-4285-81b2-dcc3e5290a5c"
+            ],
+            "elements": [
+                "8ec91e4e-e9f1-4b03-8454-ee0a7b757232",
+                "0fbe83cb-a694-44e5-845a-6bc9abab45c6",
+                "b44c6f75-60df-4071-9ad2-73764f99b77d",
+                "e0ff1a32-798a-42bd-ab7d-4bad4a48f11d",
+                "f62fc8ce-e96d-4137-bb98-f8062c6a5c89",
+                "d76878a0-4c25-40d6-827c-19c7cbba0fbb",
+                "181a9004-47a1-4449-99ca-3f92ccc79ca3",
+                "c1bd7fcf-aa6b-4587-9d40-fb7633999e25",
+                "89f7ae58-1c16-410f-b534-cc2b3247a780",
+                "19ee8a0b-ea38-4ed6-a86e-eb88c41351a5",
+                "29e45a30-0df5-4185-8a77-fa6a67040b9b"
+            ],
+            "connections": [
+                "69e22a0e-3e1c-449a-a6bb-00bc1700c1e6",
+                "b4eda740-0c89-4ed6-a026-c17d8c59f4ce",
+                "3173d61d-8bd9-48c1-bb96-4016bf0f7abf",
+                "6ac0bfb1-334e-47af-93f0-ecb32cd620f7",
+                "ef141f32-58c5-4a2d-8214-01c88e88d67b",
+                "dcc5d1ce-999a-4ade-9013-4e481b5bcc1d",
+                "8cfbf8a9-4933-4b7a-8e9c-5742d6cd5bac",
+                "db10e578-4513-4cd7-bd4d-90de258f56ec",
+                "c77dc8a4-9f8a-499b-8ea0-3f55f82cccca",
+                "46fb2f0b-ed70-455a-b6fe-1068c9772c94"
+            ]
+        }
+    },
+    "connections": {
+        "2a6edc88-6d8c-4853-9a51-6c5b3df0ff6e": {
+            "label": null,
+            "sourceid": "ffc36691-d631-4200-9e8d-0b27bd8ea9fb",
+            "targetid": "5b43763f-3c05-46ac-917c-5b06f228c228"
+        },
+        "3173d61d-8bd9-48c1-bb96-4016bf0f7abf": {
+            "label": null,
+            "sourceid": "0fbe83cb-a694-44e5-845a-6bc9abab45c6",
+            "targetid": "f62fc8ce-e96d-4137-bb98-f8062c6a5c89"
+        },
+        "46cd289e-ab39-4621-bfb5-838132c7bf7c": {
+            "label": "These ropes...",
+            "sourceid": "3d017d4d-9f09-478a-9ecf-4e5ffc688758",
+            "targetid": "331a3d0f-7349-4e85-8078-4f74d34e3a53"
+        },
+        "46fb2f0b-ed70-455a-b6fe-1068c9772c94": {
+            "label": null,
+            "sourceid": "c1bd7fcf-aa6b-4587-9d40-fb7633999e25",
+            "targetid": "29e45a30-0df5-4185-8a77-fa6a67040b9b"
+        },
+        "69e22a0e-3e1c-449a-a6bb-00bc1700c1e6": {
+            "label": null,
+            "sourceid": "8ec91e4e-e9f1-4b03-8454-ee0a7b757232",
+            "targetid": "0fbe83cb-a694-44e5-845a-6bc9abab45c6"
+        },
+        "6ac0bfb1-334e-47af-93f0-ecb32cd620f7": {
+            "label": "Try to cut the rope",
+            "sourceid": "d76878a0-4c25-40d6-827c-19c7cbba0fbb",
+            "targetid": "e0ff1a32-798a-42bd-ab7d-4bad4a48f11d"
+        },
+        "7e27c7aa-a130-4e12-be64-9b4c3e551924": {
+            "label": null,
+            "sourceid": "331a3d0f-7349-4e85-8078-4f74d34e3a53",
+            "targetid": "a64062f4-1421-4467-936f-2eea1f7a8cf5"
+        },
+        "8cfbf8a9-4933-4b7a-8e9c-5742d6cd5bac": {
+            "label": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span> is distracted",
+            "sourceid": "e0ff1a32-798a-42bd-ab7d-4bad4a48f11d",
+            "targetid": "c1bd7fcf-aa6b-4587-9d40-fb7633999e25"
+        },
+        "991361e7-b2aa-4c20-97f7-6c5fc84603e6": {
+            "label": "There's rum, you know",
+            "sourceid": "3d017d4d-9f09-478a-9ecf-4e5ffc688758",
+            "targetid": "08a2961b-0f35-436e-81ef-3562ecf60c81"
+        },
+        "aa6354ae-6c42-4122-97e3-a0b923548570": {
+            "label": null,
+            "sourceid": "1b5df9a9-776b-469e-a3ba-8bd8715efb36",
+            "targetid": "d05aff5a-be24-4b51-b4fa-7035d71ea0e3"
+        },
+        "b0afc1b3-1352-428e-9f72-b6733df8d478": {
+            "label": null,
+            "sourceid": "5b43763f-3c05-46ac-917c-5b06f228c228",
+            "targetid": "7e686abd-3b37-4e06-a21c-aa485029d8c4"
+        },
+        "b4eda740-0c89-4ed6-a026-c17d8c59f4ce": {
+            "label": "Talk to <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>",
+            "sourceid": "f62fc8ce-e96d-4137-bb98-f8062c6a5c89",
+            "targetid": "b44c6f75-60df-4071-9ad2-73764f99b77d"
+        },
+        "b7122654-d7a4-47b5-828c-d9d3eab63b87": {
+            "label": null,
+            "sourceid": "0f89e1cd-d518-4399-9fac-016c61f91ec9",
+            "targetid": "3d017d4d-9f09-478a-9ecf-4e5ffc688758"
+        },
+        "c77dc8a4-9f8a-499b-8ea0-3f55f82cccca": {
+            "label": null,
+            "sourceid": "181a9004-47a1-4449-99ca-3f92ccc79ca3",
+            "targetid": "19ee8a0b-ea38-4ed6-a86e-eb88c41351a5"
+        },
+        "db10e578-4513-4cd7-bd4d-90de258f56ec": {
+            "label": "Look at <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>",
+            "sourceid": "f62fc8ce-e96d-4137-bb98-f8062c6a5c89",
+            "targetid": "89f7ae58-1c16-410f-b534-cc2b3247a780"
+        },
+        "dcc5d1ce-999a-4ade-9013-4e481b5bcc1d": {
+            "label": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span> is looking",
+            "sourceid": "e0ff1a32-798a-42bd-ab7d-4bad4a48f11d",
+            "targetid": "181a9004-47a1-4449-99ca-3f92ccc79ca3"
+        },
+        "e59b326f-9519-4758-9d8d-76ef60608fc7": {
+            "label": null,
+            "sourceid": "08a2961b-0f35-436e-81ef-3562ecf60c81",
+            "targetid": "ffc36691-d631-4200-9e8d-0b27bd8ea9fb"
+        },
+        "ef141f32-58c5-4a2d-8214-01c88e88d67b": {
+            "label": "Take <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>",
+            "sourceid": "f62fc8ce-e96d-4137-bb98-f8062c6a5c89",
+            "targetid": "d76878a0-4c25-40d6-827c-19c7cbba0fbb"
+        },
+        "f73e8c39-6c27-4dff-8c1a-5a81744ef12c": {
+            "label": "And you are...",
+            "sourceid": "3d017d4d-9f09-478a-9ecf-4e5ffc688758",
+            "targetid": "1b5df9a9-776b-469e-a3ba-8bd8715efb36"
+        }
+    },
+    "components": {
+        "3f0ba2ea-fc21-4fb4-a738-85e0a81c12df": {
+            "name": "Piece of broken glass",
+            "image": "images\/1539874566_5bc89f06450cb.jpeg",
+            "attributes": [
+                "f4b1411a-f77e-4e57-ad3f-847ce491974a"
+            ]
+        },
+        "6c6b95ed-08b5-4979-8cc3-a60587635484": {
+            "name": "Billy Bones",
+            "attributes": [
+                "5bec9c41-ef84-428f-a0d3-2c39325678c6",
+                "7ee0881c-19ed-431a-9327-50af815f8b09",
+                "18d51897-baa7-4ce2-8317-bba65ac2d652"
+            ]
+        },
+        "73a450c4-0ab4-4119-a0fc-c609af3ee050": {
+            "name": "Antagonists",
+            "children": [
+                "d874d473-be11-43c3-a245-78b4772fc8ef"
+            ]
+        },
+        "75cf4297-90a3-4508-ab16-1fd86145395f": {
+            "name": "Root",
+            "root": true,
+            "children": [
+                "fdfc9a0b-6fa9-4779-9681-9dde62a08e3d",
+                "afef43ea-5abe-4cd1-8ec1-0ae5a0b65798",
+                "b5429f3a-813f-459d-94f8-8b217f9a671b"
+            ]
+        },
+        "7d4ed000-2eeb-443a-ab1a-afa58811318a": {
+            "name": "Allies",
+            "children": [
+                "6c6b95ed-08b5-4979-8cc3-a60587635484"
+            ]
+        },
+        "afef43ea-5abe-4cd1-8ec1-0ae5a0b65798": {
+            "name": "Locations",
+            "children": [
+                "ee0fd612-7316-437f-9852-69f28d08471b"
+            ]
+        },
+        "b5429f3a-813f-459d-94f8-8b217f9a671b": {
+            "name": "Items",
+            "children": [
+                "3f0ba2ea-fc21-4fb4-a738-85e0a81c12df"
+            ]
+        },
+        "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0": {
+            "name": "Jim",
+            "image": "images\/1539874549_5bc89ef50280a.jpeg",
+            "attributes": [
+                "33543e7d-e2f9-49cf-b427-355a9716b66c",
+                "44f56ca3-b67d-4780-9eef-4a27a07b1e74",
+                "746336e1-8c67-48fa-b1bc-3265693015c7"
+            ]
+        },
+        "d874d473-be11-43c3-a245-78b4772fc8ef": {
+            "name": "Black Dog",
+            "image": "images\/1539874554_5bc89efa612e2.jpeg",
+            "attributes": [
+                "9f34ddbd-69b1-492a-8e6b-c5eb01abb71b",
+                "faa47e31-ed24-456b-9ba6-e5278fe241d7"
+            ]
+        },
+        "ee0fd612-7316-437f-9852-69f28d08471b": {
+            "name": "Admiral Benbow Inn",
+            "image": "images\/1539874562_5bc89f0214f70.jpeg",
+            "attributes": [
+                "25e61b27-1c1f-4d82-81cf-7f317e17dfc6"
+            ]
+        },
+        "f3889865-2dd2-49c8-8a79-6c11285c8e1d": {
+            "name": "Player",
+            "children": [
+                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
+            ]
+        },
+        "fdfc9a0b-6fa9-4779-9681-9dde62a08e3d": {
+            "name": "Characters",
+            "children": [
+                "f3889865-2dd2-49c8-8a79-6c11285c8e1d",
+                "7d4ed000-2eeb-443a-ab1a-afa58811318a",
+                "73a450c4-0ab4-4119-a0fc-c609af3ee050"
+            ]
+        }
+    },
+    "attributes": {
+        "18d51897-baa7-4ce2-8317-bba65ac2d652": {
+            "label": "Description",
+            "content": "A tall, strong, heavy, nut-brown man, his tarry pigtail falling over the shoulder of his soiled blue coat. His hands are ragged and scarred, with black, broken nails, and bears a sabre cut across one cheek, a dirty, livid white."
+        },
+        "25e61b27-1c1f-4d82-81cf-7f317e17dfc6": {
+            "label": "Description",
+            "content": "The inn has seen better days: It has been weeks since a single patron has walked in and dust has settled everywhere around the place. The rear window is broken and creaking with the passing wind.&nbsp;<p>The large tables and beer stains everywhere whisper of earlier times, when the inn was full of life and music. Perhaps one day it will regain its former glory.<\/p>"
+        },
+        "33543e7d-e2f9-49cf-b427-355a9716b66c": {
+            "label": "Full name",
+            "content": "Jim Hawkins"
+        },
+        "44f56ca3-b67d-4780-9eef-4a27a07b1e74": {
+            "label": "Age",
+            "content": "15"
+        },
+        "5bec9c41-ef84-428f-a0d3-2c39325678c6": {
+            "label": "Age",
+            "content": "62"
+        },
+        "746336e1-8c67-48fa-b1bc-3265693015c7": {
+            "label": "Bio",
+            "content": "Jim has always dreamt of adventures. Little did he expect that he would embark on one when a vengeful old pirate arrives at his family's inn."
+        },
+        "7ee0881c-19ed-431a-9327-50af815f8b09": {
+            "label": "Nickname",
+            "content": "\"The Captain\""
+        },
+        "9f34ddbd-69b1-492a-8e6b-c5eb01abb71b": {
+            "label": "Age",
+            "content": "52"
+        },
+        "f4b1411a-f77e-4e57-ad3f-847ce491974a": {
+            "label": "Description",
+            "content": "A small piece of glass, probably from when the rear inn window broke from the wind. It looks very sharp."
+        },
+        "faa47e31-ed24-456b-9ba6-e5278fe241d7": {
+            "label": "Description",
+            "content": "A seasoned pirate, tall but fragile, he always wears his trusty cutlass on his belt. His garments are simple and filthy and the stench of alcohol from his unkempt beard can be noticed a mile away.&nbsp;<p>Black Dog has vowed to find and get revenge from his old pirate friend, Billy Bones.<\/p>"
+        }
+    }
+}
