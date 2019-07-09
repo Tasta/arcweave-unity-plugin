@@ -153,3 +153,10 @@ JSON parsing is only used at edit time, when importing a new project.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Support
+
+If you encounter problems in using this plugin, want to give us feedback on it or simply say hi, 
+Write us here: info@email.arcweave.com
+-or-
+Join our Discord here: https://discord.gg/atVXxAK
