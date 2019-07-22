@@ -364,7 +364,7 @@
     "components": {
         "3f0ba2ea-fc21-4fb4-a738-85e0a81c12df": {
             "name": "Piece of broken glass",
-            "image": "images\/1539874566_5bc89f06450cb.jpeg",
+            "image": "images\/1539874566_5bc89f06450cb.png",
             "attributes": [
                 "f4b1411a-f77e-4e57-ad3f-847ce491974a"
             ]
@@ -412,7 +412,7 @@
         },
         "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0": {
             "name": "Jim",
-            "image": "images\/1539874549_5bc89ef50280a.jpeg",
+            "image": "images\/1539874549_5bc89ef50280a.png",
             "attributes": [
                 "33543e7d-e2f9-49cf-b427-355a9716b66c",
                 "44f56ca3-b67d-4780-9eef-4a27a07b1e74",
@@ -421,7 +421,7 @@
         },
         "d874d473-be11-43c3-a245-78b4772fc8ef": {
             "name": "Black Dog",
-            "image": "images\/1539874554_5bc89efa612e2.jpeg",
+            "image": "images\/1539874554_5bc89efa612e2.png",
             "attributes": [
                 "9f34ddbd-69b1-492a-8e6b-c5eb01abb71b",
                 "faa47e31-ed24-456b-9ba6-e5278fe241d7"
@@ -429,7 +429,7 @@
         },
         "ee0fd612-7316-437f-9852-69f28d08471b": {
             "name": "Admiral Benbow Inn",
-            "image": "images\/1539874562_5bc89f0214f70.jpeg",
+            "image": "images\/1539874562_5bc89f0214f70.png",
             "attributes": [
                 "25e61b27-1c1f-4d82-81cf-7f317e17dfc6"
             ]
