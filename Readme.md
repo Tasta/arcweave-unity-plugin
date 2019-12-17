@@ -24,7 +24,7 @@ These instructions will get you a sample UI and Arcweave project running inside 
 
 ### Installing
 
-Open Unity and import arcweave-unity-plugin-1.0.unitypackage. 
+Open Unity and import arcweave-unity-plugin-1.1.unitypackage. 
 ```
 Assets -> Import Package -> Custom Package...
 ```
