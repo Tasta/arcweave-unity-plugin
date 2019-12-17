@@ -87,6 +87,12 @@ namespace AW.Editor
             string unityPrjFolder = Application.dataPath.Replace("Assets", "");
             projectFolder = projectFolder.Replace(unityPrjFolder, "");
 
+            // Ensure the target folder is empty, and exists.
+            if (!IsProjectFolderEmpty()) {
+                ClearProjectFolder();
+                CreateProjectFolders();
+            }
+
             try {
                 string fullPrjPath = projectFolder + "/" + projectFileName;
                 TextAsset projectAsset = AssetDatabase.LoadAssetAtPath<TextAsset>(fullPrjPath);
