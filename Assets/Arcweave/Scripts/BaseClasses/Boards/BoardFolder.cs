@@ -12,6 +12,6 @@ namespace AW
         : IBoardEntry
     {
         // Arcweave imported data
-        public int[] childIds;
+        public string[] childIds;
     } // class BoardFolder
 } // namespace AW

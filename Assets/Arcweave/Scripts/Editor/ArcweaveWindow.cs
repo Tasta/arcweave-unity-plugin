@@ -51,7 +51,8 @@ namespace AW.Editor
         private Project project = null;
 
         // Precomputed lists of boards and elements
-        private string[] boardNameList;
+        private string[] boardIDs;
+        private string[] boardPaths;
         private List<Element> potentialRoots;
         private string[] elementNameList;
 
@@ -233,11 +234,13 @@ namespace AW.Editor
             EditorGUILayout.LabelField("Select a board:");
 
             int selectedIdx = project.startingBoardIdx;
-            int newIdx = EditorGUILayout.Popup(selectedIdx, boardNameList);
+            int newIdx = EditorGUILayout.Popup(selectedIdx, boardPaths);
 
             if (newIdx != selectedIdx) {
                 project.startingBoardIdx = newIdx;
-                PrecomputeElementNames(project.boards[project.startingBoardIdx]);
+
+                Board board = project.GetBoard(boardIDs[newIdx]);
+                PrecomputeElementNames(board);
 
                 EditorUtility.SetDirty(project);
                 AssetDatabase.SaveAssets();
@@ -269,10 +272,12 @@ namespace AW.Editor
          */
         private void PrecomputeBoardNames()
         {
-            // Get list of boards
-            boardNameList = new string[project.boards.Length];
-            for (int i = 0; i < project.boards.Length; i++)
-                boardNameList[i] = project.boards[i].realName;
+            List<string> boardIDs = new List<string>();
+            List<string> boardPaths = new List<string>();
+            ProjectUtils.GetBoardsFullPaths(project, boardIDs, boardPaths);
+
+            this.boardIDs = boardIDs.ToArray();
+            this.boardPaths = boardPaths.ToArray();
         }
 
         /*

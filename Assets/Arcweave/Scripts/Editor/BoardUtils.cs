@@ -62,14 +62,14 @@ namespace AW.Editor
             bf.name = bf.id;
             bf.realName = node["name"];
 
-            JSONArray idxArray = node["children"].AsArray;
-            if (idxArray.Count == 0)
+            JSONArray hashArray = node["children"].AsArray;
+            if (hashArray.Count == 0)
                 return;
 
-            bf.childIds = new int[idxArray.Count];
+            bf.childIds = new string[hashArray.Count];
 
-            for (int i = 0; i < idxArray.Count; i++)
-                bf.childIds[i] = idxArray[i].AsInt;
+            for (int i = 0; i < hashArray.Count; i++)
+                bf.childIds[i] = hashArray[i];
         }
 
         /*

@@ -416,5 +416,44 @@ namespace AW.Editor
                 Debug.LogWarning("[Arcweave] Could not properly clean up project:\n" + e.Message + "\n" + e.StackTrace);
             }
         }
+
+        /*
+         * Return a list of board full paths, in the Arcweave hierarchy context.
+         */
+        public static void GetBoardsFullPaths(Project project, List<string> IDs, List<string> paths) {
+            BoardFolder root = project.GetRootBoardFolder();
+            if (root == null) {
+                Debug.LogWarning("[Arcweave] Cannot find root board. Maybe the exported json is corrupted, or the format has changed.");
+                return;
+            }
+
+            // Do first depth iteration here to skip appending "Root" to all paths
+            for (int i = 0; i < root.childIds.Length; i++) {
+                IBoardEntry child = project.GetBoardEntry(root.childIds[i]);
+                BoardHierarchyWalker(project, child, "", IDs, paths);
+            }
+        }
+
+        /*
+         * Recursive static function to iterate over the Board Folder hierarchy and build two lists.
+         * IDs list contains the Hash IDs of the resulting boards, while paths contain the computed Hierachy paths, as they were in Arcweave.
+         */
+        public static void BoardHierarchyWalker(Project project, IBoardEntry entry, string prefix, List<string> IDs, List<string> paths) {
+            if (entry is Board) {
+                Board b = entry as Board;
+                IDs.Add(b.id);
+                paths.Add(prefix + b.realName);
+            } else if (entry is BoardFolder) {
+                BoardFolder bf = entry as BoardFolder;
+                string newPrefix = prefix + bf.realName + "/";
+                
+                for (int i = 0; i < bf.childIds.Length; i++) {
+                    IBoardEntry child = project.GetBoardEntry(bf.childIds[i]);
+                    BoardHierarchyWalker(project, child, newPrefix, IDs, paths);
+                }
+            } else {
+                Debug.LogWarning("[Arcweave] Unexpected type of board entry: " + entry);
+            }
+        }
     } // ProjectUtils
 } // AW.Editor

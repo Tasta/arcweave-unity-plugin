@@ -84,6 +84,35 @@ namespace AW
         }
 
         /*
+         * Get root board folder.
+         */
+        public BoardFolder GetRootBoardFolder() {
+            for (int i = 0; i < boardFolders.Length; i++) {
+                if (boardFolders[i].realName == "Root")
+                    return boardFolders[i];
+            }
+
+            return null;
+        }
+
+        /*
+         * Get a board entry by it's id.
+         * Looks in both Boards and BoardFolders.
+         */
+        public IBoardEntry GetBoardEntry(string hashID) {
+            IBoardEntry entry = GetBoard(hashID);
+            if (entry != null)
+                return entry;
+
+            for (int i = 0; i < boardFolders.Length; i++) {
+                if (boardFolders[i].id == hashID)
+                    return boardFolders[i];
+            }
+
+            return null;
+        }
+
+        /*
          * Get board with given id.
          */
         public Board GetBoard(string id)
@@ -93,7 +122,6 @@ namespace AW
                     return boards[i] as Board;
             }
 
-            Debug.LogWarning("[Arcweave] Cannot find board with given id: " + id);
             return null;
         }
 
