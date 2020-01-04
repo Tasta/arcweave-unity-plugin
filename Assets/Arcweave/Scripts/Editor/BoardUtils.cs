@@ -63,8 +63,10 @@ namespace AW.Editor
             bf.realName = node["name"];
 
             JSONArray hashArray = node["children"].AsArray;
-            if (hashArray.Count == 0)
+            if (hashArray.Count == 0) {
+                bf.childIds = new string[0];
                 return;
+            }
 
             bf.childIds = new string[hashArray.Count];
 
