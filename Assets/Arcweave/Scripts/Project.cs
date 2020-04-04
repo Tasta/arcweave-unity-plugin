@@ -127,6 +127,16 @@ namespace AW
         }
 
         /*
+         * Get index of given board.
+         */
+        public int GetBoardIndex(Board b) {
+            for (int i = 0; i < boards.Length; i++)
+                if (boards[i] == b)
+                    return i;
+            return -1;
+        }
+
+        /*
          * Get board with given name.
          */
         public Board GetBoardByName(string boardName)
@@ -137,6 +147,18 @@ namespace AW
             }
             
             Debug.LogWarning("[Arcweave] Cannot find board with given name: " + boardName);
+            return null;
+        }
+
+        /*
+         * Get board that contains given element ID.
+         */
+        public Board GetBoardForElement(string elementID) {
+            for (int i = 0; i < boards.Length; i++) {
+                Element e = boards[i].GetElement(elementID);
+                if (e != null)
+                    return boards[i];
+            }
             return null;
         }
 

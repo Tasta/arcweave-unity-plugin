@@ -151,6 +151,21 @@ namespace AW.Editor
                     BoardUtils.SetDefaultRoot(project.boards[i]);
                     EditorUtility.SetDirty(project.boards[i]);
                 }
+
+                // Handle root set in the JSON
+                string startingElementID = root["startingElement"];
+                if (!string.IsNullOrEmpty(startingElementID)) {
+                    Element startingElement = project.GetElement(startingElementID);
+                    if (startingElement != null) {
+                        Board rootBoard = project.GetBoardForElement(startingElementID);
+                        if (rootBoard != null) {
+                            project.startingBoardIdx = project.GetBoardIndex(rootBoard);
+                            rootBoard.rootElementId = startingElementID;
+                        }
+                    } else {
+                        Debug.LogWarning("[Arcweave] Cannot find starting element of id: " + startingElementID + ". Fallback to computing roots.");
+                    }
+                }
             } catch (Exception e) {
                 Debug.LogError("[Arcweave] Cannot load project: " + e.Message + "\n" + e.StackTrace);
                 EditorUtility.ClearProgressBar();
