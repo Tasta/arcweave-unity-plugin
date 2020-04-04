@@ -1,494 +1,515 @@
 {
-    "name": "Treasure Island: The game",
-    "elements": {
-        "08a2961b-0f35-436e-81ef-3562ecf60c81": {
-            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>",
-            "content": "\"Please don't steal our spirits!\"",
-            "components": [
-                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
+    "name": "The Castle",
+    "startingElement": "38375689-9e4d-430e-954c-65205eb622fe",
+    "boards": {
+        "2ad15ff6-f2ba-4f1d-9d9d-68938c683d7e": {
+            "name": "Root",
+            "root": true,
+            "children": [
+                "630fdb8a-48d6-473e-9974-2460f7eb2b41",
+                "733b1cc4-6d51-4ad6-9fba-444b4f2d98f3"
+            ]
+        },
+        "630fdb8a-48d6-473e-9974-2460f7eb2b41": {
+            "name": "Main Board",
+            "notes": [
+                "585c89a5-a16c-44db-9346-6e2725afcd88",
+                "5f45b936-1a0f-4834-87c3-579fb72329b1",
+                "0d580890-add4-4750-9b0c-64a9be4bd9be",
+                "045fcf7a-0e29-4f29-a6b3-f1be825832ed",
+                "27bcf38e-cef9-4413-b4c9-97e6c7300ec3",
+                "c917680a-9884-41fb-832c-7ac41f87c520"
             ],
-            "linkedBoard": null
-        },
-        "0f89e1cd-d518-4399-9fac-016c61f91ec9": {
-            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>",
-            "content": "\"Hey mister!\"",
-            "components": [
-                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
+            "jumpers": [
+                "17251b2a-0930-4a93-8f14-e89eb3238146",
+                "60b22737-d18c-44ea-b24c-8d771dfd9f9d"
             ],
-            "linkedBoard": null
-        },
-        "0fbe83cb-a694-44e5-845a-6bc9abab45c6": {
-            "title": "Introductory cutscene",
-            "content": "<p><i>Day, outside a village inn, west England 1850 A.D.<\/i><\/p><span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span> is doing his daily chores at the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"ee0fd612-7316-437f-9852-69f28d08471b\" data-type=\"component\">Admiral Benbow Inn<\/span> when <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span> arrives and demands infomation about a patron, <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"6c6b95ed-08b5-4979-8cc3-a60587635484\" data-type=\"component\">Billy Bones<\/span>.<p>When <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;tries to escape, <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;strikes him with the hilt of his cutlass and he loses consciousness.<\/p><p><i>Fade to Black.<\/i><\/p><p><\/p>",
-            "components": [
-                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0",
-                "d874d473-be11-43c3-a245-78b4772fc8ef"
+            "elements": [
+                "38375689-9e4d-430e-954c-65205eb622fe",
+                "59370898-e089-46cd-b7cf-072b79a76453",
+                "5e0d8b0c-ae7c-42a6-83d1-fc2c13b8e6b4",
+                "b2eb06f5-0a49-488b-8a60-7c469fd3af8a",
+                "81a30674-aa09-4eb8-8484-59298d37f984",
+                "188e6385-85e2-496b-82ac-a81696e7bcab"
             ],
-            "linkedBoard": null
+            "connections": [
+                "b7f7dfc4-46f9-40ee-a8e9-e8b584cecadf",
+                "e8fbe6f8-7ce4-404d-b693-d108d7125a75",
+                "6f0952d7-202a-4978-8d63-3fee4c5dde35",
+                "c06986b8-0ec4-45a9-9d36-681ef0af2f6c",
+                "c903fd63-a07c-4d5f-829e-461eee7ce2b6",
+                "8ec9d83d-02cd-41fe-a16b-a7773e1ec678",
+                "337c4347-5b21-449c-b556-134e0acec12d",
+                "678e093e-537c-4161-b011-8d6763c4be14",
+                "9b8efafe-a73f-4c19-8b90-0cf18b7e4907",
+                "3461cb48-901b-49d5-99ba-dbfb69e6efe1",
+                "6a929b6d-c6d2-46c4-ab67-b0503e7213af",
+                "bd5fbb0a-481c-4b6a-8c77-21b153c4bb95"
+            ]
         },
-        "181a9004-47a1-4449-99ca-3f92ccc79ca3": {
-            "title": "FAILED:&nbsp;<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;sees&nbsp;<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>!",
-            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;catches <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>! Now he will never be able to warn <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"6c6b95ed-08b5-4979-8cc3-a60587635484\" data-type=\"component\">Billy Bones<\/span>!&nbsp;",
-            "components": [
-                "d874d473-be11-43c3-a245-78b4772fc8ef",
-                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
+        "733b1cc4-6d51-4ad6-9fba-444b4f2d98f3": {
+            "name": "Dialogues",
+            "children": [
+                "fde6c03b-9c62-4d2d-82b9-9d6613cf6c6f"
+            ]
+        },
+        "fde6c03b-9c62-4d2d-82b9-9d6613cf6c6f": {
+            "name": "Crusader Dialogue",
+            "notes": [
+                "f9f032d4-60f6-43f8-bee4-c76fbfca9609"
             ],
-            "linkedBoard": null
-        },
-        "19ee8a0b-ea38-4ed6-a86e-eb88c41351a5": {
-            "title": "Restart game",
-            "content": null,
-            "components": [],
-            "linkedBoard": null
-        },
-        "1b5df9a9-776b-469e-a3ba-8bd8715efb36": {
-            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>",
-            "content": "\"What's your name?\"",
-            "components": [
-                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
+            "jumpers": [
+                "9f67b73c-dcc3-4037-8c84-fb550bd1f045",
+                "3517a1bc-3b73-4850-b03d-09daf9b7bc89"
             ],
-            "linkedBoard": null
-        },
-        "29e45a30-0df5-4185-8a77-fa6a67040b9b": {
-            "title": "Chapter II",
-            "content": null,
-            "components": [],
-            "linkedBoard": null
-        },
-        "331a3d0f-7349-4e85-8078-4f74d34e3a53": {
-            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>",
-            "content": "\"Could you untie me?\"",
-            "components": [
-                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
+            "elements": [
+                "d4823bca-643b-4d3a-a908-0056762a0476",
+                "601034d9-b442-449a-a927-cd112fca8f7e",
+                "17ef2fd0-bb81-421e-8c9c-ef7ef1c8ad09",
+                "d393f371-5aad-4dd9-a3ee-300bedaf993d",
+                "fa351fcb-f7cd-4b65-ae0a-4640e8a5275f",
+                "4d61d93e-e541-4dff-b10d-42c4fd81ad0b",
+                "4c7d10f2-e68b-498f-9ced-ffd74977a8f5",
+                "b6b7cebe-0c30-4da2-9839-2639f458f759"
             ],
-            "linkedBoard": null
-        },
-        "3d017d4d-9f09-478a-9ecf-4e5ffc688758": {
-            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>",
-            "content": "What do you want lad?",
-            "components": [
-                "d874d473-be11-43c3-a245-78b4772fc8ef"
-            ],
-            "linkedBoard": null
-        },
-        "5b43763f-3c05-46ac-917c-5b06f228c228": {
-            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span> is distracted!",
-            "content": "<i>[&nbsp;<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;is distracted and looking to find the rum. <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;has about 10 seconds to cut the rope with the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>&nbsp;]<\/i>",
-            "components": [
-                "d874d473-be11-43c3-a245-78b4772fc8ef"
-            ],
-            "linkedBoard": null
-        },
-        "7e686abd-3b37-4e06-a21c-aa485029d8c4": {
-            "title": "Back to <span class=\"mention mention-board\" contenteditable=\"false\" data-id=\"ff896534-18e6-4f78-b9c7-b15ce94827ef\" data-type=\"board\">Main Flow<\/span>",
-            "content": null,
-            "components": [],
-            "linkedBoard": null
-        },
-        "89f7ae58-1c16-410f-b534-cc2b3247a780": {
-            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>",
-            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;looks at the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>.&nbsp;",
-            "components": [
-                "3f0ba2ea-fc21-4fb4-a738-85e0a81c12df"
-            ],
-            "linkedBoard": null
-        },
-        "8ec91e4e-e9f1-4b03-8454-ee0a7b757232": {
-            "title": "Game start",
-            "content": null,
-            "components": [],
-            "linkedBoard": null
-        },
-        "a64062f4-1421-4467-936f-2eea1f7a8cf5": {
-            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>",
-            "content": "\"Mwahahaha! So that you can scurry away, while i am not looking? Not in a thousand years, lad! Now stay put...\"",
-            "components": [
-                "d874d473-be11-43c3-a245-78b4772fc8ef"
-            ],
-            "linkedBoard": null
-        },
-        "b44c6f75-60df-4071-9ad2-73764f99b77d": {
-            "title": "<span class=\"mention mention-board\" contenteditable=\"false\" data-id=\"e0db0f5e-70f5-4e12-85ee-c13f535cf2bf\" data-type=\"board\">Jim and Black Dog Dialog<\/span>",
-            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;talks to <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;to find out more information about him and perhaps distract him.",
-            "components": [
-                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0",
-                "d874d473-be11-43c3-a245-78b4772fc8ef"
-            ],
-            "linkedBoard": null
-        },
-        "c1bd7fcf-aa6b-4587-9d40-fb7633999e25": {
-            "title": "SUCCESS:&nbsp;<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;cuts the rope",
-            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;manages to free himself and jumps outside from the broken window. Now to find and warn <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"6c6b95ed-08b5-4979-8cc3-a60587635484\" data-type=\"component\">Billy Bones<\/span>&nbsp;that <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;is in town!",
-            "components": [
-                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
-            ],
-            "linkedBoard": null
-        },
-        "d05aff5a-be24-4b51-b4fa-7035d71ea0e3": {
-            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>",
-            "content": "\"It's <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>, scoundrel of the 7 seas lad, and this friend of yours, <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"6c6b95ed-08b5-4979-8cc3-a60587635484\" data-type=\"component\">Billy Bones<\/span>&nbsp;will swear by the sound of it before the sun sets today!\"&nbsp;",
-            "components": [
-                "d874d473-be11-43c3-a245-78b4772fc8ef"
-            ],
-            "linkedBoard": null
-        },
-        "d76878a0-4c25-40d6-827c-19c7cbba0fbb": {
-            "title": "Take the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>",
-            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;adds the <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>&nbsp;to his inventory.",
-            "components": [
-                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0",
-                "3f0ba2ea-fc21-4fb4-a738-85e0a81c12df"
-            ],
-            "linkedBoard": null
-        },
-        "e0ff1a32-798a-42bd-ab7d-4bad4a48f11d": {
-            "title": "Cutting the rope",
-            "content": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;starts cutting the rope with the&nbsp;<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>. He has about 10 seconds before <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>&nbsp;returns to his position.",
-            "components": [
-                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
-            ],
-            "linkedBoard": null
-        },
-        "f62fc8ce-e96d-4137-bb98-f8062c6a5c89": {
-            "title": "Inside <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"ee0fd612-7316-437f-9852-69f28d08471b\" data-type=\"component\">Admiral Benbow Inn<\/span>",
-            "content": "<p><i>Fade in. <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0\" data-type=\"component\">Jim<\/span>&nbsp;regains consciousnes.&nbsp;<\/i><\/p><p><span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span> is standing at the door preventing him from exiting. Jim cannot move as long as he is tied. There is a <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span> lying nearby.<\/p>",
-            "components": [
-                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0",
-                "ee0fd612-7316-437f-9852-69f28d08471b",
-                "3f0ba2ea-fc21-4fb4-a738-85e0a81c12df"
-            ],
-            "linkedBoard": null
-        },
-        "ffc36691-d631-4200-9e8d-0b27bd8ea9fb": {
-            "title": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>",
-            "content": "\"Spirits? Like... Rum? Now that is something interesting, arrr! Let's see where it is, my mouth is getting dry...\"",
-            "components": [
-                "d874d473-be11-43c3-a245-78b4772fc8ef"
-            ],
-            "linkedBoard": null
+            "connections": [
+                "c273c20a-3d94-488f-adff-f7a796f78930",
+                "3bcf09a5-0680-4826-8fef-76e79f31fad4",
+                "e2168e1e-1cb5-4228-9e51-c5a479476c0a",
+                "4db323dc-a518-4322-baa9-7d5c40537d86",
+                "80407dcb-6a30-4720-8d87-0d53419c4d30",
+                "316e39ed-caf7-459d-8152-af60cc2cd02b",
+                "6738d031-bbd5-4d98-993f-a4926fc7fa33",
+                "36d59f80-4905-4e08-9d22-f1a4c5315b8c",
+                "c5ed8e6f-a79e-46dc-9adf-01f4634eac81",
+                "9e589cad-33a0-4105-8174-9b87c79eb3a3",
+                "1fbe3657-ca76-4840-9c37-ab11434a63b7",
+                "9a07ede8-32ca-4b27-84b1-ebe54f9d254e",
+                "ce4869fb-b31e-47a5-a0ca-47e46839a6f8",
+                "dd563c04-f2d3-4c7f-a66e-3bb649c34831",
+                "0c0cdd6d-3686-4198-88c7-d0753dda6945"
+            ]
         }
     },
     "notes": {
-        "31c64423-d448-4d30-9821-9eaa5edb97cd": {
-            "content": "<p>Drag n drop components from the sidebar to attach them as thumbnails inside elements.<\/p>"
+        "045fcf7a-0e29-4f29-a6b3-f1be825832ed": {
+            "theme": "blue",
+            "content": "<p>Change the color of an element or note and an element cover image by <strong>right clicking<\/strong> on it.<\/p>"
         },
-        "482c85d3-7e00-4487-a3aa-75000e9ad29e": {
-            "content": "<p>Change the color of an element or a note by <strong>right-clicking<\/strong> on it. Try it here!<\/p>"
+        "0d580890-add4-4750-9b0c-64a9be4bd9be": {
+            "theme": "default",
+            "content": "<p>Create connections between elements by clicking and dragging near the perimeter of an element. Αdd labels to connections by double clicking on them.<\/p>"
         },
-        "86120113-30e1-4606-80b9-f70c164c5b45": {
-            "content": "<p>Create connections between elements by dragging near the border of an element.<\/p>"
+        "27bcf38e-cef9-4413-b4c9-97e6c7300ec3": {
+            "theme": "green",
+            "content": "<p>You can create jumpers (links to elements) by dragging and dropping elements from the sidebar on the board.<\/p>"
         },
-        "f42f8ddc-0b4f-4d75-8302-60b3181c4d17": {
-            "content": "<p><strong>Welcome to Arcweave!<\/strong><\/p><p>Double click on an empty spot in the workspace to create an element. To edit its title or content just double click on it.<\/p>"
+        "585c89a5-a16c-44db-9346-6e2725afcd88": {
+            "theme": "red",
+            "content": "<p>You can reference components and boards by @mentioning them!<\/p>"
         },
-        "f554b7de-5aaa-4285-81b2-dcc3e5290a5c": {
-            "content": "<p>Use the <strong>@<\/strong> symbol while writing to mention a component or board.<\/p>"
+        "5f45b936-1a0f-4834-87c3-579fb72329b1": {
+            "theme": "default",
+            "content": "<p><strong>Welcome to Arcweave!<\/strong><\/p><p>Double click on an empty spot in the workspace to create an element. To edit an element, double click on its title or content.<\/p>"
+        },
+        "c917680a-9884-41fb-832c-7ac41f87c520": {
+            "theme": "cyan",
+            "content": "<p>Attach components to elements by dragging and dropping them on an element from the sidebar.<\/p>"
+        },
+        "f9f032d4-60f6-43f8-bee4-c76fbfca9609": {
+            "theme": "red",
+            "content": "<p>Click on the \"Play Mode\" button to interactively test the experience<\/p><p>Project images by <a href=\"https:\/\/rachelchen.itch.io\/\" target=\"__blank\" rel=\"noopener noreferrer nofollow\" title=\"https:\/\/rachelchen.itch.io\/\">https:\/\/rachelchen.itch.io\/<\/a><\/p>"
         }
     },
-    "boards": {
-        "abdc0ed4-54d3-4186-b9cb-139b73de19a2": {
-            "name": "Dialogues",
-            "children": [
-                "e0db0f5e-70f5-4e12-85ee-c13f535cf2bf"
-            ]
+    "elements": {
+        "17ef2fd0-bb81-421e-8c9c-ef7ef1c8ad09": {
+            "cover": "images\/1583176919_5e5d5cd7d1fac.jpeg",
+            "theme": "cyan",
+            "title": "<p><span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span><\/p>",
+            "content": "<p>The <span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span> does not flinch. You have the slight impression he did not get your joke.<\/p>",
+            "outputs": [
+                "e2168e1e-1cb5-4228-9e51-c5a479476c0a"
+            ],
+            "components": [],
+            "linkedBoard": null
         },
-        "d3c5e450-1f03-44d1-8a2b-ab851609501a": {
-            "name": "Root",
-            "root": true,
-            "children": [
-                "ff896534-18e6-4f78-b9c7-b15ce94827ef",
-                "abdc0ed4-54d3-4186-b9cb-139b73de19a2"
-            ]
+        "188e6385-85e2-496b-82ac-a81696e7bcab": {
+            "cover": "images\/1583176919_5e5d5cd7d1fac.jpeg",
+            "theme": "cyan",
+            "title": "<p>The <span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span> <\/p>",
+            "content": "<p>You reach a wooden door. In front of you stands a strange man dressed as a medieval crusader.<\/p>",
+            "outputs": [
+                "3461cb48-901b-49d5-99ba-dbfb69e6efe1",
+                "bd5fbb0a-481c-4b6a-8c77-21b153c4bb95"
+            ],
+            "components": [
+                "647349ca-9ebb-4d5f-b81e-500761ec1c5a"
+            ],
+            "linkedBoard": null
         },
-        "ff896534-18e6-4f78-b9c7-b15ce94827ef": {
-            "name": "Main Flow",
-            "notes": [
-                "f42f8ddc-0b4f-4d75-8302-60b3181c4d17",
-                "86120113-30e1-4606-80b9-f70c164c5b45",
-                "482c85d3-7e00-4487-a3aa-75000e9ad29e",
-                "f554b7de-5aaa-4285-81b2-dcc3e5290a5c"
+        "38375689-9e4d-430e-954c-65205eb622fe": {
+            "cover": "images\/1583176086_5e5d599681315.jpeg",
+            "theme": "default",
+            "title": "<p>Outside <span class=\"mention mention-component\" data-id=\"894c2a71-952e-45c9-b55a-340794307a1d\" data-type=\"component\">Castle Monsignor<\/span> <\/p>",
+            "content": "<p>You just arrived at <span class=\"mention mention-component\" data-id=\"894c2a71-952e-45c9-b55a-340794307a1d\" data-type=\"component\">Castle Monsignor<\/span>, your uncle's home for the past 20 years. The tone of his letter was desperate, urgently asking for your help. Worried, you quickly packed your suitcase and took the first plane.<\/p><p>Faint bird sounds break the eerie silence and a pale mist engulfs the castle hill.<\/p><p><strong>To the north you can see the castle entrance.<\/strong><\/p>",
+            "outputs": [
+                "b7f7dfc4-46f9-40ee-a8e9-e8b584cecadf"
             ],
-            "elements": [
-                "8ec91e4e-e9f1-4b03-8454-ee0a7b757232",
-                "0fbe83cb-a694-44e5-845a-6bc9abab45c6",
-                "b44c6f75-60df-4071-9ad2-73764f99b77d",
-                "e0ff1a32-798a-42bd-ab7d-4bad4a48f11d",
-                "f62fc8ce-e96d-4137-bb98-f8062c6a5c89",
-                "d76878a0-4c25-40d6-827c-19c7cbba0fbb",
-                "181a9004-47a1-4449-99ca-3f92ccc79ca3",
-                "c1bd7fcf-aa6b-4587-9d40-fb7633999e25",
-                "89f7ae58-1c16-410f-b534-cc2b3247a780",
-                "19ee8a0b-ea38-4ed6-a86e-eb88c41351a5",
-                "29e45a30-0df5-4185-8a77-fa6a67040b9b"
-            ],
-            "connections": [
-                "69e22a0e-3e1c-449a-a6bb-00bc1700c1e6",
-                "b4eda740-0c89-4ed6-a026-c17d8c59f4ce",
-                "3173d61d-8bd9-48c1-bb96-4016bf0f7abf",
-                "6ac0bfb1-334e-47af-93f0-ecb32cd620f7",
-                "ef141f32-58c5-4a2d-8214-01c88e88d67b",
-                "dcc5d1ce-999a-4ade-9013-4e481b5bcc1d",
-                "8cfbf8a9-4933-4b7a-8e9c-5742d6cd5bac",
-                "db10e578-4513-4cd7-bd4d-90de258f56ec",
-                "c77dc8a4-9f8a-499b-8ea0-3f55f82cccca",
-                "46fb2f0b-ed70-455a-b6fe-1068c9772c94"
-            ]
+            "components": [],
+            "linkedBoard": null
         },
-        "e0db0f5e-70f5-4e12-85ee-c13f535cf2bf": {
-            "name": "Jim & Black Dog Dialogue",
-            "notes": [
-                "31c64423-d448-4d30-9821-9eaa5edb97cd"
+        "4c7d10f2-e68b-498f-9ced-ffd74977a8f5": {
+            "theme": "red",
+            "title": "<p>Wrong answer<\/p>",
+            "content": "<p><strong>\"Wrong!\", <\/strong>he shouts. Before you can utter another word he strikes you with the back of his sword hilt. <\/p><p>Everything turns to black...<\/p>",
+            "outputs": [
+                "6738d031-bbd5-4d98-993f-a4926fc7fa33"
             ],
-            "elements": [
-                "0f89e1cd-d518-4399-9fac-016c61f91ec9",
-                "3d017d4d-9f09-478a-9ecf-4e5ffc688758",
-                "1b5df9a9-776b-469e-a3ba-8bd8715efb36",
-                "331a3d0f-7349-4e85-8078-4f74d34e3a53",
-                "a64062f4-1421-4467-936f-2eea1f7a8cf5",
-                "d05aff5a-be24-4b51-b4fa-7035d71ea0e3",
-                "08a2961b-0f35-436e-81ef-3562ecf60c81",
-                "ffc36691-d631-4200-9e8d-0b27bd8ea9fb",
-                "5b43763f-3c05-46ac-917c-5b06f228c228",
-                "7e686abd-3b37-4e06-a21c-aa485029d8c4"
+            "components": [],
+            "linkedBoard": null
+        },
+        "4d61d93e-e541-4dff-b10d-42c4fd81ad0b": {
+            "cover": "images\/1583232736_5e5e36e0df768.jpeg",
+            "theme": "red",
+            "title": "<p>Game over<\/p>",
+            "content": "<p>Alas, you did not manage to find what lies behind the ominous door...<\/p>",
+            "outputs": [
+                "316e39ed-caf7-459d-8152-af60cc2cd02b"
             ],
-            "connections": [
-                "b7122654-d7a4-47b5-828c-d9d3eab63b87",
-                "991361e7-b2aa-4c20-97f7-6c5fc84603e6",
-                "46cd289e-ab39-4621-bfb5-838132c7bf7c",
-                "7e27c7aa-a130-4e12-be64-9b4c3e551924",
-                "aa6354ae-6c42-4122-97e3-a0b923548570",
-                "f73e8c39-6c27-4dff-8c1a-5a81744ef12c",
-                "e59b326f-9519-4758-9d8d-76ef60608fc7",
-                "2a6edc88-6d8c-4853-9a51-6c5b3df0ff6e",
-                "b0afc1b3-1352-428e-9f72-b6733df8d478"
-            ]
+            "components": [],
+            "linkedBoard": null
+        },
+        "59370898-e089-46cd-b7cf-072b79a76453": {
+            "cover": "images\/1583176103_5e5d59a7cc24a.jpeg",
+            "theme": "green",
+            "title": "<p><span class=\"mention mention-component\" data-id=\"11e527ff-9579-412c-ae5c-6ff548ebcfc0\" data-type=\"component\">Castle Courtyard<\/span> <\/p>",
+            "content": "<p>You stand inside a small courtyard. Everything is unusually silent here.<\/p><p><strong>The path leads further to the north. An abandoned house lies to your left.<\/strong><\/p>",
+            "outputs": [
+                "337c4347-5b21-449c-b556-134e0acec12d",
+                "678e093e-537c-4161-b011-8d6763c4be14",
+                "e8fbe6f8-7ce4-404d-b693-d108d7125a75"
+            ],
+            "components": [],
+            "linkedBoard": null
+        },
+        "5e0d8b0c-ae7c-42a6-83d1-fc2c13b8e6b4": {
+            "cover": "images\/1583172191_5e5d4a5f38105.jpeg",
+            "theme": "purple",
+            "title": "<p>The small house - Overview<\/p>",
+            "content": "<p>The interior looks more like an artist's studio than a house. A few abstract paintings lie scattered around.<\/p><p>One of the paintings depicts a strange figure: a knight dressed in white, with a red cross on his chest.<\/p>",
+            "outputs": [
+                "6f0952d7-202a-4978-8d63-3fee4c5dde35",
+                "c903fd63-a07c-4d5f-829e-461eee7ce2b6"
+            ],
+            "components": [],
+            "linkedBoard": null
+        },
+        "601034d9-b442-449a-a927-cd112fca8f7e": {
+            "theme": "red",
+            "title": "<p>Trying to run past<\/p>",
+            "content": "<p>As you try to run past him, he swiftly grabs you by the neck. You fight for freedom but his grip is inhumanly strong. <\/p><p>You drift into unconsciousness...<\/p>",
+            "outputs": [
+                "80407dcb-6a30-4720-8d87-0d53419c4d30"
+            ],
+            "components": [],
+            "linkedBoard": null
+        },
+        "81a30674-aa09-4eb8-8484-59298d37f984": {
+            "cover": "images\/1583172390_5e5d4b2602486.jpeg",
+            "theme": "default",
+            "title": "<p>The stone passage<\/p>",
+            "content": "<p>A stone passage. The sound of dripping water is echoing in the distance. You feel uneasy.<\/p>",
+            "outputs": [
+                "6a929b6d-c6d2-46c4-ab67-b0503e7213af",
+                "9b8efafe-a73f-4c19-8b90-0cf18b7e4907"
+            ],
+            "components": [],
+            "linkedBoard": null
+        },
+        "b2eb06f5-0a49-488b-8a60-7c469fd3af8a": {
+            "cover": "images\/1583172191_5e5d4a5f38105.jpeg",
+            "theme": "purple",
+            "title": "<p>The small house - Examine the painting<\/p>",
+            "content": "<p>The knight is guarding a mysterious gate. You see a name written above his head:<\/p><p><strong><em>\"Conrad IV, Count of Exeter\"<\/em><\/strong><\/p>",
+            "outputs": [
+                "8ec9d83d-02cd-41fe-a16b-a7773e1ec678",
+                "c06986b8-0ec4-45a9-9d36-681ef0af2f6c"
+            ],
+            "components": [],
+            "linkedBoard": null
+        },
+        "b6b7cebe-0c30-4da2-9839-2639f458f759": {
+            "cover": "images\/1583232736_5e5e36e0df768.jpeg",
+            "theme": "green",
+            "title": "<p>Success<\/p>",
+            "content": "<p>Congrats! You finished the example project 🎉Now try and make your own interactive experience. If at any point you need help or want to share some feedback don't hesitate to contact us on <a href=\"https:\/\/discord.gg\/atVXxAK\" target=\"__blank\" rel=\"noopener noreferrer nofollow\" title=\"https:\/\/discord.gg\/atVXxAK\">Discord<\/a>!<\/p><p>Happy creations 😊<\/p><p><\/p><p><\/p>",
+            "outputs": [
+                "9a07ede8-32ca-4b27-84b1-ebe54f9d254e"
+            ],
+            "components": [],
+            "linkedBoard": null
+        },
+        "d393f371-5aad-4dd9-a3ee-300bedaf993d": {
+            "cover": "images\/1583176919_5e5d5cd7d1fac.jpeg",
+            "theme": "cyan",
+            "title": "<p>The Question<\/p>",
+            "content": "<p><strong>\"Only he who knows my name shall pass.\"<\/strong><\/p>",
+            "outputs": [
+                "1fbe3657-ca76-4840-9c37-ab11434a63b7",
+                "36d59f80-4905-4e08-9d22-f1a4c5315b8c",
+                "4db323dc-a518-4322-baa9-7d5c40537d86",
+                "9e589cad-33a0-4105-8174-9b87c79eb3a3",
+                "c5ed8e6f-a79e-46dc-9adf-01f4634eac81",
+                "dd563c04-f2d3-4c7f-a66e-3bb649c34831"
+            ],
+            "components": [],
+            "linkedBoard": null
+        },
+        "d4823bca-643b-4d3a-a908-0056762a0476": {
+            "cover": "images\/1583176919_5e5d5cd7d1fac.jpeg",
+            "theme": "cyan",
+            "title": "<p>Dialogue start<\/p>",
+            "content": "<p>The man looks at you suspiciously and tightens his sword grip. He speaks in a deep voice:<\/p><p><strong>\"What do you want stranger?\"<\/strong><\/p>",
+            "outputs": [
+                "0c0cdd6d-3686-4198-88c7-d0753dda6945",
+                "3bcf09a5-0680-4826-8fef-76e79f31fad4",
+                "c273c20a-3d94-488f-adff-f7a796f78930"
+            ],
+            "components": [],
+            "linkedBoard": null
+        },
+        "fa351fcb-f7cd-4b65-ae0a-4640e8a5275f": {
+            "cover": "images\/1583177501_5e5d5f1d273ac.jpeg",
+            "theme": "green",
+            "title": "<p>Correct answer<\/p>",
+            "content": "<p>In the blink of an eye the <span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span> disappears... Almost as if he was never there. Curious.<\/p>",
+            "outputs": [
+                "ce4869fb-b31e-47a5-a0ca-47e46839a6f8"
+            ],
+            "components": [],
+            "linkedBoard": null
+        }
+    },
+    "jumpers": {
+        "17251b2a-0930-4a93-8f14-e89eb3238146": {
+            "elementId": "59370898-e089-46cd-b7cf-072b79a76453"
+        },
+        "3517a1bc-3b73-4850-b03d-09daf9b7bc89": {
+            "elementId": "81a30674-aa09-4eb8-8484-59298d37f984"
+        },
+        "60b22737-d18c-44ea-b24c-8d771dfd9f9d": {
+            "elementId": "d4823bca-643b-4d3a-a908-0056762a0476"
+        },
+        "9f67b73c-dcc3-4037-8c84-fb550bd1f045": {
+            "elementId": "38375689-9e4d-430e-954c-65205eb622fe"
         }
     },
     "connections": {
-        "2a6edc88-6d8c-4853-9a51-6c5b3df0ff6e": {
-            "label": null,
-            "sourceid": "ffc36691-d631-4200-9e8d-0b27bd8ea9fb",
-            "targetid": "5b43763f-3c05-46ac-917c-5b06f228c228"
+        "0c0cdd6d-3686-4198-88c7-d0753dda6945": {
+            "label": "<p>\"I’ll come back later\"<\/p>",
+            "sourceid": "d4823bca-643b-4d3a-a908-0056762a0476",
+            "targetid": "3517a1bc-3b73-4850-b03d-09daf9b7bc89"
         },
-        "3173d61d-8bd9-48c1-bb96-4016bf0f7abf": {
-            "label": null,
-            "sourceid": "0fbe83cb-a694-44e5-845a-6bc9abab45c6",
-            "targetid": "f62fc8ce-e96d-4137-bb98-f8062c6a5c89"
+        "1fbe3657-ca76-4840-9c37-ab11434a63b7": {
+            "label": "<p>\"Conrad V, Count of Exeter\"<\/p>",
+            "sourceid": "d393f371-5aad-4dd9-a3ee-300bedaf993d",
+            "targetid": "4c7d10f2-e68b-498f-9ced-ffd74977a8f5"
         },
-        "46cd289e-ab39-4621-bfb5-838132c7bf7c": {
-            "label": "These ropes...",
-            "sourceid": "3d017d4d-9f09-478a-9ecf-4e5ffc688758",
-            "targetid": "331a3d0f-7349-4e85-8078-4f74d34e3a53"
+        "316e39ed-caf7-459d-8152-af60cc2cd02b": {
+            "label": "<p>Try again<\/p>",
+            "sourceid": "4d61d93e-e541-4dff-b10d-42c4fd81ad0b",
+            "targetid": "9f67b73c-dcc3-4037-8c84-fb550bd1f045"
         },
-        "46fb2f0b-ed70-455a-b6fe-1068c9772c94": {
-            "label": null,
-            "sourceid": "c1bd7fcf-aa6b-4587-9d40-fb7633999e25",
-            "targetid": "29e45a30-0df5-4185-8a77-fa6a67040b9b"
+        "337c4347-5b21-449c-b556-134e0acec12d": {
+            "label": "<p>Exit <span class=\"mention mention-component\" data-id=\"894c2a71-952e-45c9-b55a-340794307a1d\" data-type=\"component\">Castle Monsignor<\/span><\/p>",
+            "sourceid": "59370898-e089-46cd-b7cf-072b79a76453",
+            "targetid": "38375689-9e4d-430e-954c-65205eb622fe"
         },
-        "69e22a0e-3e1c-449a-a6bb-00bc1700c1e6": {
-            "label": null,
-            "sourceid": "8ec91e4e-e9f1-4b03-8454-ee0a7b757232",
-            "targetid": "0fbe83cb-a694-44e5-845a-6bc9abab45c6"
+        "3461cb48-901b-49d5-99ba-dbfb69e6efe1": {
+            "label": "<p>Talk to the man<\/p>",
+            "sourceid": "188e6385-85e2-496b-82ac-a81696e7bcab",
+            "targetid": "60b22737-d18c-44ea-b24c-8d771dfd9f9d"
         },
-        "6ac0bfb1-334e-47af-93f0-ecb32cd620f7": {
-            "label": "Try to cut the rope",
-            "sourceid": "d76878a0-4c25-40d6-827c-19c7cbba0fbb",
-            "targetid": "e0ff1a32-798a-42bd-ab7d-4bad4a48f11d"
+        "36d59f80-4905-4e08-9d22-f1a4c5315b8c": {
+            "label": "<p>\"Conrad IV, Count of Everest\"<\/p>",
+            "sourceid": "d393f371-5aad-4dd9-a3ee-300bedaf993d",
+            "targetid": "4c7d10f2-e68b-498f-9ced-ffd74977a8f5"
         },
-        "7e27c7aa-a130-4e12-be64-9b4c3e551924": {
-            "label": null,
-            "sourceid": "331a3d0f-7349-4e85-8078-4f74d34e3a53",
-            "targetid": "a64062f4-1421-4467-936f-2eea1f7a8cf5"
+        "3bcf09a5-0680-4826-8fef-76e79f31fad4": {
+            "label": "<p>\"Can i pass?\"<\/p>",
+            "sourceid": "d4823bca-643b-4d3a-a908-0056762a0476",
+            "targetid": "d393f371-5aad-4dd9-a3ee-300bedaf993d"
         },
-        "8cfbf8a9-4933-4b7a-8e9c-5742d6cd5bac": {
-            "label": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span> is distracted",
-            "sourceid": "e0ff1a32-798a-42bd-ab7d-4bad4a48f11d",
-            "targetid": "c1bd7fcf-aa6b-4587-9d40-fb7633999e25"
+        "4db323dc-a518-4322-baa9-7d5c40537d86": {
+            "label": "<p>&lt; Run past him &gt;<\/p>",
+            "sourceid": "d393f371-5aad-4dd9-a3ee-300bedaf993d",
+            "targetid": "601034d9-b442-449a-a927-cd112fca8f7e"
         },
-        "991361e7-b2aa-4c20-97f7-6c5fc84603e6": {
-            "label": "There's rum, you know",
-            "sourceid": "3d017d4d-9f09-478a-9ecf-4e5ffc688758",
-            "targetid": "08a2961b-0f35-436e-81ef-3562ecf60c81"
+        "6738d031-bbd5-4d98-993f-a4926fc7fa33": {
+            "label": "<p>...<\/p>",
+            "sourceid": "4c7d10f2-e68b-498f-9ced-ffd74977a8f5",
+            "targetid": "4d61d93e-e541-4dff-b10d-42c4fd81ad0b"
         },
-        "aa6354ae-6c42-4122-97e3-a0b923548570": {
-            "label": null,
-            "sourceid": "1b5df9a9-776b-469e-a3ba-8bd8715efb36",
-            "targetid": "d05aff5a-be24-4b51-b4fa-7035d71ea0e3"
+        "678e093e-537c-4161-b011-8d6763c4be14": {
+            "label": "<p>Follow the path north<\/p>",
+            "sourceid": "59370898-e089-46cd-b7cf-072b79a76453",
+            "targetid": "81a30674-aa09-4eb8-8484-59298d37f984"
         },
-        "b0afc1b3-1352-428e-9f72-b6733df8d478": {
-            "label": null,
-            "sourceid": "5b43763f-3c05-46ac-917c-5b06f228c228",
-            "targetid": "7e686abd-3b37-4e06-a21c-aa485029d8c4"
+        "6a929b6d-c6d2-46c4-ab67-b0503e7213af": {
+            "label": "<p>Back to <span class=\"mention mention-component\" data-id=\"11e527ff-9579-412c-ae5c-6ff548ebcfc0\" data-type=\"component\">Castle Courtyard<\/span><\/p>",
+            "sourceid": "81a30674-aa09-4eb8-8484-59298d37f984",
+            "targetid": "59370898-e089-46cd-b7cf-072b79a76453"
         },
-        "b4eda740-0c89-4ed6-a026-c17d8c59f4ce": {
-            "label": "Talk to <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span>",
-            "sourceid": "f62fc8ce-e96d-4137-bb98-f8062c6a5c89",
-            "targetid": "b44c6f75-60df-4071-9ad2-73764f99b77d"
+        "6f0952d7-202a-4978-8d63-3fee4c5dde35": {
+            "label": "<p>Back to <span class=\"mention mention-component\" data-id=\"11e527ff-9579-412c-ae5c-6ff548ebcfc0\" data-type=\"component\">Castle Courtyard<\/span> <\/p>",
+            "sourceid": "5e0d8b0c-ae7c-42a6-83d1-fc2c13b8e6b4",
+            "targetid": "17251b2a-0930-4a93-8f14-e89eb3238146"
         },
-        "b7122654-d7a4-47b5-828c-d9d3eab63b87": {
-            "label": null,
-            "sourceid": "0f89e1cd-d518-4399-9fac-016c61f91ec9",
-            "targetid": "3d017d4d-9f09-478a-9ecf-4e5ffc688758"
+        "80407dcb-6a30-4720-8d87-0d53419c4d30": {
+            "label": "<p>...<\/p>",
+            "sourceid": "601034d9-b442-449a-a927-cd112fca8f7e",
+            "targetid": "4d61d93e-e541-4dff-b10d-42c4fd81ad0b"
         },
-        "c77dc8a4-9f8a-499b-8ea0-3f55f82cccca": {
-            "label": null,
-            "sourceid": "181a9004-47a1-4449-99ca-3f92ccc79ca3",
-            "targetid": "19ee8a0b-ea38-4ed6-a86e-eb88c41351a5"
+        "8ec9d83d-02cd-41fe-a16b-a7773e1ec678": {
+            "label": "<p>Look around<\/p>",
+            "sourceid": "b2eb06f5-0a49-488b-8a60-7c469fd3af8a",
+            "targetid": "5e0d8b0c-ae7c-42a6-83d1-fc2c13b8e6b4"
         },
-        "db10e578-4513-4cd7-bd4d-90de258f56ec": {
-            "label": "Look at <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>",
-            "sourceid": "f62fc8ce-e96d-4137-bb98-f8062c6a5c89",
-            "targetid": "89f7ae58-1c16-410f-b534-cc2b3247a780"
+        "9a07ede8-32ca-4b27-84b1-ebe54f9d254e": {
+            "label": "<p>Play again<\/p>",
+            "sourceid": "b6b7cebe-0c30-4da2-9839-2639f458f759",
+            "targetid": "9f67b73c-dcc3-4037-8c84-fb550bd1f045"
         },
-        "dcc5d1ce-999a-4ade-9013-4e481b5bcc1d": {
-            "label": "<span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"d874d473-be11-43c3-a245-78b4772fc8ef\" data-type=\"component\">Black Dog<\/span> is looking",
-            "sourceid": "e0ff1a32-798a-42bd-ab7d-4bad4a48f11d",
-            "targetid": "181a9004-47a1-4449-99ca-3f92ccc79ca3"
+        "9b8efafe-a73f-4c19-8b90-0cf18b7e4907": {
+            "label": "<p>Walk further down the path<\/p>",
+            "sourceid": "81a30674-aa09-4eb8-8484-59298d37f984",
+            "targetid": "188e6385-85e2-496b-82ac-a81696e7bcab"
         },
-        "e59b326f-9519-4758-9d8d-76ef60608fc7": {
-            "label": null,
-            "sourceid": "08a2961b-0f35-436e-81ef-3562ecf60c81",
-            "targetid": "ffc36691-d631-4200-9e8d-0b27bd8ea9fb"
+        "9e589cad-33a0-4105-8174-9b87c79eb3a3": {
+            "label": "<p>\"Conrad IV, Count of Exeter\"<\/p>",
+            "sourceid": "d393f371-5aad-4dd9-a3ee-300bedaf993d",
+            "targetid": "fa351fcb-f7cd-4b65-ae0a-4640e8a5275f"
         },
-        "ef141f32-58c5-4a2d-8214-01c88e88d67b": {
-            "label": "Take <span class=\"mention mention-component\" contenteditable=\"false\" data-id=\"3f0ba2ea-fc21-4fb4-a738-85e0a81c12df\" data-type=\"component\">Piece of broken glass<\/span>",
-            "sourceid": "f62fc8ce-e96d-4137-bb98-f8062c6a5c89",
-            "targetid": "d76878a0-4c25-40d6-827c-19c7cbba0fbb"
+        "b7f7dfc4-46f9-40ee-a8e9-e8b584cecadf": {
+            "label": "<p>Enter the castle<\/p>",
+            "sourceid": "38375689-9e4d-430e-954c-65205eb622fe",
+            "targetid": "59370898-e089-46cd-b7cf-072b79a76453"
         },
-        "f73e8c39-6c27-4dff-8c1a-5a81744ef12c": {
-            "label": "And you are...",
-            "sourceid": "3d017d4d-9f09-478a-9ecf-4e5ffc688758",
-            "targetid": "1b5df9a9-776b-469e-a3ba-8bd8715efb36"
+        "bd5fbb0a-481c-4b6a-8c77-21b153c4bb95": {
+            "label": "<p>Back to the stone passage<\/p>",
+            "sourceid": "188e6385-85e2-496b-82ac-a81696e7bcab",
+            "targetid": "81a30674-aa09-4eb8-8484-59298d37f984"
+        },
+        "c06986b8-0ec4-45a9-9d36-681ef0af2f6c": {
+            "label": "<p>Back to <span class=\"mention mention-component\" data-id=\"11e527ff-9579-412c-ae5c-6ff548ebcfc0\" data-type=\"component\">Castle Courtyard<\/span> <\/p>",
+            "sourceid": "b2eb06f5-0a49-488b-8a60-7c469fd3af8a",
+            "targetid": "17251b2a-0930-4a93-8f14-e89eb3238146"
+        },
+        "c273c20a-3d94-488f-adff-f7a796f78930": {
+            "label": "<p>\"Isn't it a bit early for Halloween?\"<\/p>",
+            "sourceid": "d4823bca-643b-4d3a-a908-0056762a0476",
+            "targetid": "17ef2fd0-bb81-421e-8c9c-ef7ef1c8ad09"
+        },
+        "c5ed8e6f-a79e-46dc-9adf-01f4634eac81": {
+            "label": "<p>\"Conrad VI, Count of Exeter\"<\/p>",
+            "sourceid": "d393f371-5aad-4dd9-a3ee-300bedaf993d",
+            "targetid": "4c7d10f2-e68b-498f-9ced-ffd74977a8f5"
+        },
+        "c903fd63-a07c-4d5f-829e-461eee7ce2b6": {
+            "label": "<p>Examine the painting<\/p>",
+            "sourceid": "5e0d8b0c-ae7c-42a6-83d1-fc2c13b8e6b4",
+            "targetid": "b2eb06f5-0a49-488b-8a60-7c469fd3af8a"
+        },
+        "ce4869fb-b31e-47a5-a0ca-47e46839a6f8": {
+            "label": "<p>Open the door<\/p>",
+            "sourceid": "fa351fcb-f7cd-4b65-ae0a-4640e8a5275f",
+            "targetid": "b6b7cebe-0c30-4da2-9839-2639f458f759"
+        },
+        "dd563c04-f2d3-4c7f-a66e-3bb649c34831": {
+            "label": "<p>\"I’ll come back later\"<\/p>",
+            "sourceid": "d393f371-5aad-4dd9-a3ee-300bedaf993d",
+            "targetid": "3517a1bc-3b73-4850-b03d-09daf9b7bc89"
+        },
+        "e2168e1e-1cb5-4228-9e51-c5a479476c0a": {
+            "label": "<p>So...uh...Can i pass?<\/p>",
+            "sourceid": "17ef2fd0-bb81-421e-8c9c-ef7ef1c8ad09",
+            "targetid": "d393f371-5aad-4dd9-a3ee-300bedaf993d"
+        },
+        "e8fbe6f8-7ce4-404d-b693-d108d7125a75": {
+            "label": "<p>Enter the house<\/p>",
+            "sourceid": "59370898-e089-46cd-b7cf-072b79a76453",
+            "targetid": "5e0d8b0c-ae7c-42a6-83d1-fc2c13b8e6b4"
         }
     },
     "components": {
-        "3f0ba2ea-fc21-4fb4-a738-85e0a81c12df": {
-            "name": "Piece of broken glass",
-            "image": "images\/1539874566_5bc89f06450cb.png",
-            "attributes": [
-                "f4b1411a-f77e-4e57-ad3f-847ce491974a"
-            ]
-        },
-        "6c6b95ed-08b5-4979-8cc3-a60587635484": {
-            "name": "Billy Bones",
-            "attributes": [
-                "5bec9c41-ef84-428f-a0d3-2c39325678c6",
-                "7ee0881c-19ed-431a-9327-50af815f8b09",
-                "18d51897-baa7-4ce2-8317-bba65ac2d652"
-            ]
-        },
-        "73a450c4-0ab4-4119-a0fc-c609af3ee050": {
-            "name": "Antagonists",
+        "036db898-0cb9-4a29-b19d-3e8f3288d9a2": {
+            "name": "Characters",
             "children": [
-                "d874d473-be11-43c3-a245-78b4772fc8ef"
+                "647349ca-9ebb-4d5f-b81e-500761ec1c5a"
             ]
         },
-        "75cf4297-90a3-4508-ab16-1fd86145395f": {
+        "11e527ff-9579-412c-ae5c-6ff548ebcfc0": {
+            "icon": "IconKeep",
+            "name": "Castle Courtyard",
+            "image": null,
+            "attributes": [
+                "b7aa7bdf-26eb-41b0-bcc3-54fe13a9a31c"
+            ]
+        },
+        "647349ca-9ebb-4d5f-b81e-500761ec1c5a": {
+            "icon": null,
+            "name": "Crusader",
+            "image": "images\/1583176919_5e5d5cd7d1fac.jpeg",
+            "attributes": [
+                "d46b5c77-6441-4d30-8d74-b5a191b5ffc6",
+                "3e148d58-6b88-4976-94a0-188df6ce55da",
+                "c9607db4-f1d3-468d-8dfe-0f9b493600d8"
+            ]
+        },
+        "65005bda-15d0-41c5-867f-68c118829f08": {
             "name": "Root",
             "root": true,
             "children": [
-                "fdfc9a0b-6fa9-4779-9681-9dde62a08e3d",
-                "afef43ea-5abe-4cd1-8ec1-0ae5a0b65798",
-                "b5429f3a-813f-459d-94f8-8b217f9a671b"
+                "036db898-0cb9-4a29-b19d-3e8f3288d9a2",
+                "e175e706-97ec-42a8-8791-7855b29396e7"
             ]
         },
-        "7d4ed000-2eeb-443a-ab1a-afa58811318a": {
-            "name": "Allies",
-            "children": [
-                "6c6b95ed-08b5-4979-8cc3-a60587635484"
+        "894c2a71-952e-45c9-b55a-340794307a1d": {
+            "icon": null,
+            "name": "Castle Monsignor",
+            "image": "images\/1583176086_5e5d599681315.jpeg",
+            "attributes": [
+                "a1f9c1b1-0514-466d-a71e-756916ec2e04"
             ]
         },
-        "afef43ea-5abe-4cd1-8ec1-0ae5a0b65798": {
+        "e175e706-97ec-42a8-8791-7855b29396e7": {
             "name": "Locations",
             "children": [
-                "ee0fd612-7316-437f-9852-69f28d08471b"
-            ]
-        },
-        "b5429f3a-813f-459d-94f8-8b217f9a671b": {
-            "name": "Items",
-            "children": [
-                "3f0ba2ea-fc21-4fb4-a738-85e0a81c12df"
-            ]
-        },
-        "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0": {
-            "name": "Jim",
-            "image": "images\/1539874549_5bc89ef50280a.png",
-            "attributes": [
-                "33543e7d-e2f9-49cf-b427-355a9716b66c",
-                "44f56ca3-b67d-4780-9eef-4a27a07b1e74",
-                "746336e1-8c67-48fa-b1bc-3265693015c7"
-            ]
-        },
-        "d874d473-be11-43c3-a245-78b4772fc8ef": {
-            "name": "Black Dog",
-            "image": "images\/1539874554_5bc89efa612e2.png",
-            "attributes": [
-                "9f34ddbd-69b1-492a-8e6b-c5eb01abb71b",
-                "faa47e31-ed24-456b-9ba6-e5278fe241d7"
-            ]
-        },
-        "ee0fd612-7316-437f-9852-69f28d08471b": {
-            "name": "Admiral Benbow Inn",
-            "image": "images\/1539874562_5bc89f0214f70.png",
-            "attributes": [
-                "25e61b27-1c1f-4d82-81cf-7f317e17dfc6"
-            ]
-        },
-        "f3889865-2dd2-49c8-8a79-6c11285c8e1d": {
-            "name": "Player",
-            "children": [
-                "cf4af01c-a04e-4f8b-8caf-5eb2a8ec94a0"
-            ]
-        },
-        "fdfc9a0b-6fa9-4779-9681-9dde62a08e3d": {
-            "name": "Characters",
-            "children": [
-                "f3889865-2dd2-49c8-8a79-6c11285c8e1d",
-                "7d4ed000-2eeb-443a-ab1a-afa58811318a",
-                "73a450c4-0ab4-4119-a0fc-c609af3ee050"
+                "11e527ff-9579-412c-ae5c-6ff548ebcfc0",
+                "894c2a71-952e-45c9-b55a-340794307a1d"
             ]
         }
     },
     "attributes": {
-        "18d51897-baa7-4ce2-8317-bba65ac2d652": {
+        "3e148d58-6b88-4976-94a0-188df6ce55da": {
+            "label": "Real name",
+            "content": "Conrad IV, Count of Exeter"
+        },
+        "a1f9c1b1-0514-466d-a71e-756916ec2e04": {
+            "label": "Info",
+            "content": "Caste Monsignor is where the game plot and narrative take place. It was built in 1562 near Devonshire, England. The Castle is home to Lord Monsignor, the player's uncle, who has been living there for the past 20 years. The castle has recently become a time traveling portal, allowing people from the 16th century to travel to the present."
+        },
+        "b7aa7bdf-26eb-41b0-bcc3-54fe13a9a31c": {
             "label": "Description",
-            "content": "A tall, strong, heavy, nut-brown man, his tarry pigtail falling over the shoulder of his soiled blue coat. His hands are ragged and scarred, with black, broken nails, and bears a sabre cut across one cheek, a dirty, livid white."
+            "content": "The courtyard of Castle Monsignor"
         },
-        "25e61b27-1c1f-4d82-81cf-7f317e17dfc6": {
+        "c9607db4-f1d3-468d-8dfe-0f9b493600d8": {
+            "label": "Defeated by",
+            "content": "Telling him his real name, which can be found on a painting inside the small house"
+        },
+        "d46b5c77-6441-4d30-8d74-b5a191b5ffc6": {
             "label": "Description",
-            "content": "The inn has seen better days: It has been weeks since a single patron has walked in and dust has settled everywhere around the place. The rear window is broken and creaking with the passing wind.&nbsp;<p>The large tables and beer stains everywhere whisper of earlier times, when the inn was full of life and music. Perhaps one day it will regain its former glory.<\/p>"
-        },
-        "33543e7d-e2f9-49cf-b427-355a9716b66c": {
-            "label": "Full name",
-            "content": "Jim Hawkins"
-        },
-        "44f56ca3-b67d-4780-9eef-4a27a07b1e74": {
-            "label": "Age",
-            "content": "15"
-        },
-        "5bec9c41-ef84-428f-a0d3-2c39325678c6": {
-            "label": "Age",
-            "content": "62"
-        },
-        "746336e1-8c67-48fa-b1bc-3265693015c7": {
-            "label": "Bio",
-            "content": "Jim has always dreamt of adventures. Little did he expect that he would embark on one when a vengeful old pirate arrives at his family's inn."
-        },
-        "7ee0881c-19ed-431a-9327-50af815f8b09": {
-            "label": "Nickname",
-            "content": "\"The Captain\""
-        },
-        "9f34ddbd-69b1-492a-8e6b-c5eb01abb71b": {
-            "label": "Age",
-            "content": "52"
-        },
-        "f4b1411a-f77e-4e57-ad3f-847ce491974a": {
-            "label": "Description",
-            "content": "A small piece of glass, probably from when the rear inn window broke from the wind. It looks very sharp."
-        },
-        "faa47e31-ed24-456b-9ba6-e5278fe241d7": {
-            "label": "Description",
-            "content": "A seasoned pirate, tall but fragile, he always wears his trusty cutlass on his belt. His garments are simple and filthy and the stench of alcohol from his unkempt beard can be noticed a mile away.&nbsp;<p>Black Dog has vowed to find and get revenge from his old pirate friend, Billy Bones.<\/p>"
+            "content": "The Crusader exists as an early obstacle to the player, introducing the feelings of danger and time travel throughout the game"
         }
     }
 }

@@ -53,15 +53,6 @@ namespace AW
         }
 
         /*
-         * Reset connections.
-         */
-        public void ResetConnections()
-        {
-            inConnections = new List<Connection>();
-            outConnections = new List<Connection>();
-        }
-
-        /*
          * Get the in neighbour for given index.
          */
         public Element GetInNeighbour(int connectionIdx, Project project)
@@ -74,8 +65,9 @@ namespace AW
 
             Connection conn = inConnections[connectionIdx];
             try {
-                return project.GetElement(conn.sourceElementId);
-            } catch (Exception) {
+                return conn.Get(false, project);
+            } catch (Exception ex) {
+                Debug.LogWarning("[Arcweave] Exception " + ex.Message + " whhen trying to get next element from connection.");
                 return null;
             }
         }
@@ -93,8 +85,9 @@ namespace AW
 
             Connection conn = outConnections[connectionIdx];
             try {
-                return project.GetElement(conn.targetElementId);
-            } catch (Exception) {
+                return conn.Get(true, project);
+            } catch (Exception ex) {
+                Debug.LogWarning("[Arcweave] Exception " + ex.Message + " whhen trying to get next element from connection.");
                 return null;
             }
         }
@@ -129,6 +122,14 @@ namespace AW
 			Debug.LogWarning("[Arcweave] Found no root to go back to.");
 			return null;
 		}
+
+        /*
+         * Reset connections.
+         */
+        public void ResetConnections() {
+            inConnections = new List<Connection>();
+            outConnections = new List<Connection>();
+        }
 
         /*
          * Get displayable string for this node.

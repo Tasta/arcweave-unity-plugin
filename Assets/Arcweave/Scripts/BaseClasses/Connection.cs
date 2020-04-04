@@ -20,12 +20,29 @@ namespace AW
         public string targetElementId;
 
         /*
+         * Get source/destination element.
+         * Handles jumpers.
+         */
+        public Element Get(bool destination, Project project) {
+            string id = destination ? targetElementId : sourceElementId;
+
+            // Search for Jumper first (they're fewer)
+            Jumper jumper = project.GetJumper(id);
+            if (jumper != null) {
+                // ToDo: In case one day we will care about board changes, trigger it here.
+                return project.GetElement(jumper.elementID);
+            } else {
+                return project.GetElement(id);
+            }
+        }
+
+        /*
          * Attribute connections
          */
         public void Relink(Project project)
         {
             // Add in connection to element
-            Element target = project.GetElement(targetElementId);
+            Element target = Get(true, project);
             if (target != null) {
                 target.AddInConnection(this);
             } else {
@@ -33,7 +50,7 @@ namespace AW
             }
 
             // Add out connection to element
-            Element source = project.GetElement(sourceElementId);
+            Element source = Get(false, project);
             if (source != null) {
                 source.AddOutConnection(this);
             } else {

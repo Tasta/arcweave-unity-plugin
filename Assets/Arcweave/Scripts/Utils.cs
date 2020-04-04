@@ -34,7 +34,7 @@ namespace AW
 
 			// Create the XML reader
 			XmlReaderSettings settings = new XmlReaderSettings();
-            settings.DtdProcessing = DtdProcessing.Prohibit;
+            settings.DtdProcessing = DtdProcessing.Ignore;
 			XmlReader reader = XmlReader.Create(new System.IO.StringReader(rootedContent), settings);
 
 			// Values for parsing
@@ -60,6 +60,8 @@ namespace AW
                                 parsedContent += "\n\n";
                             else if (reader.Name == "u")
                                 break; // Don't have underline yet
+                            else if (reader.Name == "a")
+                                break; // Don't have Anchors yet
                             else if (reader.Name == "span") {
                                 if (reader.HasAttributes) {
                                     // Check data-type and data-id for links
@@ -95,10 +97,12 @@ namespace AW
                                 parsedContent += "</b>";
                             else if (reader.Name == "i" || reader.Name == "em")
                                 parsedContent += "</i>";
-                            else if (reader.Name == "u")
-                                break; // Don't have underline yet
                             else if (reader.Name == "p")
                                 paragraphCount++;
+                            else if (reader.Name == "u")
+                                break; // Don't have underline yet
+                            else if (reader.Name == "a")
+                                break; // Don't have Anchors yet
                             else if (reader.Name == "span") {
                                 if (inColorTag) {
                                     //parsedContent += "</color>";

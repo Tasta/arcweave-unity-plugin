@@ -116,6 +116,10 @@ namespace AW.Editor
                 EditorUtility.DisplayProgressBar("Arcweave", "Creating elements...", 30.0f);
                 ReadElements(project, root["elements"].AsObject);
 
+                // Read jumpers
+                EditorUtility.DisplayProgressBar("Arcweave", "Creating jumpers...", 37.5f);
+                ReadJumpers(project, root["jumpers"].AsObject);
+
                 // Read connections
                 EditorUtility.DisplayProgressBar("Arcweave", "Creating connections...", 45.0f);
                 ReadConnections(project, root["connections"].AsObject);
@@ -325,6 +329,32 @@ namespace AW.Editor
             if (e.linkedBoardId != null) {
                 //Debug.LogWarning("[Arcweave] Linked board became available for reading!");
             }
+        }
+
+        /*
+         * Read jumpers from JSON entry.
+         */
+        private static void ReadJumpers(Project project, JSONClass root) {
+            List<Jumper> tmp = new List<Jumper>();
+
+            IEnumerator children = root.GetEnumerator();
+            while (children.MoveNext()) {
+                // Get current
+                KeyValuePair<string, JSONNode> current = (children.Current != null) ?
+                    (KeyValuePair<string, JSONNode>)children.Current : default(KeyValuePair<string, JSONNode>);
+                JSONNode child = current.Value;
+
+                // Create element
+                Jumper jumper = new Jumper();
+                jumper.id = current.Key;
+                jumper.boardID = null;
+                jumper.elementID = child["elementId"];
+
+                // Add
+                tmp.Add(jumper);
+            }
+
+            project.jumpers = tmp.ToArray();
         }
 
         /*

@@ -28,6 +28,7 @@ namespace AW
         public Note[] notes;
         public Board[] boards;
         public BoardFolder[] boardFolders;
+        public Jumper[] jumpers;
 
         [Space(15.0f)]
         [Header("User Preferences")]
@@ -202,6 +203,19 @@ namespace AW
             for (int nIdx = 0; nIdx < notes.Length; nIdx++) {
                 if (notes[nIdx].id == id) {
                     return notes[nIdx];
+                }
+            }
+
+            return null;
+        }
+
+        /*
+         * Get jumper by id.
+         */
+        public Jumper GetJumper(string id) {
+            for (int jIdx = 0; jIdx < jumpers.Length; jIdx++) {
+                if (jumpers[jIdx].id == id) {
+                    return jumpers[jIdx];
                 }
             }
 

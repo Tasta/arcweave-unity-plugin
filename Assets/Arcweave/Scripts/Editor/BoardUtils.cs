@@ -97,6 +97,17 @@ namespace AW.Editor
                 string elementId = elementArray[i];
                 b.elementIds[i] = elementId;
             }
+
+            // Search each jumper and set self as board
+            JSONArray jumperArray = node["jumpers"].AsArray;
+            for (int i = 0; i < jumperArray.Count; i++) {
+                var jumper = project.GetJumper(jumperArray[i]);
+                if (jumper == null) {
+                    Debug.LogWarning("[Arcweave] Cannot find jumper of ID: " + jumperArray[i]);
+                    continue;
+                }
+                jumper.boardID = b.id;
+            }
         }
 
         /*
