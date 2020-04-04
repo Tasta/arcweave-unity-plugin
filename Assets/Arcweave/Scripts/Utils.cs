@@ -34,7 +34,7 @@ namespace AW
 
 			// Create the XML reader
 			XmlReaderSettings settings = new XmlReaderSettings();
-			settings.ProhibitDtd = false;
+            settings.DtdProcessing = DtdProcessing.Prohibit;
 			XmlReader reader = XmlReader.Create(new System.IO.StringReader(rootedContent), settings);
 
 			// Values for parsing
