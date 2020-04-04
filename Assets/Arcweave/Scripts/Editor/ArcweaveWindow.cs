@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEditor;
+using UnityEditor.Sprites;
 
 namespace AW.Editor
 {
@@ -49,6 +50,7 @@ namespace AW.Editor
         private static ArcweaveWindow Instance;
         private string folderPath = null;
         private Project project = null;
+        private Sprite sprite = null;
 
         // Precomputed lists of boards and elements
         private string[] boardIDs;
@@ -67,10 +69,14 @@ namespace AW.Editor
         }
 
         /*
-         * Populate with items on Awake.
+         * Populate with items on enable
          */
-        private void Awake()
+        private void OnEnable()
         {
+            if (sprite == null) {
+                sprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Arcweave/Sample/Graphics/arcweave_logo.png");
+            }
+
             Instance = this;
             project = AssetDatabase.LoadAssetAtPath<Project>("Assets/Resources/Arcweave/Project.asset");
 
@@ -90,12 +96,22 @@ namespace AW.Editor
         public void OnGUI()
         {
             try {
-                // Setup the title
-                EditorGUILayout.LabelField("Project Settings");
 
-                EditorGUILayout.Separator();
-                EditorGUILayout.Separator();
-                EditorGUILayout.Separator();
+                // Setup the title
+                GUILayout.BeginHorizontal();
+                GUILayout.FlexibleSpace();
+
+                GUILayout.BeginVertical();
+                GUILayout.Space(50.0f);
+                if (sprite != null) {
+                    Texture tex = SpriteUtility.GetSpriteTexture(sprite, false);
+                    GUILayout.Label(tex);
+                }
+                GUILayout.Space(50.0f);
+                GUILayout.EndVertical();
+
+                GUILayout.FlexibleSpace();
+                GUILayout.EndHorizontal();
 
                 // Handle Project path
                 HandleProjectFolderSelector();
@@ -113,6 +129,7 @@ namespace AW.Editor
                     }
 
                     // Handle board and root element selection
+                    GUILayout.Space(25.0f);
                     if (project.startingBoardIdx != -1) {
                         for (int i = 0; i < 5; i++)
                             EditorGUILayout.Space();
