@@ -16,8 +16,9 @@ using AW;
 public class SampleViewController : MonoBehaviour
 {
     [Header("Element Items")]
+    public Image elementHeader;
     public Text elementContent;
-    public RectTransform elementLayout;
+    public VerticalLayoutGroup elementLayout;
     public RectTransform actionLayout;
     public GameObject ActionPrefab;
 
@@ -59,10 +60,6 @@ public class SampleViewController : MonoBehaviour
 
         // Handle back button in respect of stack status
         backAction.SetActive(elementStack.Count > 0);
-
-        // Force layout recalculations
-        LayoutRebuilder.ForceRebuildLayoutImmediate(elementLayout);
-        Canvas.ForceUpdateCanvases();
 
         // Push this element on stack
         elementStack.Push(awElement);
@@ -131,6 +128,9 @@ public class SampleViewController : MonoBehaviour
      */
     private void PopulateContent(Element awElement)
     {
+        elementHeader.sprite = awElement.cover;
+        elementHeader.gameObject.SetActive(awElement.cover != null);
+        
         // ToDo: Remove "null" comparison when null is properly passed.
         if (string.IsNullOrEmpty(awElement.content) || awElement.content == "null") {
             elementContent.text = "";

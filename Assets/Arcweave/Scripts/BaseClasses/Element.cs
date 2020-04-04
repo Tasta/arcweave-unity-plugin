@@ -22,6 +22,7 @@ namespace AW
         public string contentNoStyle;
         public Component[] components;
         public string linkedBoardId;
+        public Sprite cover;
 
         // Computed data
         [NonSerialized] public Board ownerBoard;

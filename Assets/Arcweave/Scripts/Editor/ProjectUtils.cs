@@ -114,7 +114,7 @@ namespace AW.Editor
 
                 // Read elements
                 EditorUtility.DisplayProgressBar("Arcweave", "Creating elements...", 30.0f);
-                ReadElements(project, root["elements"].AsObject);
+                ReadElements(project, root["elements"].AsObject, projectFolder);
 
                 // Read jumpers
                 EditorUtility.DisplayProgressBar("Arcweave", "Creating jumpers...", 37.5f);
@@ -274,7 +274,7 @@ namespace AW.Editor
         /*
          * Read elements from JSON entry.
          */
-        private static void ReadElements(Project project, JSONClass elementRoot)
+        private static void ReadElements(Project project, JSONClass elementRoot, string projectPath)
         {
             List<Element> tmp = new List<Element>();
 
@@ -288,7 +288,7 @@ namespace AW.Editor
                 // Create element
                 Element element = new Element();
                 element.id = current.Key;
-                ReadElement(element, project, current.Value);
+                ReadElement(element, project, current.Value, projectPath);
 
                 // Add
                 tmp.Add(element);
@@ -300,7 +300,7 @@ namespace AW.Editor
         /*
          * Read element from node.
          */
-        private static void ReadElement(Element e, Project project, JSONNode root)
+        private static void ReadElement(Element e, Project project, JSONNode root, string projectPath)
         {
             // Read & Parse Title
             e.title = root["title"];
@@ -322,6 +322,17 @@ namespace AW.Editor
                 }
 
                 e.components[i] = c;
+            }
+
+            // Attempt to load the cover image
+            string imgPath = root["cover"];
+            if (!string.IsNullOrEmpty(imgPath) && imgPath != "null") {
+                // Load sprite at given path
+                string fullPath = projectPath + "/assets/" + imgPath;
+                e.cover = AssetDatabase.LoadAssetAtPath<Sprite>(fullPath);
+                if (e.cover == null) {
+                    Debug.LogWarning("[Arcweave] Could not load image at path: " + fullPath + " for element " + e.title);
+                }
             }
 
             // Handle linked board tag
