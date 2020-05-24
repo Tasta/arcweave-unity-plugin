@@ -79,6 +79,7 @@ namespace AW.Editor
 
             Instance = this;
             project = AssetDatabase.LoadAssetAtPath<Project>("Assets/Resources/Arcweave/Project.asset");
+            project.Relink();
 
             if (project != null) {
                 // Load stuff from the object

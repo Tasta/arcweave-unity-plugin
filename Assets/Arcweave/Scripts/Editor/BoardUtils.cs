@@ -130,6 +130,16 @@ namespace AW.Editor
         {
             List<Element> potentialRoots = new List<Element>();
 
+            if (board == null) {
+                Debug.LogWarning("[Arcweave] Cannot compute roots for null board.");
+                return potentialRoots;
+            }
+
+            if (board.elements == null) {
+                Debug.LogWarning("[Arcweave] Board elements are not set. The board was not linked before computing roots.");
+                return potentialRoots;
+            }
+
             for (int i = 0; i < board.elements.Count; i++) {
                 Element e = board.elements[i];
                 if (e.inConnections.Count == 0)
