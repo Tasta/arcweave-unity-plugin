@@ -123,7 +123,7 @@
     },
     "elements": {
         "17ef2fd0-bb81-421e-8c9c-ef7ef1c8ad09": {
-            "cover": "images\/1583176919_5e5d5cd7d1fac.jpeg",
+            "cover": "images\/1583176919_5e5d5cd7d1fac.png",
             "theme": "cyan",
             "title": "<p><span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span><\/p>",
             "content": "<p>The <span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span> does not flinch. You have the slight impression he did not get your joke.<\/p>",
@@ -134,7 +134,7 @@
             "linkedBoard": null
         },
         "188e6385-85e2-496b-82ac-a81696e7bcab": {
-            "cover": "images\/1583176919_5e5d5cd7d1fac.jpeg",
+            "cover": "images\/1583176919_5e5d5cd7d1fac.png",
             "theme": "cyan",
             "title": "<p>The <span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span> <\/p>",
             "content": "<p>You reach a wooden door. In front of you stands a strange man dressed as a medieval crusader.<\/p>",
@@ -148,7 +148,7 @@
             "linkedBoard": null
         },
         "38375689-9e4d-430e-954c-65205eb622fe": {
-            "cover": "images\/1583176086_5e5d599681315.jpeg",
+            "cover": "images\/1583176086_5e5d599681315.png",
             "theme": "default",
             "title": "<p>Outside <span class=\"mention mention-component\" data-id=\"894c2a71-952e-45c9-b55a-340794307a1d\" data-type=\"component\">Castle Monsignor<\/span> <\/p>",
             "content": "<p>You just arrived at <span class=\"mention mention-component\" data-id=\"894c2a71-952e-45c9-b55a-340794307a1d\" data-type=\"component\">Castle Monsignor<\/span>, your uncle's home for the past 20 years. The tone of his letter was desperate, urgently asking for your help. Worried, you quickly packed your suitcase and took the first plane.<\/p><p>Faint bird sounds break the eerie silence and a pale mist engulfs the castle hill.<\/p><p><strong>To the north you can see the castle entrance.<\/strong><\/p>",
@@ -169,7 +169,7 @@
             "linkedBoard": null
         },
         "4d61d93e-e541-4dff-b10d-42c4fd81ad0b": {
-            "cover": "images\/1583232736_5e5e36e0df768.jpeg",
+            "cover": "images\/1583232736_5e5e36e0df768.png",
             "theme": "red",
             "title": "<p>Game over<\/p>",
             "content": "<p>Alas, you did not manage to find what lies behind the ominous door...<\/p>",
@@ -180,7 +180,7 @@
             "linkedBoard": null
         },
         "59370898-e089-46cd-b7cf-072b79a76453": {
-            "cover": "images\/1583176103_5e5d59a7cc24a.jpeg",
+            "cover": "images\/1583176103_5e5d59a7cc24a.png",
             "theme": "green",
             "title": "<p><span class=\"mention mention-component\" data-id=\"11e527ff-9579-412c-ae5c-6ff548ebcfc0\" data-type=\"component\">Castle Courtyard<\/span> <\/p>",
             "content": "<p>You stand inside a small courtyard. Everything is unusually silent here.<\/p><p><strong>The path leads further to the north. An abandoned house lies to your left.<\/strong><\/p>",
@@ -193,7 +193,7 @@
             "linkedBoard": null
         },
         "5e0d8b0c-ae7c-42a6-83d1-fc2c13b8e6b4": {
-            "cover": "images\/1583172191_5e5d4a5f38105.jpeg",
+            "cover": "images\/1583172191_5e5d4a5f38105.png",
             "theme": "purple",
             "title": "<p>The small house - Overview<\/p>",
             "content": "<p>The interior looks more like an artist's studio than a house. A few abstract paintings lie scattered around.<\/p><p>One of the paintings depicts a strange figure: a knight dressed in white, with a red cross on his chest.<\/p>",
@@ -215,7 +215,7 @@
             "linkedBoard": null
         },
         "81a30674-aa09-4eb8-8484-59298d37f984": {
-            "cover": "images\/1583172390_5e5d4b2602486.jpeg",
+            "cover": "images\/1583172390_5e5d4b2602486.png",
             "theme": "default",
             "title": "<p>The stone passage<\/p>",
             "content": "<p>A stone passage. The sound of dripping water is echoing in the distance. You feel uneasy.<\/p>",
@@ -227,7 +227,7 @@
             "linkedBoard": null
         },
         "b2eb06f5-0a49-488b-8a60-7c469fd3af8a": {
-            "cover": "images\/1583172191_5e5d4a5f38105.jpeg",
+            "cover": "images\/1583172191_5e5d4a5f38105.png",
             "theme": "purple",
             "title": "<p>The small house - Examine the painting<\/p>",
             "content": "<p>The knight is guarding a mysterious gate. You see a name written above his head:<\/p><p><strong><em>\"Conrad IV, Count of Exeter\"<\/em><\/strong><\/p>",
@@ -239,7 +239,7 @@
             "linkedBoard": null
         },
         "b6b7cebe-0c30-4da2-9839-2639f458f759": {
-            "cover": "images\/1583232736_5e5e36e0df768.jpeg",
+            "cover": "images\/1583232736_5e5e36e0df768.png",
             "theme": "green",
             "title": "<p>Success<\/p>",
             "content": "<p>Congrats! You finished the example project 🎉Now try and make your own interactive experience. If at any point you need help or want to share some feedback don't hesitate to contact us on <a href=\"https:\/\/discord.gg\/atVXxAK\" target=\"__blank\" rel=\"noopener noreferrer nofollow\" title=\"https:\/\/discord.gg\/atVXxAK\">Discord<\/a>!<\/p><p>Happy creations 😊<\/p><p><\/p><p><\/p>",
@@ -250,7 +250,7 @@
             "linkedBoard": null
         },
         "d393f371-5aad-4dd9-a3ee-300bedaf993d": {
-            "cover": "images\/1583176919_5e5d5cd7d1fac.jpeg",
+            "cover": "images\/1583176919_5e5d5cd7d1fac.png",
             "theme": "cyan",
             "title": "<p>The Question<\/p>",
             "content": "<p><strong>\"Only he who knows my name shall pass.\"<\/strong><\/p>",
@@ -266,7 +266,7 @@
             "linkedBoard": null
         },
         "d4823bca-643b-4d3a-a908-0056762a0476": {
-            "cover": "images\/1583176919_5e5d5cd7d1fac.jpeg",
+            "cover": "images\/1583176919_5e5d5cd7d1fac.png",
             "theme": "cyan",
             "title": "<p>Dialogue start<\/p>",
             "content": "<p>The man looks at you suspiciously and tightens his sword grip. He speaks in a deep voice:<\/p><p><strong>\"What do you want stranger?\"<\/strong><\/p>",
@@ -279,7 +279,7 @@
             "linkedBoard": null
         },
         "fa351fcb-f7cd-4b65-ae0a-4640e8a5275f": {
-            "cover": "images\/1583177501_5e5d5f1d273ac.jpeg",
+            "cover": "images\/1583177501_5e5d5f1d273ac.png",
             "theme": "green",
             "title": "<p>Correct answer<\/p>",
             "content": "<p>In the blink of an eye the <span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span> disappears... Almost as if he was never there. Curious.<\/p>",
@@ -449,7 +449,7 @@
             ]
         },
         "11e527ff-9579-412c-ae5c-6ff548ebcfc0": {
-            "icon": "IconKeep",
+            "icon": "Arcweave\/keep",
             "name": "Castle Courtyard",
             "image": null,
             "attributes": [
@@ -459,7 +459,7 @@
         "647349ca-9ebb-4d5f-b81e-500761ec1c5a": {
             "icon": null,
             "name": "Crusader",
-            "image": "images\/1583176919_5e5d5cd7d1fac.jpeg",
+            "image": "images\/1583176919_5e5d5cd7d1fac.png",
             "attributes": [
                 "d46b5c77-6441-4d30-8d74-b5a191b5ffc6",
                 "3e148d58-6b88-4976-94a0-188df6ce55da",
@@ -477,7 +477,7 @@
         "894c2a71-952e-45c9-b55a-340794307a1d": {
             "icon": null,
             "name": "Castle Monsignor",
-            "image": "images\/1583176086_5e5d599681315.jpeg",
+            "image": "images\/1583176086_5e5d599681315.png",
             "attributes": [
                 "a1f9c1b1-0514-466d-a71e-756916ec2e04"
             ]
