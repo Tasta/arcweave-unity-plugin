@@ -18,7 +18,7 @@ These instructions will get you a sample UI and Arcweave project running inside 
 ### Prerequisites
 
 * An Unity3d installation (we tested this on Unity 2017, ping us if you got a version with issues)
-* The Arcweave Unity Plugin package, which can be downloaded here (arcweave-unity-plugin-1.0.unitypackage)
+* The Arcweave Unity Plugin package (check Releases on this page)
 * (Optional) Your own Arcweave exported project
 * (Optional) Good will
 
