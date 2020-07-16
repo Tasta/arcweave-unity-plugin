@@ -22,12 +22,13 @@ namespace AW
         public string contentNoStyle;
         public Component[] components;
         public string linkedBoardId;
-        public Sprite cover;
+        public string coverID;
 
         // Computed data
         [NonSerialized] public Board ownerBoard;
         [NonSerialized] public List<Connection> inConnections;
         [NonSerialized] public List<Connection> outConnections;
+        [NonSerialized] public Sprite cover;
         
         /*
          * Basic constructor.

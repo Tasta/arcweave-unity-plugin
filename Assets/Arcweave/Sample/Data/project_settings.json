@@ -1,5 +1,9 @@
 {
     "name": "The Castle",
+    "cover": {
+        "file": "cover.jpg",
+        "type": "template-image"
+    },
     "startingElement": "38375689-9e4d-430e-954c-65205eb622fe",
     "boards": {
         "2ad15ff6-f2ba-4f1d-9d9d-68938c683d7e": {
@@ -123,9 +127,13 @@
     },
     "elements": {
         "17ef2fd0-bb81-421e-8c9c-ef7ef1c8ad09": {
-            "cover": "images\/1583176919_5e5d5cd7d1fac.png",
             "theme": "cyan",
             "title": "<p><span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span><\/p>",
+            "assets": {
+                "cover": {
+                    "id": "b876170a-8f65-4091-b8b7-164738e476f9"
+                }
+            },
             "content": "<p>The <span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span> does not flinch. You have the slight impression he did not get your joke.<\/p>",
             "outputs": [
                 "e2168e1e-1cb5-4228-9e51-c5a479476c0a"
@@ -134,9 +142,13 @@
             "linkedBoard": null
         },
         "188e6385-85e2-496b-82ac-a81696e7bcab": {
-            "cover": "images\/1583176919_5e5d5cd7d1fac.png",
             "theme": "cyan",
             "title": "<p>The <span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span> <\/p>",
+            "assets": {
+                "cover": {
+                    "id": "b876170a-8f65-4091-b8b7-164738e476f9"
+                }
+            },
             "content": "<p>You reach a wooden door. In front of you stands a strange man dressed as a medieval crusader.<\/p>",
             "outputs": [
                 "3461cb48-901b-49d5-99ba-dbfb69e6efe1",
@@ -148,9 +160,13 @@
             "linkedBoard": null
         },
         "38375689-9e4d-430e-954c-65205eb622fe": {
-            "cover": "images\/1583176086_5e5d599681315.png",
             "theme": "default",
             "title": "<p>Outside <span class=\"mention mention-component\" data-id=\"894c2a71-952e-45c9-b55a-340794307a1d\" data-type=\"component\">Castle Monsignor<\/span> <\/p>",
+            "assets": {
+                "cover": {
+                    "id": "b876170a-8f65-4091-b8b7-164738e476f9"
+                }
+            },
             "content": "<p>You just arrived at <span class=\"mention mention-component\" data-id=\"894c2a71-952e-45c9-b55a-340794307a1d\" data-type=\"component\">Castle Monsignor<\/span>, your uncle's home for the past 20 years. The tone of his letter was desperate, urgently asking for your help. Worried, you quickly packed your suitcase and took the first plane.<\/p><p>Faint bird sounds break the eerie silence and a pale mist engulfs the castle hill.<\/p><p><strong>To the north you can see the castle entrance.<\/strong><\/p>",
             "outputs": [
                 "b7f7dfc4-46f9-40ee-a8e9-e8b584cecadf"
@@ -169,9 +185,13 @@
             "linkedBoard": null
         },
         "4d61d93e-e541-4dff-b10d-42c4fd81ad0b": {
-            "cover": "images\/1583232736_5e5e36e0df768.png",
             "theme": "red",
             "title": "<p>Game over<\/p>",
+            "assets": {
+                "cover": {
+                    "id": "c48178d4-0619-4c95-8ca1-02aad2358e12"
+                }
+            },
             "content": "<p>Alas, you did not manage to find what lies behind the ominous door...<\/p>",
             "outputs": [
                 "316e39ed-caf7-459d-8152-af60cc2cd02b"
@@ -180,9 +200,13 @@
             "linkedBoard": null
         },
         "59370898-e089-46cd-b7cf-072b79a76453": {
-            "cover": "images\/1583176103_5e5d59a7cc24a.png",
             "theme": "green",
             "title": "<p><span class=\"mention mention-component\" data-id=\"11e527ff-9579-412c-ae5c-6ff548ebcfc0\" data-type=\"component\">Castle Courtyard<\/span> <\/p>",
+            "assets": {
+                "cover": {
+                    "id": "3b7bc968-2438-488d-b0de-629024746693"
+                }
+            },
             "content": "<p>You stand inside a small courtyard. Everything is unusually silent here.<\/p><p><strong>The path leads further to the north. An abandoned house lies to your left.<\/strong><\/p>",
             "outputs": [
                 "337c4347-5b21-449c-b556-134e0acec12d",
@@ -193,9 +217,13 @@
             "linkedBoard": null
         },
         "5e0d8b0c-ae7c-42a6-83d1-fc2c13b8e6b4": {
-            "cover": "images\/1583172191_5e5d4a5f38105.png",
             "theme": "purple",
             "title": "<p>The small house - Overview<\/p>",
+            "assets": {
+                "cover": {
+                    "id": "b73aa11a-1b40-4636-a71d-adb21e616e11"
+                }
+            },
             "content": "<p>The interior looks more like an artist's studio than a house. A few abstract paintings lie scattered around.<\/p><p>One of the paintings depicts a strange figure: a knight dressed in white, with a red cross on his chest.<\/p>",
             "outputs": [
                 "6f0952d7-202a-4978-8d63-3fee4c5dde35",
@@ -215,9 +243,13 @@
             "linkedBoard": null
         },
         "81a30674-aa09-4eb8-8484-59298d37f984": {
-            "cover": "images\/1583172390_5e5d4b2602486.png",
             "theme": "default",
             "title": "<p>The stone passage<\/p>",
+            "assets": {
+                "cover": {
+                    "id": "83bc18b9-1fae-4b47-9904-75c5da84a61d"
+                }
+            },
             "content": "<p>A stone passage. The sound of dripping water is echoing in the distance. You feel uneasy.<\/p>",
             "outputs": [
                 "6a929b6d-c6d2-46c4-ab67-b0503e7213af",
@@ -227,9 +259,13 @@
             "linkedBoard": null
         },
         "b2eb06f5-0a49-488b-8a60-7c469fd3af8a": {
-            "cover": "images\/1583172191_5e5d4a5f38105.png",
             "theme": "purple",
             "title": "<p>The small house - Examine the painting<\/p>",
+            "assets": {
+                "cover": {
+                    "id": "83bc18b9-1fae-4b47-9904-75c5da84a61d"
+                }
+            },
             "content": "<p>The knight is guarding a mysterious gate. You see a name written above his head:<\/p><p><strong><em>\"Conrad IV, Count of Exeter\"<\/em><\/strong><\/p>",
             "outputs": [
                 "8ec9d83d-02cd-41fe-a16b-a7773e1ec678",
@@ -239,9 +275,13 @@
             "linkedBoard": null
         },
         "b6b7cebe-0c30-4da2-9839-2639f458f759": {
-            "cover": "images\/1583232736_5e5e36e0df768.png",
             "theme": "green",
             "title": "<p>Success<\/p>",
+            "assets": {
+                "cover": {
+                    "id": "83bc18b9-1fae-4b47-9904-75c5da84a61d"
+                }
+            },
             "content": "<p>Congrats! You finished the example project 🎉Now try and make your own interactive experience. If at any point you need help or want to share some feedback don't hesitate to contact us on <a href=\"https:\/\/discord.gg\/atVXxAK\" target=\"__blank\" rel=\"noopener noreferrer nofollow\" title=\"https:\/\/discord.gg\/atVXxAK\">Discord<\/a>!<\/p><p>Happy creations 😊<\/p><p><\/p><p><\/p>",
             "outputs": [
                 "9a07ede8-32ca-4b27-84b1-ebe54f9d254e"
@@ -250,9 +290,13 @@
             "linkedBoard": null
         },
         "d393f371-5aad-4dd9-a3ee-300bedaf993d": {
-            "cover": "images\/1583176919_5e5d5cd7d1fac.png",
             "theme": "cyan",
             "title": "<p>The Question<\/p>",
+            "assets": {
+                "cover": {
+                    "id": "83bc18b9-1fae-4b47-9904-75c5da84a61d"
+                }
+            },
             "content": "<p><strong>\"Only he who knows my name shall pass.\"<\/strong><\/p>",
             "outputs": [
                 "1fbe3657-ca76-4840-9c37-ab11434a63b7",
@@ -266,9 +310,13 @@
             "linkedBoard": null
         },
         "d4823bca-643b-4d3a-a908-0056762a0476": {
-            "cover": "images\/1583176919_5e5d5cd7d1fac.png",
             "theme": "cyan",
             "title": "<p>Dialogue start<\/p>",
+            "assets": {
+                "cover": {
+                    "id": "83bc18b9-1fae-4b47-9904-75c5da84a61d"
+                }
+            },
             "content": "<p>The man looks at you suspiciously and tightens his sword grip. He speaks in a deep voice:<\/p><p><strong>\"What do you want stranger?\"<\/strong><\/p>",
             "outputs": [
                 "0c0cdd6d-3686-4198-88c7-d0753dda6945",
@@ -279,9 +327,13 @@
             "linkedBoard": null
         },
         "fa351fcb-f7cd-4b65-ae0a-4640e8a5275f": {
-            "cover": "images\/1583177501_5e5d5f1d273ac.png",
             "theme": "green",
             "title": "<p>Correct answer<\/p>",
+            "assets": {
+                "cover": {
+                    "id": "206816c5-9c9a-4003-940c-5c5176caed18"
+                }
+            },
             "content": "<p>In the blink of an eye the <span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span> disappears... Almost as if he was never there. Curious.<\/p>",
             "outputs": [
                 "ce4869fb-b31e-47a5-a0ca-47e46839a6f8"
@@ -449,17 +501,24 @@
             ]
         },
         "11e527ff-9579-412c-ae5c-6ff548ebcfc0": {
-            "icon": "Arcweave\/keep",
             "name": "Castle Courtyard",
-            "image": null,
+            "assets": {
+                "cover": {
+                    "file": "Arcweave\/keep",
+                    "type": "icon"
+                }
+            },
             "attributes": [
                 "b7aa7bdf-26eb-41b0-bcc3-54fe13a9a31c"
             ]
         },
         "647349ca-9ebb-4d5f-b81e-500761ec1c5a": {
-            "icon": null,
             "name": "Crusader",
-            "image": "images\/1583176919_5e5d5cd7d1fac.png",
+            "assets": {
+                "cover": {
+                    "id": "bcf8b35c-0ce5-4cbb-bfc7-5fa7a2dd90be"
+                }
+            },
             "attributes": [
                 "d46b5c77-6441-4d30-8d74-b5a191b5ffc6",
                 "3e148d58-6b88-4976-94a0-188df6ce55da",
@@ -475,9 +534,12 @@
             ]
         },
         "894c2a71-952e-45c9-b55a-340794307a1d": {
-            "icon": null,
             "name": "Castle Monsignor",
-            "image": "images\/1583176086_5e5d599681315.png",
+            "assets": {
+                "cover": {
+                    "id": "b876170a-8f65-4091-b8b7-164738e476f9"
+                }
+            },
             "attributes": [
                 "a1f9c1b1-0514-466d-a71e-756916ec2e04"
             ]
@@ -510,6 +572,48 @@
         "d46b5c77-6441-4d30-8d74-b5a191b5ffc6": {
             "label": "Description",
             "content": "The Crusader exists as an early obstacle to the player, introducing the feelings of danger and time travel throughout the game"
+        }
+    },
+    "assets": {
+        "206816c5-9c9a-4003-940c-5c5176caed18": {
+            "name": "large door.png",
+            "type": "template-image"
+        },
+        "3b7bc968-2438-488d-b0de-629024746693": {
+            "name": "village.png",
+            "type": "template-image"
+        },
+        "647d0495-341f-42b2-8788-b47dace22bf8": {
+            "root": true,
+            "children": [
+                "bcf8b35c-0ce5-4cbb-bfc7-5fa7a2dd90be",
+                "b876170a-8f65-4091-b8b7-164738e476f9",
+                "c48178d4-0619-4c95-8ca1-02aad2358e12",
+                "3b7bc968-2438-488d-b0de-629024746693",
+                "b73aa11a-1b40-4636-a71d-adb21e616e11",
+                "83bc18b9-1fae-4b47-9904-75c5da84a61d",
+                "206816c5-9c9a-4003-940c-5c5176caed18"
+            ]
+        },
+        "83bc18b9-1fae-4b47-9904-75c5da84a61d": {
+            "name": "corridor.png",
+            "type": "template-image"
+        },
+        "b73aa11a-1b40-4636-a71d-adb21e616e11": {
+            "name": "painter room.png",
+            "type": "template-image"
+        },
+        "b876170a-8f65-4091-b8b7-164738e476f9": {
+            "name": "misty castle.png",
+            "type": "template-image"
+        },
+        "bcf8b35c-0ce5-4cbb-bfc7-5fa7a2dd90be": {
+            "name": "crusader.png",
+            "type": "template-image"
+        },
+        "c48178d4-0619-4c95-8ca1-02aad2358e12": {
+            "name": "the end.png",
+            "type": "template-image"
         }
     }
 }

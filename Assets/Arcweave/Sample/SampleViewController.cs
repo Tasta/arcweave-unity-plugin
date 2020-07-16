@@ -91,13 +91,13 @@ public class SampleViewController : MonoBehaviour
                 label.text = awElement.components[i].realName;
 
                 // The mask
-                Sprite sprite = awElement.components[i].image;
+                Sprite sprite = awElement.components[i].cover;
                 RectTransform mask = compObj.transform.Find("Mask").GetComponent<RectTransform>();
                 mask.gameObject.SetActive(sprite != null);
                 if (sprite != null) {
                     // The component icon
                     Image icon = mask.Find("Image").GetComponent<Image>();
-                    icon.sprite = awElement.components[i].image;
+                    icon.sprite = awElement.components[i].cover;
                     icon.SetNativeSize();
 
                     if (sprite.texture.width > sprite.texture.height) {

@@ -48,6 +48,14 @@ namespace AW
 
                 elements.Add(e);
                 e.ownerBoard = this;
+                if (!string.IsNullOrEmpty(e.coverID)) {
+                    var asset = prj.GetAsset(e.coverID);
+                    if (asset != null) {
+                        e.cover = asset.sprite;
+                    } else {
+                        Debug.LogWarning("Missing asset: " + asset.name);
+                    }
+                }
             }
         }
 

@@ -13,5 +13,5 @@ namespace AW
     {
         public string id;
         public string realName;
-    } // interface IBoardEntry
+    } // class IBoardEntry
 } // namespace AW

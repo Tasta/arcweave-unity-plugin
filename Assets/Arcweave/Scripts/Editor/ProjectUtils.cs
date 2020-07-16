@@ -104,12 +104,16 @@ namespace AW.Editor
 
                 project.project = root["name"];
 
+                // Read assets
+                EditorUtility.DisplayProgressBar("Arcweave", "Loading assets...", 0.0f);
+                ReadAssets(project, root["assets"].AsObject, projectFolder);
+
                 // Read attributes
-                EditorUtility.DisplayProgressBar("Arcweave", "Creating attributes...", 0.0f);
+                EditorUtility.DisplayProgressBar("Arcweave", "Creating attributes...", 10.0f);
                 ReadAttributes(project, root["attributes"].AsObject);
 
                 // Read components
-                EditorUtility.DisplayProgressBar("Arcweave", "Creating components...", 15.0f);
+                EditorUtility.DisplayProgressBar("Arcweave", "Creating components...", 20.0f);
                 ReadComponents(project, root["components"].AsObject, projectFolder);
 
                 // Read elements
@@ -174,6 +178,60 @@ namespace AW.Editor
 
             EditorUtility.ClearProgressBar();
             return true;
+        }
+
+        /*
+         * Read assets from given JSON Class.
+         */
+        private static void ReadAssets(Project project, JSONClass assetsRoot, string projectPath) {
+            List<AssetEntry> entries = new List<AssetEntry>();
+            List<AssetFolder> folders = new List<AssetFolder>();
+
+            IEnumerator children = assetsRoot.GetEnumerator();
+            while (children.MoveNext()) {
+                // Get current
+                KeyValuePair<string, JSONNode> current = (children.Current != null) ?
+                    (KeyValuePair<string, JSONNode>)children.Current : default(KeyValuePair<string, JSONNode>);
+                JSONNode child = current.Value;
+
+                // Get its ID
+                string id = current.Key;
+                bool isFolder = child["children"] != null;
+
+                if (isFolder) {
+                    AssetFolder folder = new AssetFolder();
+                    folder.id = id;
+                    folder.name = child["root"] != null ? "Root" : child["name"].ToString();
+                    ReadAssetFolder(folder, child);
+                    folders.Add(folder);
+                } else {
+                    AssetEntry asset = new AssetEntry();
+                    asset.id = id;
+                    asset.name = child["name"];
+                    asset.ParseType(child["type"]);
+                    asset.LinkAsset(projectPath);
+                    entries.Add(asset);
+                }
+            }
+
+            project.assetEntries = entries.ToArray();
+            project.assetFolders = folders.ToArray();
+        }
+
+        /*
+         * Read asset folder from JSON entry.
+         */
+        private static void ReadAssetFolder(AssetFolder af, JSONNode node) {
+            af.name = node["name"] != null ? node["name"].ToString() : "Root";
+
+            JSONArray idxArray = node["children"].AsArray;
+            if (idxArray.Count == 0)
+                return;
+
+            af.childIds = new string[idxArray.Count];
+
+            for (int i = 0; i < idxArray.Count; i++)
+                af.childIds[i] = idxArray[i];
         }
 
         /*
@@ -267,14 +325,10 @@ namespace AW.Editor
             c.realName = root["name"];
 
             // Attempt to load the image
-            string imgPath = root["image"];
-            if (!string.IsNullOrEmpty(imgPath) && imgPath != "null") {
-                // Load sprite at given path
-                string fullPath = projectPath + "/assets/" + imgPath;
-                c.image = AssetDatabase.LoadAssetAtPath<Sprite>(fullPath);
-                if (c.image == null) {
-                    Debug.LogWarning("[Arcweave] Could not load image at path: " + fullPath + " for component " + c.name);
-                }
+            // Load the cover ID
+            if (root["assets"] != null &&
+                root["assets"]["cover"] != null) {
+                c.coverID = root["assets"]["cover"]["id"];
             }
 
             // Load the attributes
@@ -339,17 +393,12 @@ namespace AW.Editor
                 e.components[i] = c;
             }
 
-            // Attempt to load the cover image
-            string imgPath = root["cover"];
-            if (!string.IsNullOrEmpty(imgPath) && imgPath != "null") {
-                // Load sprite at given path
-                string fullPath = projectPath + "/assets/" + imgPath;
-                e.cover = AssetDatabase.LoadAssetAtPath<Sprite>(fullPath);
-                if (e.cover == null) {
-                    Debug.LogWarning("[Arcweave] Could not load image at path: " + fullPath + " for element " + e.title);
-                }
+            // Load the cover ID
+            if (root["assets"] != null &&
+                root["assets"]["cover"] != null) {
+                e.coverID = root["assets"]["cover"]["id"];
             }
-
+            
             // Handle linked board tag
             string linkedBoardID = root["linkedBoard"];
             if (e.linkedBoardId != null) {

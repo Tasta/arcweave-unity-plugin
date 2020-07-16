@@ -21,6 +21,8 @@ namespace AW
     {    
         [Header("The Arcweave Data")]
         public string project;
+        public AssetEntry[] assetEntries;
+        public AssetFolder[] assetFolders;
         public Attribute[] attributes;
         public IComponentEntry[] components;
         public Element[] elements;
@@ -71,6 +73,14 @@ namespace AW
 
                 Component c = components[i] as Component;
                 c.RelinkAttributes(this);
+                if (!string.IsNullOrEmpty(c.coverID)) {
+                    var asset = GetAsset(c.coverID);
+                    if (asset != null) {
+                        c.cover = asset.sprite;
+                    } else {
+                        Debug.LogWarning("Missing asset: " + asset.name);
+                    }
+                }
             }
 
             // Handle connections
@@ -91,6 +101,18 @@ namespace AW
             for (int i = 0; i < boardFolders.Length; i++) {
                 if (boardFolders[i].realName == "Root")
                     return boardFolders[i];
+            }
+
+            return null;
+        }
+
+        /*
+         * Get asset entry.
+         */
+        public AssetEntry GetAsset(string hashID) {
+            for (int i = 0; i < assetEntries.Length; i++) {
+                if (assetEntries[i].id == hashID)
+                    return assetEntries[i];
             }
 
             return null;

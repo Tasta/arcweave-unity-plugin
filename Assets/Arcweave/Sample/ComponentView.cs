@@ -42,8 +42,8 @@ public class ComponentView : MonoBehaviour {
 		gameObject.SetActive(true);
 
         // Set icon and compute size
-        icon.sprite = component.image;
-        if (component.image != null) {
+        icon.sprite = component.cover;
+        if (component.cover != null) {
             // Best fit of image into view size
             HandlePictureSize();
 

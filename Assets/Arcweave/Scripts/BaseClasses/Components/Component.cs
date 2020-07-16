@@ -15,11 +15,12 @@ namespace AW
         : IComponentEntry
     {
         // Arcweave imported data
-        public Sprite image;
         public string[] attributeIDs;
+        public string coverID;
 
         // Populate upon relink
         [NonSerialized] public List<Attribute> attributes;
+        [NonSerialized] public Sprite cover;
 
         /*
          * Relink attributes
