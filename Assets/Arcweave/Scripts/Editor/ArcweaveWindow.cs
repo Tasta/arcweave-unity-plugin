@@ -109,7 +109,9 @@ namespace AW.Editor
                 if (sprite != null) {
                     Texture tex = SpriteUtility.GetSpriteTexture(sprite, false);
                     GUILayout.Label(tex);
+                    GUILayout.Label("Version 1.3", EditorStyles.centeredGreyMiniLabel);
                 }
+
                 GUILayout.Space(50.0f);
                 GUILayout.EndVertical();
 
