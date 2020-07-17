@@ -131,7 +131,7 @@
             "title": "<p><span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span><\/p>",
             "assets": {
                 "cover": {
-                    "id": "b876170a-8f65-4091-b8b7-164738e476f9"
+                    "id": "bcf8b35c-0ce5-4cbb-bfc7-5fa7a2dd90be"
                 }
             },
             "content": "<p>The <span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span> does not flinch. You have the slight impression he did not get your joke.<\/p>",
@@ -146,7 +146,7 @@
             "title": "<p>The <span class=\"mention mention-component\" data-id=\"647349ca-9ebb-4d5f-b81e-500761ec1c5a\" data-type=\"component\">Crusader<\/span> <\/p>",
             "assets": {
                 "cover": {
-                    "id": "b876170a-8f65-4091-b8b7-164738e476f9"
+                    "id": "bcf8b35c-0ce5-4cbb-bfc7-5fa7a2dd90be"
                 }
             },
             "content": "<p>You reach a wooden door. In front of you stands a strange man dressed as a medieval crusader.<\/p>",
@@ -263,7 +263,7 @@
             "title": "<p>The small house - Examine the painting<\/p>",
             "assets": {
                 "cover": {
-                    "id": "83bc18b9-1fae-4b47-9904-75c5da84a61d"
+                    "id": "b73aa11a-1b40-4636-a71d-adb21e616e11"
                 }
             },
             "content": "<p>The knight is guarding a mysterious gate. You see a name written above his head:<\/p><p><strong><em>\"Conrad IV, Count of Exeter\"<\/em><\/strong><\/p>",
@@ -279,7 +279,7 @@
             "title": "<p>Success<\/p>",
             "assets": {
                 "cover": {
-                    "id": "83bc18b9-1fae-4b47-9904-75c5da84a61d"
+                    "id": "c48178d4-0619-4c95-8ca1-02aad2358e12"
                 }
             },
             "content": "<p>Congrats! You finished the example project 🎉Now try and make your own interactive experience. If at any point you need help or want to share some feedback don't hesitate to contact us on <a href=\"https:\/\/discord.gg\/atVXxAK\" target=\"__blank\" rel=\"noopener noreferrer nofollow\" title=\"https:\/\/discord.gg\/atVXxAK\">Discord<\/a>!<\/p><p>Happy creations 😊<\/p><p><\/p><p><\/p>",
@@ -294,7 +294,7 @@
             "title": "<p>The Question<\/p>",
             "assets": {
                 "cover": {
-                    "id": "83bc18b9-1fae-4b47-9904-75c5da84a61d"
+                    "id": "bcf8b35c-0ce5-4cbb-bfc7-5fa7a2dd90be"
                 }
             },
             "content": "<p><strong>\"Only he who knows my name shall pass.\"<\/strong><\/p>",
@@ -314,7 +314,7 @@
             "title": "<p>Dialogue start<\/p>",
             "assets": {
                 "cover": {
-                    "id": "83bc18b9-1fae-4b47-9904-75c5da84a61d"
+                    "id": "bcf8b35c-0ce5-4cbb-bfc7-5fa7a2dd90be"
                 }
             },
             "content": "<p>The man looks at you suspiciously and tightens his sword grip. He speaks in a deep voice:<\/p><p><strong>\"What do you want stranger?\"<\/strong><\/p>",
