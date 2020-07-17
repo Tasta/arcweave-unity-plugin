@@ -98,6 +98,8 @@ namespace AW.Editor
                 TextAsset projectAsset = AssetDatabase.LoadAssetAtPath<TextAsset>(fullPrjPath);
                 if (projectAsset == null)
                     throw new Exception("No project asset found at " + fullPrjPath + ".");
+                else
+                    AssetImportHelper.SetupSprites(projectFolder);
 
                 string projectContents = Encoding.UTF8.GetString(projectAsset.bytes);
                 JSONNode root = JSONNode.Parse(projectContents);
@@ -176,6 +178,7 @@ namespace AW.Editor
                 return false;
             }
 
+            Debug.Log("[Arcweave] Import completed successfully.");
             EditorUtility.ClearProgressBar();
             return true;
         }
