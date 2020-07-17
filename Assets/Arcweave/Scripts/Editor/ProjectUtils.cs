@@ -83,6 +83,10 @@ namespace AW.Editor
          */
         public static bool ReadProject(Project project, string projectFolder)
         {
+            // Force an Asset Refresh before starting this, in case Unity
+            // doesn't have auto-refresh on.
+            AssetDatabase.Refresh();
+
             // Asset paths are relative to project folder
             string unityPrjFolder = Application.dataPath.Replace("Assets", "");
             projectFolder = projectFolder.Replace(unityPrjFolder, "");
