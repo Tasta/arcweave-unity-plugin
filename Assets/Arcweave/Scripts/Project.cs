@@ -18,7 +18,7 @@ namespace AW
      */
     [Serializable]
     public class Project : ScriptableObject
-    {    
+    {
         [Header("The Arcweave Data")]
         public string project;
         public AssetEntry[] assetEntries;
@@ -61,7 +61,7 @@ namespace AW
          * If the member is referenced by both Board and Project, upon deserialization,
          * two copies of the same member are created.
          *
-         * So instead of serializing them as they are, we'll serialize IDs, 
+         * So instead of serializing them as they are, we'll serialize IDs,
          * and reestablish the links after deserialization.
          */
         public void Relink()
@@ -167,7 +167,7 @@ namespace AW
                 if (boards[i].realName == boardName)
                     return boards[i] as Board;
             }
-            
+
             Debug.LogWarning("[Arcweave] Cannot find board with given name: " + boardName);
             return null;
         }

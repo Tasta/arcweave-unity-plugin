@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AW
 {
-    /* 
+    /*
      * A component Attribute in the Arcweave context.
      */
     [Serializable]

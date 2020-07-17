@@ -11,10 +11,10 @@ namespace AW
 	{
 		/*
 		 * Parse the HTML imported from the Arcweave project.
-		 * 
+		 *
 		 * Use the C# built-in XML parser.
 		 * Although this is HTML code, we hack it a bit to parse as XML.
-		 * 
+		 *
 		 * Resolve the |board| reference.
 		 */
 		public static void ParseHTML(string content, ref string parsedContent, ref string parsedContentNoStyle, ref string linkedBoardId)

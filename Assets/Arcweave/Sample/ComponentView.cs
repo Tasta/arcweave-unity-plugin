@@ -68,7 +68,7 @@ public class ComponentView : MonoBehaviour {
 
         // Set title
         title.text = component.realName;
-        
+
 		// Populate attributes
         for (int i = 0; i < component.attributes.Count; i++) {
             Attribute attribute = component.attributes[i];
@@ -107,7 +107,7 @@ public class ComponentView : MonoBehaviour {
         float heightRatio = frameSize.y / tex.height;
         float ratio = Mathf.Max(widthRatio, heightRatio);
 
-        
+
         Vector2 size = iconRT.sizeDelta;
         size.x = size.x * ratio;
         size.y = size.y * ratio;

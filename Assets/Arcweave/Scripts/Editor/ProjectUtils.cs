@@ -356,7 +356,7 @@ namespace AW.Editor
                 KeyValuePair<string, JSONNode> current = (children.Current != null) ?
                     (KeyValuePair<string, JSONNode>)children.Current : default(KeyValuePair<string, JSONNode>);
                 JSONNode child = current.Value;
-                
+
                 // Create element
                 Element element = new Element();
                 element.id = current.Key;
@@ -387,7 +387,7 @@ namespace AW.Editor
                 string compId = componentArray[i];
 
                 Component c = project.GetComponent(compId);
-                
+
                 if (c == null) {
                     Debug.LogWarning("[Arcweave] Cannot find component for given id: " + compId);
                     continue;
@@ -401,7 +401,7 @@ namespace AW.Editor
                 root["assets"]["cover"] != null) {
                 e.coverID = root["assets"]["cover"]["id"];
             }
-            
+
             // Handle linked board tag
             string linkedBoardID = root["linkedBoard"];
             if (e.linkedBoardId != null) {
@@ -468,7 +468,7 @@ namespace AW.Editor
          */
         private static void ReadNotes(Project project, JSONClass noteRoot)
         {
-            List<Note> tmp = new List<Note>();            
+            List<Note> tmp = new List<Note>();
 
             IEnumerator children = noteRoot.GetEnumerator();
             while (children.MoveNext()) {
@@ -476,7 +476,7 @@ namespace AW.Editor
                 KeyValuePair<string, JSONNode> current = (children.Current != null) ?
                     (KeyValuePair<string, JSONNode>)children.Current : default(KeyValuePair<string, JSONNode>);
                 JSONNode child = current.Value;
-                
+
                 // Create element
                 Note note = new Note(current.Key, current.Value);
 
@@ -554,7 +554,7 @@ namespace AW.Editor
             } else if (entry is BoardFolder) {
                 BoardFolder bf = entry as BoardFolder;
                 string newPrefix = prefix + bf.realName + "/";
-                
+
                 for (int i = 0; i < bf.childIds.Length; i++) {
                     IBoardEntry child = project.GetBoardEntry(bf.childIds[i]);
                     BoardHierarchyWalker(project, child, newPrefix, IDs, paths);

@@ -79,7 +79,7 @@ namespace AW.Editor
 
             Instance = this;
             project = AssetDatabase.LoadAssetAtPath<Project>("Assets/Resources/Arcweave/Project.asset");
-            
+
             if (project != null) {
                 // Force relink of project
                 project.Relink();
@@ -209,7 +209,7 @@ namespace AW.Editor
                             // Set board
                             project = newProject;
                             project.folderPath = newFolderPath;
-                            project.startingBoardIdx = 0; 
+                            project.startingBoardIdx = 0;
 
                             // Setup the board names
                             PrecomputeBoardNames();

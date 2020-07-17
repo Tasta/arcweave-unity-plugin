@@ -15,7 +15,7 @@ namespace AW
      * Gets created for each Board (containing references to Arcweave entities)
      * and with a MonoBehaviour (to attach coroutines to).
      *
-     * Walks the given board starting from its root node, 
+     * Walks the given board starting from its root node,
      * while getting ticked with the player choices.
      */
     public class BoardWalker

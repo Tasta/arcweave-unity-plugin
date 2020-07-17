@@ -29,7 +29,7 @@ namespace AW
         [NonSerialized] public List<Connection> inConnections;
         [NonSerialized] public List<Connection> outConnections;
         [NonSerialized] public Sprite cover;
-        
+
         /*
          * Basic constructor.
          */
@@ -97,10 +97,10 @@ namespace AW
 		/*
 		 * Propagate back to the last element that had a connection with labels.
 		 * Used to simulate a root. It's a hack!
-		 * 
+		 *
 		 * ToDo: With a more fixed structure in Arcweave, this should return to
 		 * 		 the last Element in the RootStack. And shouldn't be isolated here.
-		 * 
+		 *
 		 * Return element that acts as root.
 		 */
 		public Element GoBack(Project project) {
@@ -141,7 +141,7 @@ namespace AW
         public string GetActionLabel()
         {
             const int maxDisplayChar = 40;
-            
+
             if (!string.IsNullOrEmpty(titleNoStyle) && titleNoStyle != "null") {
                 if (titleNoStyle.Length > maxDisplayChar)
                     return titleNoStyle.Substring(0, maxDisplayChar) + "...";

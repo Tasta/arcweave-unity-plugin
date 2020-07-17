@@ -8,7 +8,7 @@ namespace AW {
      * At the moment, it just references images.
      */
     [Serializable]
-    public class AssetEntry 
+    public class AssetEntry
         : IAssetEntry
     {
         /*
@@ -46,7 +46,7 @@ namespace AW {
                     break;
             }
         }
-        
+
         /*
          * Load resource using given project base path.
          */

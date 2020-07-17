@@ -11,7 +11,7 @@ namespace AW
 {
 	/*
 	 * Project walker.
-	 * 
+	 *
 	 * Container for all BoardRunners in Arcweave.
 	 * Wraps the usage of the active BoardRunner to manage
 	 * the switch between boards.
@@ -54,7 +54,7 @@ namespace AW
                     Debug.LogWarning("[Arcweave] Cannot create BoardWalker for Board " + board.realName + ".\n" + e.Message);
                 }
             }
-            
+
 			// If there's no walker loaded, bail!
 			if (walkers.Count == 0)
 				throw new Exception("Cannot create ProjectRunner. No board loaded.");

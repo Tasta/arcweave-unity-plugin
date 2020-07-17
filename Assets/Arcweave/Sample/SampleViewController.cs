@@ -130,7 +130,7 @@ public class SampleViewController : MonoBehaviour
     {
         elementHeader.sprite = awElement.cover;
         elementHeader.gameObject.SetActive(awElement.cover != null);
-        
+
         // ToDo: Remove "null" comparison when null is properly passed.
         if (string.IsNullOrEmpty(awElement.content) || awElement.content == "null") {
             elementContent.text = "";
@@ -158,7 +158,7 @@ public class SampleViewController : MonoBehaviour
             // Put the action
             for (int i = 0; i < awElement.outConnections.Count; i++) {
                 GameObject actionObj = GameObject.Instantiate(ActionPrefab, actionLayout.transform);
-                
+
                 // Set text
                 string connLabel = awElement.outConnections[i].labelNoStyle;
                 Text label = actionObj.transform.Find("Text").GetComponent<Text>();

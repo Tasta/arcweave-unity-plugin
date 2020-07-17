@@ -5,7 +5,7 @@ using UnityEngine;
 using AW;
 
 public class Sample : MonoBehaviour {
-    // The view of this 
+    // The view of this
     public SampleViewController viewController;
     public CanvasGroup loader;
 
@@ -42,7 +42,7 @@ public class Sample : MonoBehaviour {
         ResourceRequest rr = Resources.LoadAsync("Arcweave/Project");
         yield return rr;
         project = rr.asset as Project;
-        
+
         if (project == null) {
             Debug.LogWarning("No project found. Please use the Arcweave Utility to import a project.");
             yield break;
@@ -64,7 +64,7 @@ public class Sample : MonoBehaviour {
     }
 
     /*
-     * Gets called back by the runner when an element is in Play. 
+     * Gets called back by the runner when an element is in Play.
      */
     public void OnElementTriggered(Element element)
     {

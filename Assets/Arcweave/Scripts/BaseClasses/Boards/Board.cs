@@ -21,7 +21,7 @@ namespace AW
         // Runtime data
         [NonSerialized] public List<Note> notes;
         [NonSerialized] public List<Element> elements;
-        
+
         /*
          * Relink notes and elements.
          */
